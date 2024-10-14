@@ -33,11 +33,11 @@ export default function Navbar() {
                 <ul className="flex flex-col lg:flex-row lg:space-x-4 mt-4 lg:mt-0">
                     {/* Menu items stacked vertically on small screens, horizontally on medium+ screens */}
                     <li onClick={() => router.push('/')} className="text-black block py-2 px-4 cursor-pointer">Home</li>
-                    <li onClick={() => router.push('/components/education/client')} className="text-black block py-2 px-4 cursor-pointer">Education</li>
-                    <li onClick={() => router.push('/components/experience/client')} className="text-black block py-2 px-4 cursor-pointer">Experience</li>
-                    <li onClick={() => router.push('/components/projects/client')} className="text-black block py-2 px-4 cursor-pointer">Projects</li>
+                    <li onClick={() => router.push('/components/education')} className="text-black block py-2 px-4 cursor-pointer">Education</li>
+                    <li onClick={() => router.push('/components/experience')} className="text-black block py-2 px-4 cursor-pointer">Experience</li>
                     <li onClick={() => router.push('/components/skills')} className="text-black block py-2 px-4 cursor-pointer">Skills</li>
-                    <li onClick={() => router.push('/components/contactme/client')} className="text-black block py-2 px-4 cursor-pointer">Contact</li>
+                    <li onClick={() => router.push('/components/projects')} className="text-black block py-2 px-4 cursor-pointer">Projects</li>
+                    <li onClick={() => router.push('/components/contact')} className="text-black block py-2 px-4 cursor-pointer">Contact</li>
                 </ul>
             </div>
         </div>

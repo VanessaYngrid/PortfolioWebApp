@@ -3,8 +3,8 @@ export default function Presentation(){
     return(
     <div className=" bg-white overflow-x-hidden mt-8 md:mt-12 lg:px-10">
         <div className="text-center pt-10">
-            <p className="text-black text-sm">Get to know me more</p>
             <h1 className="text-black text-3xl font-bold">ABOUT ME</h1>
+            <p className="text-black text-md pt-2">Get to know me more</p>
         </div>   
         <div className="flex flex-col md:flex-row mx-6 lg:mx-20 py-10">
             <div className="md:w-1/3 p-4 flex flex-col gap-6 justify-center text-center">
