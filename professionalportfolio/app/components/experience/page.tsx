@@ -16,7 +16,7 @@ type JobExperience = {
     };
 };
 
-export default function Experience() {
+export default function WorkExperience() {
     const [experienceInfo, setExperienceInfo] = useState<JobExperience[]>([]);
     const [dataIsLoaded, setDataIsLoaded] = useState(false);
 
