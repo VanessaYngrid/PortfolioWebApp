@@ -21,7 +21,7 @@ export async function GET() {
     //para portfolio -> actualizar las responsabilidades
     const jobExperiences: JobExperience [] = [
         {
-            company: "YULCOM Technologies",
+            company: "YULCOM Technologies - Canada",
             department: "Development Team",
             position: "Web Developer Intern",
             dateRange: "Sep 2024 - Present",
@@ -32,7 +32,7 @@ export async function GET() {
             }
         },
         {
-            company: "ITAÚ UNIBANCO BANK (largest private bank in Latin America)",
+            company: "ITAÚ UNIBANCO BANK - Brazil",
             department: "Vehicle Department",
             position: "Process Engineer",
             dateRange: "Sep 2021 - Oct 2022",
@@ -44,7 +44,7 @@ export async function GET() {
             }
         },
         {
-            company: "ITAÚ UNIBANCO BANK (largest private bank in Latin America)",
+            company: "ITAÚ UNIBANCO BANK - Brazil",
             department: "Accounting Operations Transformation Management",
             position: "Junior Operational Financial Analyst",
             dateRange: "Jan 2021 - Sep 2021",
@@ -55,7 +55,7 @@ export async function GET() {
             }
         },
         {
-            company: "ITAÚ UNIBANCO BANK (largest private bank in Latin America)",
+            company: "ITAÚ UNIBANCO BANK - Brazil",
             department: "Insurance and Pension Accounting Processing Management",
             position: "Junior Operational Financial Analyst",
             dateRange: "Apr 2020 - Jan 2021",
@@ -66,7 +66,7 @@ export async function GET() {
             }
         },
         {
-            company: "ITAÚ UNIBANCO BANK (largest private bank in Latin America)",
+            company: "ITAÚ UNIBANCO BANK - Brazil",
             department: "Credit Card and Insurance Accounting Processing Management",
             position: "Operational Financial Intern",
             dateRange: "Aug 2018 - Apr 2020",
