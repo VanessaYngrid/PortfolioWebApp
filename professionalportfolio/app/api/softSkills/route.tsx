@@ -3,11 +3,11 @@ import { NextResponse } from "next/server";
 export async function GET(){
 
     //Define the TypeScript type for contact info
-    type TechnologySkills = {
+    type SoftSkills = {
         softSkills: string[],
     };
 
-    const TechnologyObject: TechnologySkills = {
+    const TechnologyObject: SoftSkills = {
         softSkills: ["Adaptability", "Communication", "TeamWork", "Problem Solving", "Creativity", "Critical Thinking"],
     };
 
