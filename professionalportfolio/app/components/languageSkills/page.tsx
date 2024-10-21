@@ -71,7 +71,7 @@ export default function LanguagesSkills() {
     }, [languageSkills]);
 
     return (
-        <div className="bg-white px-16 overflow-x-hidden">
+        <div className="bg-white px-8 md:px-16 overflow-x-hidden">
             {myComponent}
         </div>
     );
