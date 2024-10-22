@@ -1,3 +1,5 @@
+'use client';
+
 import AgileSkillsComponent from "../agileSkills/page";
 import Footer from "../footer/page";
 import LanguagesSkills from "../languageSkills/page";

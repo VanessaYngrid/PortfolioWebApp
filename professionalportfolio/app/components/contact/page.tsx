@@ -68,7 +68,7 @@ export default function Contact(){
                         />
                         <button
                         type="button"
-                        className="text-white bg-blue-600 hover:bg-blue-700 rounded text-sm px-6 py-3 mt-6"
+                        className="text-white bg-[#6a0dad] hover:bg-blue-700 rounded text-sm px-6 py-3 mt-6"
                         >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

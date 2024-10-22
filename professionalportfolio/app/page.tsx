@@ -5,14 +5,16 @@ import WorkExperience from "./components/experience/page";
 import Footer from "./components/footer/page";
 import Navbar from "./components/navbar/page";
 import Presentation from "./components/presentation/page";
+import SkillsMainPage from "./components/skillsMainPage/page";
 
 export default function Home() {
   return (
-  <div className="overflow-x-hidden">
+  <div className="bg-[#f9f9f9] overflow-x-hidden">
     <Navbar/>
     <BannerIntro/>
     <Presentation/>
     <Education/>
+    <SkillsMainPage/>
     <WorkExperience/>
     <Contact/>
     <Footer/>
