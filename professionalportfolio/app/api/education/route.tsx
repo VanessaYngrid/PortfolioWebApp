@@ -16,7 +16,7 @@ export async function GET(){
     const educationObject: EducationInfo[] = [
         {
             education_id:"e001",
-            program:"AEC Software Development: Desktop, Mobile and Web Application",
+            program:"AEC Software Development: Mobile and Web Application",
             university:"Vanier College",
             period:"January 2023 - December 2024 (Expected)",
             place:"Montreal, Canada",

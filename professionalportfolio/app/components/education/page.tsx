@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Image from 'next/image';
 
-// Define type
 type EducationInfo = {
     education_id: string,
     program: string,
@@ -14,16 +13,23 @@ type EducationInfo = {
 
 export default function Education() {
     const [eduInfo, setEduInfo] = useState<EducationInfo[]>([]);
-    const [dataIsLoaded, setDataIsLoaded] = useState(false);
+
+    useEffect(() => {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/education`, { cache: "no-cache" })
+            .then((res) => res.json())
+            .then((data) => {
+                setEduInfo(data);
+            });
+    }, []);
 
     function renderTimeline() {
         return (
             <div className="relative pt-4 pb-10 px-6 md:px-12 lg:px-40">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {eduInfo.length > 0 && eduInfo.map((edu) => (
+                    {eduInfo.map((edu) => (
                         <div key={edu.education_id} className="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl border-l-4 border-[#FFB3C1]">
                             <div className="mb-4">
-                                <h2 className="text-base font-bold text-[#4A1942]">{edu.period}</h2>
+                                <h2 className="text-base font-semibold text-[#4A1942]">{edu.period}</h2>
                             </div>
                             <div className="flex items-center mb-2">
                                 <Image 
@@ -33,7 +39,7 @@ export default function Education() {
                                     height={24} 
                                     className="mr-2" 
                                 />
-                                <h3 className="text-md font-bold text-[#893168]">{edu.program}</h3>
+                                <h3 className="text-lg font-semibold text-[#893168]">{edu.program}</h3>
                             </div>
                             <div className="flex items-center mb-2">
                                 <Image 
@@ -43,7 +49,7 @@ export default function Education() {
                                     height={24} 
                                     className="mr-2" 
                                 />
-                                <h4 className="text-sm text-[#6B6B8A]">{edu.university}</h4>
+                                <h4 className="text-md text-[#6B6B8A]">{edu.university}</h4>
                             </div>
                             <div className="flex items-center mb-4">
                                 <Image 
@@ -62,24 +68,13 @@ export default function Education() {
         );
     }
 
-    useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/education`, { cache: "no-cache" })
-            .then((res) => res.json())
-            .then((data) => {
-                setDataIsLoaded(true);
-                setEduInfo(data);
-            });
-    }, []);
-
     return (
-        <div className="overflow-x-hidden bg-[#F9F9F9] text-center pt-6">
-            <h1 className="text-[#4A1942] text-3xl font-bold mb-6">EDUCATION</h1> 
-            <div className="container mx-auto py-6">
-                {dataIsLoaded ? renderTimeline() : <p className="text-gray-500">Loading...</p>}
+        <div className="overflow-x-hidden bg-[#F9F9F9] text-center pt-6 pb-10">
+            <h1 className="text-[#4A1942] text-3xl font-bold mb-4">EDUCATION</h1> 
+            <div className="mx-auto py-6">
+                {renderTimeline()}
             </div>
         </div>
     );
 }
-
-    
 

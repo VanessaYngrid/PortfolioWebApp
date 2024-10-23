@@ -31,18 +31,19 @@ export default function WorkExperience() {
     }, []);
 
     function renderTimeline() {
-        const recentExperiences = experienceInfo.slice(0, 3); // Tres experiencias más recientes
-        const olderExperiences = experienceInfo.slice(3, 5); // Dos experiencias más antiguas
+        const recentExperiences = experienceInfo.slice(0, 3); // Three most recent experiences
+        const olderExperiences = experienceInfo.slice(3); // Older experiences
 
         return (
             <div className="flex justify-between px-24 pt-10">
                 <div className="w-full sm:w-1/2 px-10">
+                    <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Recent Experience</h2>
                     {recentExperiences.map((exp, index) => (
                         <ol key={index} className="relative border-s border-gray-200 mb-10">
                             <li className="ms-6">
-                                <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
+                                <span className="absolute flex items-center justify-center w-6 h-6 bg-[#6B4C7C] rounded-full -start-3 ring-8 ring-white">
                                     <svg
-                                        className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300"
+                                        className="w-2.5 h-2.5 text-[#FFB3C1]"
                                         aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="currentColor"
@@ -54,18 +55,18 @@ export default function WorkExperience() {
                                 <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900">
                                     {exp.dateRange}
                                 </h3>
-                                <p className="block mb-4 text-lg font-semibold leading-none text-gray-400">
+                                <p className="block mb-4 text-lg font-semibold leading-none text-[#893168]">
                                     {exp.position}
                                 </p>
-                                <p className="mb-1 text-base font-normal text-gray-500 dark:text-gray-400">
+                                <p className="mb-1 text-base font-normal text-gray-700">
                                     {exp.company}
                                 </p>
-                                <p className="mb-6 text-base font-normal text-gray-500 dark:text-gray-400">
+                                <p className="mb-6 text-base font-normal text-gray-700">
                                     {exp.department}
                                 </p>
                                 <ul className="list-disc list-inside">
                                     {Object.values(exp.responsibilities).map((resp, idx) => (
-                                        resp && <li key={idx} className="mb-1 text-base font-normal text-gray-500 dark:text-gray-400">{resp}</li>
+                                        resp && <li key={idx} className="mb-1 text-base font-normal text-gray-500">{resp}</li>
                                     ))}
                                 </ul>
                             </li>
@@ -74,12 +75,13 @@ export default function WorkExperience() {
                 </div>
 
                 <div className="w-full sm:w-1/2 px-10">
+                    <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Previous Experience</h2>
                     {olderExperiences.map((exp, index) => (
                         <ol key={index} className="relative border-s border-gray-200 mb-10">
                             <li className="ms-6">
-                                <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white">
+                                <span className="absolute flex items-center justify-center w-6 h-6 bg-[#6B4C7C] rounded-full -start-3 ring-8 ring-white">
                                     <svg
-                                        className="w-2.5 h-2.5 text-blue-800 dark:text-blue-300"
+                                        className="w-2.5 h-2.5 text-[#FFB3C1]"
                                         aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="currentColor"
@@ -91,18 +93,18 @@ export default function WorkExperience() {
                                 <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900">
                                     {exp.dateRange}
                                 </h3>
-                                <p className="block mb-4 text-lg font-semibold leading-none text-gray-400">
+                                <p className="block mb-4 text-lg font-semibold leading-none text-[#893168]">
                                     {exp.position}
                                 </p>
-                                <p className="mb-1 text-base font-normal text-gray-500 dark:text-gray-400">
+                                <p className="mb-1 text-base font-normal text-gray-700">
                                     {exp.company}
                                 </p>
-                                <p className="mb-6 text-base font-normal text-gray-500 dark:text-gray-400">
+                                <p className="mb-6 text-base font-normal text-gray-700">
                                     {exp.department}
                                 </p>
                                 <ul className="list-disc list-inside">
                                     {Object.values(exp.responsibilities).map((resp, idx) => (
-                                        resp && <li key={idx} className="mb-1 text-base font-normal text-gray-500 dark:text-gray-400">{resp}</li>
+                                        resp && <li key={idx} className="mb-1 text-base font-normal text-gray-500">{resp}</li>
                                     ))}
                                 </ul>
                             </li>
@@ -115,11 +117,12 @@ export default function WorkExperience() {
 
     // Rendering the component
     return (
-        <div className="overflow-x-hidden bg-white text-start pt-10">
-            <h1 className="text-black text-3xl font-bold text-center">WORK EXPERIENCE</h1>
-            <div className="container mx-auto py-6 px-4 sm:px-8">
+        <div className="overflow-x-hidden bg-[#F9F9F9] text-start pt-10">
+            <h1 className="text-[#4A1942] text-3xl font-bold text-center mb-6">WORK EXPERIENCE</h1>
+            <div className="container mx-auto">
                 {dataIsLoaded && renderTimeline()}
             </div>
         </div>
     );
 }
+
