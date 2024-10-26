@@ -5,6 +5,7 @@ import WorkExperience from "./components/experience/page";
 import Footer from "./components/footer/page";
 import Navbar from "./components/navbar/page";
 import Presentation from "./components/presentation/page";
+import ProjectsMainPage from "./components/projectsMainPage/page";
 import SkillsMainPage from "./components/skillsMainPage/page";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     <Education/>
     <SkillsMainPage/>
     <WorkExperience/>
+    <ProjectsMainPage/>
     <Contact/>
     <Footer/>
   </div>    

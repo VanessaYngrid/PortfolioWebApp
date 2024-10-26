@@ -35,7 +35,7 @@ export default function WorkExperience() {
         const olderExperiences = experienceInfo.slice(3); // Older experiences
 
         return (
-            <div className="flex justify-between px-24 pt-10">
+            <div className="flex justify-between px-28 pt-10">
                 <div className="w-full sm:w-1/2 px-10">
                     <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Recent Experience</h2>
                     {recentExperiences.map((exp, index) => (
@@ -74,7 +74,7 @@ export default function WorkExperience() {
                     ))}
                 </div>
 
-                <div className="w-full sm:w-1/2 px-10">
+                <div className="w-full sm:w-1/2 px-12">
                     <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Previous Experience</h2>
                     {olderExperiences.map((exp, index) => (
                         <ol key={index} className="relative border-s border-gray-200 mb-10">

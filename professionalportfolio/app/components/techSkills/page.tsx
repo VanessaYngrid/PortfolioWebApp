@@ -14,7 +14,7 @@ type TechnologySkills = {
 };
 
 // Function to transform skill names for image URLs
-const transformSkillName = (skill: string) => {
+const transformSkillName = (skill: string) => { 
     return skill
         .replace(/ /g, '_')
         .replace(/#/g, '%23')
