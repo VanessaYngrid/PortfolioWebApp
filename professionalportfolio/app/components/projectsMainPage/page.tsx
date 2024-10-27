@@ -18,7 +18,7 @@ type Project = {
     image: string;
 };
 
-export default function ProjectsMainPage() {
+export default function Projects() {
     const [projects, setProjects] = useState<Project[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [myComponent, setMyComponent] = useState<JSX.Element | null>(null);
@@ -52,7 +52,7 @@ export default function ProjectsMainPage() {
                     <div className="w-full md:w-1/2 flex flex-col justify-center text-start p-4 md:p-6 h-[200px] md:h-full">
                         <div>
                             <h2 className="text-[#FFB3C1] text-xl font-semibold pb-4 md:pl-6">{title}</h2>
-                            <p className="text-gray-200 md:pl-6"> {category}</p>
+                            <p className="text-gray-200 md:pl-6">{category}</p>
                             <p className="text-gray-200 pb-10 md:pl-6"><strong>Duration:</strong> {duration}</p>
                         </div>
                         <div className="flex flex-wrap md:pl-6">
@@ -82,7 +82,7 @@ export default function ProjectsMainPage() {
 
     return (
         <div className="relative bg-[#46183f] text-center pt-10 pb-14 px-36">
-            <h1 className="text-[#EAEAEA] text-3xl font-bold mb-10 font-sans">MY PROJECTS</h1>
+            <h1 className="text-[#EAEAEA] text-3xl font-bold text-center mb-10">MY PROJECTS</h1>
             <div className="max-w-[1200px] mx-auto flex items-center flex-col md:flex-row">
                 <button
                     type="button"

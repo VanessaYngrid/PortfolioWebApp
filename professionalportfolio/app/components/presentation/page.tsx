@@ -18,13 +18,13 @@ export default function Presentation() {
                 </div>
                 
                 <div className="md:w-2/3 p-4 md:p-6 flex flex-col justify-center">
-                    <p className="text-[#4A1942] mb-4 text-lg leading-relaxed">
+                    <p className="text-[#4A1942] mb-4 text-[17px] leading-relaxed">
                         I am a software development student with strong proficiency in web technologies and mobile application development. My experience includes server-side development, database design, and a solid foundation in object-oriented programming.
                     </p>
-                    <p className="text-[#4A1942] mb-4 text-lg leading-relaxed">
+                    <p className="text-[#4A1942] mb-4 text-[17px] leading-relaxed">
                         I have 4 years of experience in a financial institution as a financial analyst and process engineer, specializing in process improvement through agile methodologies, particularly the Scrum framework.
                     </p>
-                    <p className="text-[#4A1942] text-lg leading-relaxed">
+                    <p className="text-[#4A1942] text-[17px] leading-relaxed">
                         My previous bachelor&apos;s degree in industrial engineering and work experience were essential in developing my problem-solving and interpersonal skills through my analytical thinking, communication, and collaboration skills.
                     </p>
                 </div>

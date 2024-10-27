@@ -1,6 +1,7 @@
 'use client';
 
 import AgileSkillsComponent from "../agileSkills/page";
+import Contact from "../contact/page";
 import Footer from "../footer/page";
 import LanguagesSkills from "../languageSkills/page";
 import Navbar from "../navbar/page";
@@ -15,6 +16,7 @@ export default function Skills(){
             <AgileSkillsComponent/>
             <LanguagesSkills/>
             <SoftSkillsComponent/>
+            <Contact/>
             <Footer/>
         </div>
     )

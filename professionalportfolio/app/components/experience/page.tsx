@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { useEffect, useState } from "react";
 
@@ -52,16 +52,16 @@ export default function WorkExperience() {
                                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
                                 </span>
-                                <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900">
+                                <h3 className="flex items-center mb-1 text-lg font-semibold text-[#4A1942]">
                                     {exp.dateRange}
                                 </h3>
                                 <p className="block mb-4 text-lg font-semibold leading-none text-[#893168]">
                                     {exp.position}
                                 </p>
-                                <p className="mb-1 text-base font-normal text-gray-700">
+                                <p className="mb-1 text-base font-normal text-[#4A1942]">
                                     {exp.company}
                                 </p>
-                                <p className="mb-6 text-base font-normal text-gray-700">
+                                <p className="mb-6 text-base font-normal text-[#4A1942]">
                                     {exp.department}
                                 </p>
                                 <ul className="list-disc list-inside">
@@ -90,19 +90,19 @@ export default function WorkExperience() {
                                         <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
                                 </span>
-                                <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900">
+                                <h3 className="flex items-center mb-1 text-lg font-semibold text-[#4A1942]">
                                     {exp.dateRange}
                                 </h3>
                                 <p className="block mb-4 text-lg font-semibold leading-none text-[#893168]">
                                     {exp.position}
                                 </p>
-                                <p className="mb-1 text-base font-normal text-gray-700">
+                                <p className="mb-1 text-base font-normal text-[#4A1942]">
                                     {exp.company}
                                 </p>
-                                <p className="mb-6 text-base font-normal text-gray-700">
+                                <p className="mb-6 text-base font-normal text-[#4A1942]">
                                     {exp.department}
                                 </p>
-                                <ul className="list-disc list-inside">
+                                <ul className="list-disc list-inside leading-relaxed">
                                     {Object.values(exp.responsibilities).map((resp, idx) => (
                                         resp && <li key={idx} className="mb-1 text-base font-normal text-gray-500">{resp}</li>
                                     ))}
@@ -125,4 +125,3 @@ export default function WorkExperience() {
         </div>
     );
 }
-
