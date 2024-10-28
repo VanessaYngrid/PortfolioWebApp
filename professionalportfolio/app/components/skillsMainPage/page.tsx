@@ -25,7 +25,7 @@ export default function SkillsMainPage() {
                         style={{ backgroundImage: skill.bgImage }}
                     >
                         <div className="absolute inset-0 bg-black bg-opacity-60 rounded-lg"></div>
-                        <p className="relative text-2xl font-bold">{skill.name}</p>
+                        <p className="relative text-2xl font-normal">{skill.name}</p>
                     </div>
                 ))}
             </div>

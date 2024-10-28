@@ -1,6 +1,7 @@
 'use client';
 
 import AgileSkillsComponent from "../agileSkills/page";
+import Carousel from "../carousel/page";
 import Contact from "../contact/page";
 import Footer from "../footer/page";
 import LanguagesSkills from "../languageSkills/page";
@@ -12,6 +13,7 @@ export default function Skills(){
     return(
         <div className="overflow-x-hidden">
             <Navbar/>
+            <Carousel/>
             <TechSkills/>
             <AgileSkillsComponent/>
             <LanguagesSkills/>

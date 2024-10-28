@@ -39,25 +39,36 @@ export default function Projects() {
             const { title, duration, category, technologies, image } = projects[currentIndex];
 
             const component = (
-                <div className="flex flex-col md:flex-row w-full bg-[#3d1538] rounded-lg overflow-hidden h-[400px] md:h-[350px] shadow-lg">
-                    <div className="relative w-full md:w-1/2 h-[200px] md:h-full">
-                        <Image
-                            src={image}
-                            alt={title}
-                            layout="fill"
-                            objectFit="cover"
-                            className="transition duration-700 ease-in-out"
-                        />
-                    </div>
-                    <div className="w-full md:w-1/2 flex flex-col justify-center text-start p-4 md:p-6 h-[200px] md:h-full">
-                        <div>
-                            <h2 className="text-[#FFB3C1] text-xl font-semibold pb-4 md:pl-6">{title}</h2>
-                            <p className="text-gray-200 md:pl-6">{category}</p>
-                            <p className="text-gray-200 pb-10 md:pl-6"><strong>Duration:</strong> {duration}</p>
+                <div className="flex flex-col md:flex-row w-full">
+                    <div className="relative w-full md:w-1/2">
+                        <div className="relative border-gray-800 bg-gray-800 border-[8px] mx-auto max-w-[600px]">
+                            <Image
+                                src="https://flowbite.s3.amazonaws.com/docs/device-mockups/desktop.png" // Replace with your desktop mockup image URL
+                                alt="Desktop mockup"
+                                layout="responsive"
+                                width={680}
+                                height={400}
+                                className="rounded-t-xl"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <Image
+                                    src={image}
+                                    alt={title}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    objectPosition="top"
+                                    className="rounded-b-xl"
+                                />
+                            </div>
                         </div>
-                        <div className="flex flex-wrap md:pl-6">
+                    </div>
+                    <div className="w-full md:w-1/2 flex flex-col justify-center text-start p-4 md:py-6 md:px-20">
+                        <h2 className="text-[#893168] text-xl font-semibold pb-4">{title}</h2>
+                        <p className="text-[#4A1942]">{category}</p>
+                        <p className="text-[#4A1942] pb-10"><strong>Duration:</strong> {duration}</p>
+                        <div className="flex flex-wrap">
                             {technologies.map((tech) => (
-                                <span key={tech} className="inline-block bg-[#FFB3C1] bg-opacity-70 rounded-md px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                                <span key={tech} className="inline-block bg-[#4A1942] bg-opacity-70 rounded-md px-3 py-1 text-sm font-normal text-white mr-2 mb-2">
                                     #{tech}
                                 </span>
                             ))}
@@ -81,8 +92,8 @@ export default function Projects() {
     if (projects.length === 0) return <div className="text-center">Loading...</div>;
 
     return (
-        <div className="relative bg-[#46183f] text-center pt-10 pb-14 px-36">
-            <h1 className="text-[#EAEAEA] text-3xl font-bold text-center mb-10">MY PROJECTS</h1>
+        <div className="bg-[#F9F9F9] relative text-center pt-10 pb-14 px-36"> {/*bg-[#F9F9F9] , E1BEE7 , F0E6F6, D7C9D7, E6E6E6*/}
+            <h1 className="text-[#4A1942] text-3xl font-bold text-center mb-10">MY PROJECTS</h1>
             <div className="max-w-[1200px] mx-auto flex items-center flex-col md:flex-row">
                 <button
                     type="button"
