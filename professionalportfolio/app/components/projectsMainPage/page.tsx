@@ -3,11 +3,12 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-type Project = {
+type Projects = {
     project_id: string;
     title: string;
     duration: string;
     category: string;
+    type: string;
     description: {
         description1: string;
         description2: string;
@@ -15,11 +16,13 @@ type Project = {
         description4?: string;
     };
     technologies: string[];
-    image: string;
+    image: string[]; // Array of images for each project
+    demo: string;
+    github?: string;
 };
 
 export default function Projects() {
-    const [projects, setProjects] = useState<Project[]>([]);
+    const [projects, setProjects] = useState<Projects[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [myComponent, setMyComponent] = useState<JSX.Element | null>(null);
 
@@ -52,7 +55,7 @@ export default function Projects() {
                             />
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <Image
-                                    src={image}
+                                    src={image[0]}
                                     alt={title}
                                     layout="fill"
                                     objectFit="cover"
@@ -64,8 +67,8 @@ export default function Projects() {
                     </div>
                     <div className="w-full md:w-1/2 flex flex-col justify-center text-start p-4 md:py-6 md:px-20">
                         <h2 className="text-[#893168] text-xl font-semibold pb-4">{title}</h2>
-                        <p className="text-[#4A1942]">{category}</p>
-                        <p className="text-[#4A1942] pb-10"><strong>Duration:</strong> {duration}</p>
+                        <p className="text-gray-600">{category}</p>
+                        <p className="text-gray-600 pb-10"><strong>Duration:</strong> {duration}</p>
                         <div className="flex flex-wrap">
                             {technologies.map((tech) => (
                                 <span key={tech} className="inline-block bg-[#4A1942] bg-opacity-70 rounded-md px-3 py-1 text-sm font-normal text-white mr-2 mb-2">
@@ -92,7 +95,7 @@ export default function Projects() {
     if (projects.length === 0) return <div className="text-center">Loading...</div>;
 
     return (
-        <div className="bg-[#F9F9F9] relative text-center pt-10 pb-14 px-36"> {/*bg-[#F9F9F9] , E1BEE7 , F0E6F6, D7C9D7, E6E6E6*/}
+        <div className="bg-[#F0F0F0] relative text-center pt-10 pb-14 px-36"> {/*bg-[#F9F9F9] , E1BEE7 , F0E6F6, D7C9D7, E6E6E6*/}
             <h1 className="text-[#4A1942] text-4xl font-bold text-center mb-10">MY PROJECTS</h1>
             <div className="max-w-[1200px] mx-auto flex items-center flex-col md:flex-row">
                 <button

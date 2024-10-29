@@ -60,7 +60,7 @@ export default function TechSkills() {
 
             const component = (
                 <div className="max-w-full mx-auto px-4 py-8 text-center">
-                    <h1 className="text-4xl font-bold mb-8 text-[#4A1942]">Technology Skills</h1>
+                    <h1 className="text-4xl font-bold mb-8 text-[#4A1942]">TECHNOLOGY SKILLS</h1>
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="w-full md:w-1/2 pr-0 md:pr-4">
                             <h2 className="text-xl font-bold mb-4 text-[#893168]">Front End</h2>
@@ -73,10 +73,10 @@ export default function TechSkills() {
                             {renderSkills(techSkills.programming.database)}
                         </div>
                     </div>
-                    <h2 className="text-2xl font-bold my-8 text-[#893168]">Tools</h2>
+                    <h2 className="text-3xl font-bold my-8 text-[#893168]">Tools</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                         {techSkills.tools.map(tool => (
-                            <div className="bg-[#3d1538] rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105" key={tool}>
+                            <div className="bg-[#F0F0F0] rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105" key={tool}>
                                 <div className='text-center pt-6 pb-2 w-full h-16 flex items-center justify-center'>
                                     <Image
                                         src={`/images/tools/${transformSkillName(tool)}.png`}
@@ -87,7 +87,7 @@ export default function TechSkills() {
                                     />
                                 </div>
                                 <div className='px-4 w-full h-10 flex items-center justify-center'>
-                                    <h2 className='text-white text-md font-normal'>{tool}</h2>
+                                    <h2 className='text-[#4A1942] text-md font-normal'>{tool}</h2>
                                 </div>
                             </div>
                         ))}

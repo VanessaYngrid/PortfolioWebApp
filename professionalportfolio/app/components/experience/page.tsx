@@ -117,7 +117,7 @@ export default function WorkExperience() {
 
     // Rendering the component
     return (
-        <div className="overflow-x-hidden bg-[#F9F9F9] text-start pt-10">
+        <div className="overflow-x-hidden bg-[#F9F9F9] text-start pt-10 pb-8">
             <h1 className="text-[#4A1942] text-4xl font-bold text-center mb-6">WORK EXPERIENCE</h1>
             <div className="container mx-auto">
                 {dataIsLoaded && renderTimeline()}

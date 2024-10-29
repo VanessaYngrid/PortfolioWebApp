@@ -25,7 +25,7 @@ export default function Contact() {
     }, []);
 
     return (
-        <div className="bg-[#2B2B2B] py-10">
+        <div className="bg-gradient-to-b from-[#2B2B2B] to-[#1C1C1C] py-10">
             <div>
                 <div className="text-center">
                     <h1 className="text-white text-4xl font-bold">CONTACT ME</h1>
@@ -42,7 +42,7 @@ export default function Contact() {
                     </p>
                 </div>
                 <div className="font-sans max-w-7xl mx-auto pt-10 pb-4">
-                    <div className="bg-[#2B2B2B] shadow-lg rounded-lg py-8 px-12"> {/* #2a2929 */}
+                    <div className="bg-gradient-to-b from-[#2B2B2B] to-[#1C1C1C] shadow-lg rounded-lg py-8 px-12"> {/* #2a2929 */}
                         <div className="grid lg:grid-cols-2 items-start gap-12">
                             <form className="space-y-3 text-gray-200">
                                 <input

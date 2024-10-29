@@ -9,7 +9,7 @@ export default function BannerIntro() {
             {/* Sección de texto */}
             <div className="flex flex-col items-start md:items-start md:mr-10 mb-6 md:mb-0 z-10">
                 <p className="text-white text-xl md:text-2xl font-semibold">Hello, I am</p>
-                <p className="text-white text-3xl md:text-4xl font-bold">Vanessa Yngrid Chuquitaipe Vargas</p>
+                <p className="text-white text-4xl md:text-4xl font-bold">Vanessa Yngrid Chuquitaipe Vargas</p>
                 <p className="text-white text-lg md:text-2xl font-semibold pt-4">
                     <span className="text-[#FFB3C1]">Software Developer</span> & Industrial Engineer
                 </p>

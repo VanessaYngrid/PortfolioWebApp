@@ -41,10 +41,10 @@ export default function LanguagesSkills() {
         if (languageSkills.length > 0) {
             const component = (
                 <div className="max-w-full mx-auto px-4 py-8 text-center">
-                    <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">Language Skills</h1>
+                    <h1 className="text-4xl font-bold mb-8 text-[#4A1942]">LANGUAGE SKILLS</h1>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
                         {languageSkills.map(skill => (
-                            <div className="bg-[#3d1538] rounded overflow-hidden shadow-lg pb-4" key={skill.language_id}>
+                            <div className="bg-[#F0F0F0] rounded overflow-hidden shadow-lg pb-4" key={skill.language_id}>
                                 <div className='text-center pt-4 pb-2 w-full h-16 flex items-center justify-center'>
                                     <Image
                                         src={`/images/languages/${transformSkillName(skill.language)}.png`}
@@ -55,10 +55,10 @@ export default function LanguagesSkills() {
                                     />
                                 </div>
                                 <div className='px-4 w-full flex items-center justify-center'>
-                                    <h2 className='text-white text-md font-normal'>{skill.language}</h2>
+                                    <h2 className='text-[#4A1942] text-md font-normal'>{skill.language}</h2>
                                 </div>
                                 <div className='px-4 w-full flex items-center justify-center'>
-                                    <p className='text-gray-200 text-sm'>{skill.level}</p>
+                                    <p className='text-[#6B4C7C] text-sm'>{skill.level}</p>
                                 </div>
                             </div>
                         ))}

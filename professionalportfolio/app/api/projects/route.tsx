@@ -51,7 +51,7 @@ export async function GET(){
                 description4: "Employed fragments for dynamic UI components to enhance user experience."
             },
             technologies: ["Java for Android", "Android Studio", "MVC", "Android SDK", "XML", "UML Diagrams"],
-            image: ["/images/beautyStore/natural_beauty_store_mobile_application.png",
+            image: ["/images/natural_beauty_store_mobile_application.png",
                 "/images/beautyStore/login_beautyStore.png",
                 "/images/beautyStore/allProducts_beautyStore.png",
                 "/images/beautyStore/myAccount_beautyStore.png",
@@ -72,7 +72,7 @@ export async function GET(){
                 description3: "Designed the prototype in Figma, integrated Google Maps, and implemented Stripe for secure payments, supporting user login, registration, profile updates, and appointment bookings."
             },
             technologies: ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "MongoDB", "Figma", "Google Maps API", "UML Diagrams", "Visual Studio Code"],
-            image: ["/images/massagePage/massage_therapy_booking_web_application.png", 
+            image: ["/images/massage_therapy_booking_web_application.png", 
                 "/images/massagePage/home_massagePage.png",
                 "/images/massagePage/services_massagePage.png",
             "/images/massagePage/booking_massagePage.png"],
@@ -89,7 +89,7 @@ export async function GET(){
                 description2: "Orchestrated the design framework to ensure a user-friendly, responsive interface, including a real-time search bar with product data and refined filters, and contributed to developing the login system."
             },
             technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "JQuery","Visual Studio Code"],
-            image: ["/images/comoSeLlama/como_se_llama_ecommerce_clothing_store.png",
+            image: ["/images/como_se_llama_ecommerce_clothing_store.png",
                 "/images/comoSeLlama/home_ComoSeLlama.png",
                 "/images/comoSeLlama/womenClothes_ComoSeLlama.png",
                 "/images/comoSeLlama/search_ComoSeLlama.png"],
@@ -107,7 +107,7 @@ export async function GET(){
                 description2: "Ensured all project functionalities were implemented with respect to MVC (Model-View-Controller) design pattern."
             },
             technologies: ["C#", "MVC", "RESTful APIs", "Visual Studio"],
-            image: ["/images/eFiguro/e_figuro_employee_management_system.png",
+            image: ["/images/e_figuro_employee_management_system.png",
             "/images/eFiguro/login_efiguro.png",
             "/images/eFiguro/features_efiguro.png",
             "/images/eFiguro/registration_efiguro.png",
