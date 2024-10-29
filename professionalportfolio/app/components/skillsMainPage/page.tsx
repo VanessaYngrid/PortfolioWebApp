@@ -16,7 +16,7 @@ export default function SkillsMainPage() {
 
     return (
         <div className="overflow-x-hidden bg-[#4A1942] text-center py-14 px-8 md:px-40">
-            <h1 className="text-[#EAEAEA] text-3xl font-bold mb-10 font-sans">MY SKILLS</h1> 
+            <h1 className="text-[#EAEAEA] text-4xl font-bold mb-10 font-sans">MY SKILLS</h1> 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {skills.map((skill, index) => (
                     <div

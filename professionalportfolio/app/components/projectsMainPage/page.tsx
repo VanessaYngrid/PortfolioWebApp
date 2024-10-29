@@ -43,7 +43,7 @@ export default function Projects() {
                     <div className="relative w-full md:w-1/2">
                         <div className="relative border-gray-800 bg-gray-800 border-[8px] mx-auto max-w-[600px]">
                             <Image
-                                src="https://flowbite.s3.amazonaws.com/docs/device-mockups/desktop.png" // Replace with your desktop mockup image URL
+                                src="https://flowbite.s3.amazonaws.com/docs/device-mockups/desktop.png" 
                                 alt="Desktop mockup"
                                 layout="responsive"
                                 width={680}
@@ -93,7 +93,7 @@ export default function Projects() {
 
     return (
         <div className="bg-[#F9F9F9] relative text-center pt-10 pb-14 px-36"> {/*bg-[#F9F9F9] , E1BEE7 , F0E6F6, D7C9D7, E6E6E6*/}
-            <h1 className="text-[#4A1942] text-3xl font-bold text-center mb-10">MY PROJECTS</h1>
+            <h1 className="text-[#4A1942] text-4xl font-bold text-center mb-10">MY PROJECTS</h1>
             <div className="max-w-[1200px] mx-auto flex items-center flex-col md:flex-row">
                 <button
                     type="button"

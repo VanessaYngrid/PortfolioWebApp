@@ -60,7 +60,7 @@ export default function TechSkills() {
 
             const component = (
                 <div className="max-w-full mx-auto px-4 py-8 text-center">
-                    <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">Technology Skills</h1>
+                    <h1 className="text-4xl font-bold mb-8 text-[#4A1942]">Technology Skills</h1>
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="w-full md:w-1/2 pr-0 md:pr-4">
                             <h2 className="text-xl font-bold mb-4 text-[#893168]">Front End</h2>
@@ -73,7 +73,7 @@ export default function TechSkills() {
                             {renderSkills(techSkills.programming.database)}
                         </div>
                     </div>
-                    <h2 className="text-xl font-bold my-8 text-[#893168]">Tools</h2>
+                    <h2 className="text-2xl font-bold my-8 text-[#893168]">Tools</h2>
                     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                         {techSkills.tools.map(tool => (
                             <div className="bg-[#3d1538] rounded-lg overflow-hidden shadow-lg transition-transform transform hover:scale-105" key={tool}>

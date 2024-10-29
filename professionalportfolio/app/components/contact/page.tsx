@@ -28,7 +28,7 @@ export default function Contact() {
         <div className="bg-[#2B2B2B] py-10">
             <div>
                 <div className="text-center">
-                    <h1 className="text-white text-3xl font-bold">CONTACT ME</h1>
+                    <h1 className="text-white text-4xl font-bold">CONTACT ME</h1>
                     <p className="text-white text-md mt-4">Feel free to contact me by submitting the form below or sending me an email</p>
                     <p className="font-medium mt-2 text-white flex items-center justify-center">
                         <Image

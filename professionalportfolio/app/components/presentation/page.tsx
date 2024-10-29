@@ -2,7 +2,7 @@ export default function Presentation() {
     return (
         <div className="bg-[#F9F9F9] overflow-x-hidden pt-8 md:pt-12 lg:px-12">
             <div className="text-center">
-                <h1 className="text-[#4A1942] text-3xl font-bold">ABOUT ME</h1>
+                <h1 className="text-[#4A1942] text-4xl font-bold">ABOUT ME</h1>
                 <p className="text-[#4A1942] text-md pt-2">Get to know me more</p>
             </div>
             <div className="flex flex-col md:flex-row px-6 lg:mx-16 pt-4 pb-10">
