@@ -24,7 +24,7 @@ export default function Education() {
 
     function renderTimeline() {
         return (
-            <div className="relative pt-4 pb-10 px-6 md:px-12 lg:px-40">
+            <div className="relative pt-2 md:pt-4 pb-8 px-8 md:px-12 lg:px-36">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {eduInfo.map((edu) => (
                         <div key={edu.education_id} className="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl border-l-4 border-[#FFB3C1]">
@@ -35,11 +35,11 @@ export default function Education() {
                                 <Image 
                                     src="/icons/program.png" 
                                     alt="program icon" 
-                                    width={24} 
+                                    width={24}
                                     height={24} 
                                     className="mr-2" 
                                 />
-                                <h3 className="text-lg font-semibold text-[#893168]">{edu.program}</h3>
+                                <h3 className="text-md md:text-lg font-semibold text-[#893168] text-left">{edu.program}</h3>
                             </div>
                             <div className="flex items-center mb-2">
                                 <Image 
@@ -49,7 +49,7 @@ export default function Education() {
                                     height={24} 
                                     className="mr-2" 
                                 />
-                                <h4 className="text-md text-[#6B6B8A]">{edu.university}</h4>
+                                <h4 className="text-md text-gray-600">{edu.university}</h4>
                             </div>
                             <div className="flex items-center mb-4">
                                 <Image 
@@ -59,7 +59,7 @@ export default function Education() {
                                     height={24} 
                                     className="mr-2" 
                                 />
-                                <h5 className="text-md text-[#6B6B8A]">{edu.place}</h5>
+                                <h5 className="text-md text-gray-600">{edu.place}</h5>
                             </div>
                         </div>
                     ))}
@@ -69,8 +69,8 @@ export default function Education() {
     }
 
     return (
-        <div className="overflow-x-hidden bg-[#F9F9F9] text-center pt-4 pb-10">
-            <h1 className="text-[#4A1942] text-4xl font-bold mb-4">EDUCATION</h1> 
+        <div className="overflow-x-hidden bg-[#F9F9F9] text-center pt-2 pb-6 md:pb-10">
+            <h1 className="text-[#4A1942] text-4xl font-bold mb-2 md:mb-4">EDUCATION</h1> 
             <div className="mx-auto py-6">
                 {renderTimeline()}
             </div>

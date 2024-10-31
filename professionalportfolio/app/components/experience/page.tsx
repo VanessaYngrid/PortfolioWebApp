@@ -18,25 +18,21 @@ type JobExperience = {
 
 export default function WorkExperience() {
     const [experienceInfo, setExperienceInfo] = useState<JobExperience[]>([]);
-    const [dataIsLoaded, setDataIsLoaded] = useState(false);
 
     // Fetching the experience data from the API when the component mounts
     useEffect(() => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/experience`, { cache: "no-cache" })
             .then((res) => res.json())
-            .then((data) => {
-                setDataIsLoaded(true);
-                setExperienceInfo(data);
-            });
+            .then((data) => setExperienceInfo(data));
     }, []);
 
     function renderTimeline() {
-        const recentExperiences = experienceInfo.slice(0, 3); // Three most recent experiences
-        const olderExperiences = experienceInfo.slice(3); // Older experiences
+        const recentExperiences = experienceInfo.slice(0, 3); // Tres experiencias más recientes
+        const olderExperiences = experienceInfo.slice(3); // Experiencias más antiguas
 
         return (
-            <div className="flex justify-between px-28 pt-10">
-                <div className="w-full sm:w-1/2 px-10">
+            <div className="flex flex-col md:flex-row justify-between px-6 md:px-28 pt-10">
+                <div className="w-full md:w-1/2 px-4 md:px-10">
                     <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Recent Experience</h2>
                     {recentExperiences.map((exp, index) => (
                         <ol key={index} className="relative border-s border-gray-200 mb-10">
@@ -74,7 +70,7 @@ export default function WorkExperience() {
                     ))}
                 </div>
 
-                <div className="w-full sm:w-1/2 px-12">
+                <div className="w-full md:w-1/2 px-4 md:px-12">
                     <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Previous Experience</h2>
                     {olderExperiences.map((exp, index) => (
                         <ol key={index} className="relative border-s border-gray-200 mb-10">
@@ -104,7 +100,7 @@ export default function WorkExperience() {
                                 </p>
                                 <ul className="list-disc list-inside leading-relaxed">
                                     {Object.values(exp.responsibilities).map((resp, idx) => (
-                                        resp && <li key={idx} className="mb-1 text-base font-normal text-gray-500">{resp}</li>
+                                        resp && <li key={idx} className="mb-1 text-base font-normal text-gray-600">{resp}</li>
                                     ))}
                                 </ul>
                             </li>
@@ -119,8 +115,8 @@ export default function WorkExperience() {
     return (
         <div className="overflow-x-hidden bg-[#F9F9F9] text-start pt-10 pb-8">
             <h1 className="text-[#4A1942] text-4xl font-bold text-center mb-6">WORK EXPERIENCE</h1>
-            <div className="container mx-auto">
-                {dataIsLoaded && renderTimeline()}
+            <div className="mx-auto">
+                {experienceInfo.length > 0 && renderTimeline()}
             </div>
         </div>
     );
