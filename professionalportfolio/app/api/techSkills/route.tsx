@@ -38,7 +38,7 @@ export async function GET() {
             ],
         },
         tools: [
-            "Git" , "Visual Studio Code", "Jira", "Figma" , "Miro","Bizagi", "Draw.io", "Android Studio",
+            "Git" , "Visual Studio Code", "Jira", "Figma" , "Miro","Bizagi", "Draw io", "Android Studio",
             "Eclipse", "Excel", "PowerPoint", "Word"
         ],
     };

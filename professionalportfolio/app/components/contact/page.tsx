@@ -130,7 +130,7 @@ export default function Contact() {
                     </p>
                 </div>
                 <div className="font-sans max-w-7xl mx-auto pt-10 pb-4">
-                    <div className=" shadow-lg rounded-lg py-8 px-12"> {/* #2a2929 */}
+                    <div className=" shadow-lg rounded-lg py-8 px-14 lg:px-12"> {/* #2a2929 */}
                         <div className="grid lg:grid-cols-2 items-start gap-12">
                             <form className="space-y-4 text-black" onSubmit={handleSubmit}>
                                 <input

@@ -59,7 +59,7 @@ export default function AgileSkillsComponent() {
                         ))}
                     </div>
                     <h2 className="text-3xl font-bold pt-14 pb-10 text-[#893168]">Certifications</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:h-72 lg:h-44">
+                    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 sm:h-72 lg:h-60">
                         {agileSkills.certification.map((cert, index) => (
                             <div className="bg-[#F0F0F0] rounded-lg overflow-hidden shadow-lg flex transition-transform transform hover:scale-105" key={cert + index}>
                                 <div className='flex-shrink-0 w-1/2 h-full relative'>
@@ -93,7 +93,7 @@ export default function AgileSkillsComponent() {
     }, [agileSkills]);
 
     return (
-        <div className="bg-[#F9F9F9] px-8 md:px-16 overflow-x-hidden">
+        <div className="bg-[#F9F9F9] px-8 md:px-10 lg:px-16 overflow-x-hidden">
             {myComponent}
         </div>
     );

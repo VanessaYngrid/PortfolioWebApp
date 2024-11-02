@@ -50,13 +50,13 @@ export default function Projects() {
                     SHOWCASE OF MY WORK
                 </h1>
             </div>
-            <div className="bg-[#F9F9F9] px-14 md:px-16 pt-10 pb-20">
+            <div className="bg-[#F9F9F9] px-14 md:px-10 lg:px-16 pt-10 pb-20">
                 <div className="flex flex-col space-y-8">
                     {projects.map((project, index) => (
                         <ProjectCard 
                             key={project.project_id} 
                             project={project} 
-                            gridColumns={index === 1 ? 'md:grid-cols-4' : 'md:grid-cols-3'} 
+                            gridColumns={index === 1 ? 'grid-cols-4' : 'grid-cols-3'} 
                         />
                     ))}
                 </div>
@@ -69,8 +69,8 @@ export default function Projects() {
     // ProjectCard Component
     function ProjectCard({ project, gridColumns }: { project: Projects; gridColumns: string }) {
         return (
-            <div className="flex flex-col md:flex-row border rounded-lg shadow-lg overflow-hidden">
-                <div className="w-full md:w-1/2 p-4">
+            <div className="flex flex-col lg:flex-row border rounded-lg shadow-lg overflow-hidden">
+                <div className="w-full lg:w-1/2 p-4">
                     <div className={`grid grid-cols-2 ${gridColumns} gap-4`}>
                         {project.image.slice(1).map((imgSrc, index) => (
                             <div key={index} className="relative group flex justify-center items-center">
@@ -86,7 +86,7 @@ export default function Projects() {
                         ))}
                     </div>
                 </div>
-                <div className="w-full md:w-1/2 p-4 flex flex-col justify-center">
+                <div className="w-full lg:w-1/2 p-4 flex flex-col justify-center">
                     <h2 className="text-[#893168] text-xl font-semibold pb-2 flex justify-start items-center">{project.title}
                     <span className="flex space-x-2 ml-4">
                             {project.demo && (

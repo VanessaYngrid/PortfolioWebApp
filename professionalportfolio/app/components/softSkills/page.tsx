@@ -48,7 +48,7 @@ export default function SoftSkillsComponent() {
     }, [softSkills]);
 
     return (
-        <div className="bg-[#F9F9F9] px-8 md:px-16 pb-20 overflow-x-hidden">
+        <div className="bg-[#F9F9F9] px-8 md:px-10 lg:px-16 pb-20 overflow-x-hidden">
             {myComponent}
         </div>
     );

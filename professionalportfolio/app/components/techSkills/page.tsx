@@ -19,7 +19,7 @@ const transformSkillName = (skill: string) => {
 
 const ProgressBar = ({ knowledge }: { knowledge: number }) => {
     return (
-        <div className="flex items-center px-4">
+        <div className="flex items-center px-0">
             <div className="h-2 bg-white rounded w-full shadow-md">
                 <div className="h-full bg-[#6B4C7C] rounded" style={{ width: `${knowledge}%` }}></div>
             </div>
@@ -52,7 +52,7 @@ export default function TechSkills() {
             const renderSkills = (skills: { name: string, knowledge: number }[]) => {
                 return skills.map((skill, index) => (
                     <div className="mb-6" key={skill.name + index}>
-                        <h3 className="text-lg font-normal text-[#2B2B2B]">{skill.name}</h3>
+                        <h3 className="text-md lg:text-lg font-normal text-[#2B2B2B] text-left">{skill.name}</h3>
                         <ProgressBar knowledge={skill.knowledge} />
                     </div>
                 ));
@@ -100,7 +100,7 @@ export default function TechSkills() {
     }, [techSkills]);
 
     return (
-        <div className="bg-[#F9F9F9] px-8 md:px-16 overflow-x-hidden">
+        <div className="bg-[#F9F9F9] px-8 md:px-10 lg:px-16 overflow-x-hidden">
             {myComponent}
         </div>
     );

@@ -39,7 +39,7 @@ export default function Education() {
                                     height={24} 
                                     className="mr-2" 
                                 />
-                                <h3 className="text-md md:text-lg font-semibold text-[#893168] text-left">{edu.program}</h3>
+                                <h3 className="text-md lg:text-lg font-semibold text-[#893168] text-left">{edu.program}</h3>
                             </div>
                             <div className="flex items-center mb-2">
                                 <Image 
@@ -49,7 +49,7 @@ export default function Education() {
                                     height={24} 
                                     className="mr-2" 
                                 />
-                                <h4 className="text-md text-gray-600">{edu.university}</h4>
+                                <h4 className="text-md text-gray-600 text-left">{edu.university}</h4>
                             </div>
                             <div className="flex items-center mb-4">
                                 <Image 
@@ -59,7 +59,7 @@ export default function Education() {
                                     height={24} 
                                     className="mr-2" 
                                 />
-                                <h5 className="text-md text-gray-600">{edu.place}</h5>
+                                <h5 className="text-md text-gray-600 text-left">{edu.place}</h5>
                             </div>
                         </div>
                     ))}
