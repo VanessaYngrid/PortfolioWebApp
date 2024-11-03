@@ -52,7 +52,7 @@ export default function TechSkills() {
             const renderSkills = (skills: { name: string, knowledge: number }[]) => {
                 return skills.map((skill, index) => (
                     <div className="mb-6" key={skill.name + index}>
-                        <h3 className="text-md lg:text-lg font-normal text-[#2B2B2B] text-left">{skill.name}</h3>
+                        <h3 className="text-md font-normal text-[#2B2B2B] text-left">{skill.name}</h3>
                         <ProgressBar knowledge={skill.knowledge} />
                     </div>
                 ));
@@ -63,13 +63,13 @@ export default function TechSkills() {
                     <h1 className="text-4xl font-bold mb-8 text-[#4A1942]">TECHNOLOGY SKILLS</h1>
                     <div className="flex flex-col md:flex-row justify-between">
                         <div className="w-full md:w-1/2 pr-0 md:pr-4">
-                            <h2 className="text-xl font-bold mb-4 text-[#893168]">Front End</h2>
+                            <h2 className="text-2xl font-bold mb-4 text-[#893168]">Front End</h2>
                             {renderSkills(techSkills.programming.frontend)}
                         </div>
                         <div className="w-full md:w-1/2 pl-0 md:pl-4">
-                            <h2 className="text-xl font-bold mb-4 text-[#893168]">Back End</h2>
+                            <h2 className="text-2xl font-bold mb-4 text-[#893168]">Back End</h2>
                             {renderSkills(techSkills.programming.backend)}
-                            <h2 className="text-xl font-bold mt-4 md:mt-14 mb-4 text-[#893168]">Database</h2>
+                            <h2 className="text-2xl font-bold mt-4 md:mt-14 mb-4 text-[#893168]">Database</h2>
                             {renderSkills(techSkills.programming.database)}
                         </div>
                     </div>

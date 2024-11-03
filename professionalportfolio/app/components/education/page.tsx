@@ -69,7 +69,7 @@ export default function Education() {
     }
 
     return (
-        <div className="overflow-x-hidden bg-[#F9F9F9] text-center pt-2 pb-6 md:pb-10">
+        <div id="education" className="overflow-x-hidden bg-[#F9F9F9] text-center pt-2 pb-6 md:pb-10">
             <h1 className="text-[#4A1942] text-4xl font-bold mb-2 md:mb-4">EDUCATION</h1> 
             <div className="mx-auto py-6">
                 {renderTimeline()}

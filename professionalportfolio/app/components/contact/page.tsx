@@ -113,7 +113,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="bg-gradient-to-b from-[#3d3d3d] to-[#1d1d1d] py-10">
+        <div id="contact" className="bg-gradient-to-b from-[#3d3d3d] to-[#1d1d1d] py-10">
             <div>
                 <div className="text-center">
                     <h1 className="text-white text-4xl font-bold">CONTACT ME</h1>

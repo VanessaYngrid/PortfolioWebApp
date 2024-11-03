@@ -1,8 +1,11 @@
 'use client';
 
-import router from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function SkillsMainPage() {
+
+    const router = useRouter();
+
     const skills = [
         { name: 'Front-end', bgImage: 'url(/images/skills/frontend.jpg)' },
         { name: 'Back-end', bgImage: 'url(/images/skills/backend.jpg)' },
@@ -15,7 +18,7 @@ export default function SkillsMainPage() {
     ];
 
     return (
-        <div className="overflow-x-hidden bg-[#4A1942] text-center py-14 px-8 md:px-12 lg:px-40">
+        <div id="skillsmain" className="overflow-x-hidden bg-[#4A1942] text-center py-14 px-8 md:px-12 lg:px-40">
             <h1 className="text-[#EAEAEA] text-4xl font-bold mb-10 font-sans">MY SKILLS</h1> 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                 {skills.map((skill, index) => (

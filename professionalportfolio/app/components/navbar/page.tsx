@@ -9,10 +9,14 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
 
-    //items-center => para centrar horizontalmente
-    //justify-center => para centrar verticalmente
+    const handleMenuItemClick = (id: string) => {
+        // Navigate to the home page
+        router.push(`/#${id}`);
+        setIsOpen(false); // Close the menu after navigation
+    };
+    
     return (
-    <nav className="bg-[#4A1942] lg:py-4 md:px-12 lg:px-36 p-4"> {/* Navbar container with background color and padding */}
+    <nav className="bg-[#4A1942] lg:py-4 md:px-10 lg:px-36 py-4 px-8"> {/* Navbar container with background color and padding */}
         <div className="container mx-auto flex flex-wrap items-center justify-between">
             <div className="text-white text-lg">Vanessa Vargas</div>
                 {/* Menu toggle button (hamburger icon) visible on small screens */}
@@ -32,12 +36,27 @@ export default function Navbar() {
             <div className={`w-full lg:flex lg:items-center lg:w-auto ${isOpen ? '' : 'hidden'}`}>
                 <ul className="flex flex-col lg:flex-row lg:space-x-4 mt-4 lg:mt-0">
                     {/* Menu items stacked vertically on small screens, horizontally on medium+ screens */}
-                    <li onClick={() => router.push('/')} className="text-white block py-2 px-4 cursor-pointer">Home</li>
-                    <li onClick={() => router.push('/components/education')} className="text-white block py-2 px-4 cursor-pointer">Education</li>
-                    <li onClick={() => router.push('/components/experience')} className="text-white block py-2 px-4 cursor-pointer">Experience</li>
-                    <li onClick={() => router.push('/components/skills')} className="text-white block py-2 px-4 cursor-pointer">Skills</li>
-                    <li onClick={() => router.push('/components/projects')} className="text-white block py-2 px-4 cursor-pointer">Projects</li>
-                    <li onClick={() => router.push('/components/contact')} className="text-white block py-2 px-4 cursor-pointer">Contact</li>
+                    <li>
+                        <a onClick={() => handleMenuItemClick('home')} className="text-white block py-2 px-4 cursor-pointer">Home</a>
+                    </li>
+                    <li>
+                        <a onClick={() => handleMenuItemClick('about')} className="text-white block py-2 px-4 cursor-pointer">About</a>
+                    </li>
+                    <li>
+                        <a onClick={() => handleMenuItemClick('education')} className="text-white block py-2 px-4 cursor-pointer">Education</a>
+                    </li>
+                    <li>
+                        <a onClick={() => handleMenuItemClick('skillsmain')} className="text-white block py-2 px-4 cursor-pointer">Skills</a>
+                    </li>
+                    <li>
+                        <a onClick={() => handleMenuItemClick('projectsmain')} className="text-white block py-2 px-4 cursor-pointer">Projects</a>
+                    </li>
+                    <li>
+                        <a onClick={() => handleMenuItemClick('experience')} className="text-white block py-2 px-4 cursor-pointer">Experience</a>
+                    </li>
+                    <li>
+                        <a onClick={() => handleMenuItemClick('contact')} className="text-white block py-2 px-4 cursor-pointer">Contact</a>
+                    </li>
                 </ul>
             </div>
         </div>
