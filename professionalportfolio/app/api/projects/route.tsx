@@ -114,7 +114,7 @@ export async function GET(){
             "/images/eFiguro/leave_efiguro.png",
             "/images/eFiguro/clock_efiguro.png",
             "/images/eFiguro/payroll_efiguro.png"],
-            demo: "",
+            demo: " ",
             github: "https://github.com/VanessaYngrid/E-Figuro"
         }
     ];
