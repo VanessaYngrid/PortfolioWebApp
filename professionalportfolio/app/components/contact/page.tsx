@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { collection, addDoc } from "firebase/firestore"; 
+import { db } from "@/lib/firebaseConfig";
 
 type ContactInfo = {
     contact_id: string;
@@ -30,7 +32,6 @@ export default function Contact() {
 
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-
     useEffect(() => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contactinfo`, { cache: "no-cache" })
             .then((res) => res.json())
@@ -48,7 +49,7 @@ export default function Contact() {
                 if (!value) {
                     newErrors.name = "Name is required.";
                     valid = false;
-                } else if (!/^[a-zA-Z]+$/.test(value)) {
+                } else if (!/^[a-zA-Z\s]+$/.test(value)) {
                     newErrors.name = "Name must contain only letters.";
                     valid = false;
                 } else if (value.length < 2 || value.length > 50) {
@@ -96,19 +97,30 @@ export default function Contact() {
         validateForm(name, value); // Validate on change
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         if (validateForm("name", formData.name) && validateForm("email", formData.email) && validateForm("message", formData.message)) {
-            // Submit form data
-            setIsSubmitted(true);
-            // Reset form and errors
-            setFormData({ name: "", email: "", message: "" });
-            setErrors({ name: "", email: "", message: "" });
+            try {
+                // Submit form data to Firestore
+                await addDoc(collection(db, "contacts"), {
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                    timestamp: new Date(),
+                });
 
-            // Hide the popup after 3 seconds
-            setTimeout(() => {
-                setIsSubmitted(false);
-            }, 3000);
+                setIsSubmitted(true);
+                // Reset form and errors
+                setFormData({ name: "", email: "", message: "" });
+                setErrors({ name: "", email: "", message: "" });
+
+                // Hide the popup after 3 seconds
+                setTimeout(() => {
+                    setIsSubmitted(false);
+                }, 3000);
+            } catch (error) {
+                console.error("Error adding document: ", error);
+            }
         }
     };
 
@@ -130,7 +142,7 @@ export default function Contact() {
                     </p>
                 </div>
                 <div className="font-sans max-w-7xl mx-auto pt-10 pb-4">
-                    <div className=" shadow-lg rounded-lg py-8 px-14 lg:px-12"> {/* #2a2929 */}
+                    <div className="shadow-lg rounded-lg py-8 px-14 lg:px-12">
                         <div className="grid lg:grid-cols-2 items-start gap-12">
                             <form className="space-y-4 text-black" onSubmit={handleSubmit}>
                                 <input
