@@ -56,7 +56,7 @@ export async function GET(){
                 "/images/beautyStore/allProducts_beautyStore.png",
                 "/images/beautyStore/myAccount_beautyStore.png",
                 "/images/beautyStore/feedback_beautyStore.png"],
-            demo: "/images/demos/beautyStore_Demo.mp4",
+            demo: "",
             github: "https://github.com/VanessaYngrid/BeautyStoreMobileApp"
 
         },
@@ -93,7 +93,7 @@ export async function GET(){
                 "/images/comoSeLlama/home_ComoSeLlama.png",
                 "/images/comoSeLlama/womenClothes_ComoSeLlama.png",
                 "/images/comoSeLlama/search_ComoSeLlama.png"],
-            demo: "/images/demos/comoSeLlama_Demo.mp4",
+            demo: "",
             github: "https://github.com/VanessaYngrid/Como-Se-Llama"
         },
         {
@@ -114,7 +114,7 @@ export async function GET(){
             "/images/eFiguro/leave_efiguro.png",
             "/images/eFiguro/clock_efiguro.png",
             "/images/eFiguro/payroll_efiguro.png"],
-            demo: "/images/demos/eFiguro_Demo.mp4",
+            demo: "",
             github: "https://github.com/VanessaYngrid/E-Figuro"
         }
     ];
