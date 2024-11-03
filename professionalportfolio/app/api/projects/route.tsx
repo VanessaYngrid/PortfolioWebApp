@@ -35,7 +35,7 @@ export async function GET(){
             },
             technologies: ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "Visual Studio Code"],
             image: ["/images/personal_portfolio.png" , "/images/personal_portfolio.png" ],
-            demo: "/images/demo/url.pdf",
+            demo: "",
             github: "https://github.com/VanessaYngrid/PortfolioWebApp"
         },
         {
@@ -76,7 +76,7 @@ export async function GET(){
                 "/images/massagePage/home_massagePage.png",
                 "/images/massagePage/services_massagePage.png",
             "/images/massagePage/booking_massagePage.png"],
-            demo: "/pdfs/massageBooking.pdf"
+            demo: ""
         },
         {
             project_id: "p004",

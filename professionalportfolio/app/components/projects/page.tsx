@@ -88,28 +88,6 @@ export default function Projects() {
                 </div>
                 <div className="w-full lg:w-1/2 p-4 flex flex-col justify-center">
                     <h2 className="text-[#893168] text-xl font-semibold pb-2 flex justify-start items-center">{project.title}
-                    <span className="flex space-x-2 ml-4">
-                            {project.demo && (
-                                <a 
-                                    href={project.demo} 
-                                    className="text-black text-sm bg-gray-200 text-normal rounded-full px-2 py-1"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    Demo
-                                </a>
-                            )}
-                            {project.github && (
-                                <a 
-                                    href={project.github} 
-                                    className="text-black text-sm bg-gray-200 text-normal rounded-full px-2 py-1"
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                >
-                                    GitHub
-                                </a>
-                            )}
-                        </span>
                     </h2>
                     <p className="text-gray-600">{project.category} ({project.type})</p>
                     <p className="text-gray-600 mb-4">Duration: {project.duration}</p>
@@ -132,3 +110,29 @@ export default function Projects() {
         );
     }
 }
+
+/*
+<span className="flex space-x-2 ml-4">
+                            {project.demo && (
+                                <a 
+                                    href={project.demo} 
+                                    className="text-black text-sm bg-gray-200 text-normal rounded-full px-2 py-1"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Demo
+                                </a>
+                            )}
+                            {project.github && (
+                                <a 
+                                    href={project.github} 
+                                    className="text-black text-sm bg-gray-200 text-normal rounded-full px-2 py-1"
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                >
+                                    GitHub
+                                </a>
+                            )}
+                        </span>
+
+                        */
