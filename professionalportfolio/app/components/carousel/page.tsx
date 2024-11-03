@@ -21,6 +21,7 @@ const slides = [
 ];
 
 export default function Carousel() {
+    
     return (
         <div>
             <Swiper
