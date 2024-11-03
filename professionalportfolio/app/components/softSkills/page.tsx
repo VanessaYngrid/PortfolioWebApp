@@ -7,7 +7,7 @@ type SoftSkills = {
     softSkills: string[],
 };
 
-export default function SoftSkillsComponent() {
+export default function SoftSkillsComponent({ searchQuery }: { searchQuery: string }) {
     const [softSkills, setSoftSkills] = useState<string[]>([]);
     const [myComponent, setMyComponent] = useState(<></>);
 
@@ -28,24 +28,36 @@ export default function SoftSkillsComponent() {
 
     useEffect(() => {
         if (softSkills.length > 0) {
+            const filteredSkills = softSkills.filter(skill =>
+                skill.toLowerCase().includes(searchQuery)
+            );
+
+            // Only render the title and skills if there are filtered results
             const component = (
                 <div className="max-w-full mx-auto px-4 py-8 text-center">
-                    <h1 className="text-4xl font-bold mb-8 text-[#4A1942]">SOFT SKILLS</h1>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                        {softSkills.map((skill, index) => (
-                            <div className="bg-[#F0F0F0] rounded overflow-hidden shadow-lg" key={skill + index}>
-                                <div className='px-4 py-4 lg:py-6 w-full flex items-center justify-center'>
-                                    <h2 className='text-[#4A1942] text-md font-normal'>{skill}</h2>
-                                </div>
+                    {filteredSkills.length > 0 ? (
+                        <>
+                            <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">SOFT SKILLS</h1>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                                {filteredSkills.map((skill, index) => (
+                                    <div className="bg-[#F0F0F0] rounded overflow-hidden shadow-lg" key={skill + index}>
+                                        <div className='px-4 py-4 lg:py-6 w-full flex items-center justify-center'>
+                                            <h2 className='text-[#4A1942] text-md font-normal'>{skill}</h2>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                        </>
+                    ) : (
+                        // Optionally, you can render a message if no skills match the search query
+                        <h2 className="text-md text-[#4A1942]"></h2>
+                    )}
                 </div>
             );
 
             setMyComponent(component);
         }
-    }, [softSkills]);
+    }, [softSkills, searchQuery]);
 
     return (
         <div className="bg-[#F9F9F9] px-8 md:px-10 lg:px-16 pb-20 overflow-x-hidden">

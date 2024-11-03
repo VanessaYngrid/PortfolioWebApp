@@ -32,7 +32,7 @@ export default function Carousel() {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <div className="relative flex flex-col items-center justify-center h-72 bg-black">
+                        <div className="relative flex flex-col items-center justify-center h-60 bg-black">
                             <div className="absolute inset-0">
                                 <Image
                                     src={slide.image}

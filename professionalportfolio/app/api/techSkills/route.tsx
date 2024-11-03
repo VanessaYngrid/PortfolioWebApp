@@ -27,7 +27,7 @@ export async function GET() {
             ],
             backend: [
                 { name: "RESTful APIs", knowledge: 90 },
-                { name: "Java para Android Studio", knowledge: 65 },
+                { name: "Java for Android Studio", knowledge: 65 },
                 { name: "Java", knowledge: 80 },
                 { name: "Node.js", knowledge: 70 },
                 { name: "C#", knowledge: 50 },

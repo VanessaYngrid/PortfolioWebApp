@@ -18,7 +18,7 @@ const transformSkillName = (skill: string) => {
         .toLowerCase();
 };
 
-export default function LanguagesSkills() {
+export default function LanguagesSkills({ searchQuery }: { searchQuery: string }) {
     const [languageSkills, setLanguageSkills] = useState<LanguageSkills[]>([]);
     const [myComponent, setMyComponent] = useState(<></>);
 
@@ -39,36 +39,47 @@ export default function LanguagesSkills() {
 
     useEffect(() => {
         if (languageSkills.length > 0) {
+            const filteredSkills = languageSkills.filter(skill =>
+                skill.language.toLowerCase().includes(searchQuery)
+            );
+
             const component = (
                 <div className="max-w-full mx-auto px-4 py-8 text-center">
-                    <h1 className="text-4xl font-bold mb-8 text-[#4A1942]">LANGUAGE SKILLS</h1>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
-                        {languageSkills.map(skill => (
-                            <div className="bg-[#F0F0F0] rounded overflow-hidden shadow-lg pb-4" key={skill.language_id}>
-                                <div className='text-center pt-4 pb-2 w-full h-16 flex items-center justify-center'>
-                                    <Image
-                                        src={`/images/languages/${transformSkillName(skill.language)}.png`}
-                                        alt={`${skill.language} logo`}
-                                        width={50}
-                                        height={50}
-                                        layout='intrinsic'
-                                    />
-                                </div>
-                                <div className='px-4 w-full flex items-center justify-center'>
-                                    <h2 className='text-[#4A1942] text-md font-normal'>{skill.language}</h2>
-                                </div>
-                                <div className='px-4 w-full flex items-center justify-center'>
-                                    <p className='text-[#6B4C7C] text-sm'>{skill.level}</p>
-                                </div>
+                    {filteredSkills.length > 0 ? (
+                        <>
+                            <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">LANGUAGE SKILLS</h1>
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+                                {filteredSkills.map(skill => (
+                                    <div className="bg-[#F0F0F0] rounded overflow-hidden shadow-lg pb-4" key={skill.language_id}>
+                                        <div className='text-center pt-4 pb-2 w-full h-16 flex items-center justify-center'>
+                                            <Image
+                                                src={`/images/languages/${transformSkillName(skill.language)}.png`}
+                                                alt={`${skill.language} logo`}
+                                                width={50}
+                                                height={50}
+                                                layout='intrinsic'
+                                            />
+                                        </div>
+                                        <div className='px-4 w-full flex items-center justify-center'>
+                                            <h2 className='text-[#4A1942] text-md font-normal'>{skill.language}</h2>
+                                        </div>
+                                        <div className='px-4 w-full flex items-center justify-center'>
+                                            <p className='text-[#6B4C7C] text-sm'>{skill.level}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                        </>
+                    ) : (
+                        // Optionally display a message if no skills match the search query
+                        <h2 className="text-md text-[#4A1942]"></h2>
+                    )}
                 </div>
             );
 
             setMyComponent(component);
         }
-    }, [languageSkills]);
+    }, [languageSkills, searchQuery]);
 
     return (
         <div className="bg-[#F9F9F9] px-8 md:px-10 lg:px-16 overflow-x-hidden">
