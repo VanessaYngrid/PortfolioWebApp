@@ -7,6 +7,7 @@ import Navbar from "./components/navbar/page";
 import Presentation from "./components/presentation/page";
 import ProjectsMainPage from "./components/projectsMainPage/page";
 import SkillsMainPage from "./components/skillsMainPage/page";
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
   return (

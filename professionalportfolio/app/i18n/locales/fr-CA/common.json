@@ -1,0 +1,47 @@
+{
+    "navbar": {
+        "title": "Vanessa Vargas",
+        "menu": {
+            "home": "Accueil",
+            "about": "À propos",
+            "education": "Éducation",
+            "skills": "Compétences",
+            "projects": "Projets",
+            "experience": "Expérience",
+            "contact": "Contact",
+            "language": "Langue",
+            "english": "Anglais",
+            "french": "Français"
+        }
+    },
+
+    "presentation": {
+        "title": "À PROPOS DE MOI",
+        "subtitle": "Apprenez à me connaître",
+        "experience": {
+        "years": "+4 ans",
+        "description": "Expérience Professionnelle"
+        },
+        "projects": {
+        "count": "5 projets",
+        "description": "Développement de Logiciels"
+        },
+        "bio": [
+        "Je suis un étudiant en développement logiciel avec une forte compétence en technologies web et développement d'applications mobiles. Mon expérience inclut le développement côté serveur, la conception de bases de données et une solide formation en programmation orientée objet.",
+        "J'ai 4 ans d'expérience dans une institution financière en tant qu'analyste financier et ingénieur des processus, me spécialisant dans l'amélioration des processus grâce aux méthodologies agiles, en particulier le cadre Scrum.",
+        "Mon diplôme de premier cycle en ingénierie industrielle et mon expérience professionnelle ont été essentiels pour développer mes compétences en résolution de problèmes et en relations interpersonnelles grâce à ma pensée analytique, mes compétences en communication et en collaboration."
+        ]
+    },
+    "banner": {
+        "greeting": "Bonjour, je suis",
+        "name": "Vanessa Yngrid Chuquitaipe Vargas",
+        "profession": {
+        "title": "Développeur de Logiciels",
+        "subtitle": "Ingénieur Industriel"
+        },
+        "specialization": {
+        "prefix": "Spécialisé en"
+        },
+        "downloadCV": "Télécharger le CV"
+    }
+}
