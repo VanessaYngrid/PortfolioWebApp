@@ -13,7 +13,7 @@ export async function GET() {
     const contactInfoObject: ContactInfo = {
         contact_id: "c001",
         email: "vanessa.yngrid96@gmail.com",
-        address: "821 Sainte Croix Ave",
+        address: "Montreal, Canada",
     };
 
     // Return the JSON response

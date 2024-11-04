@@ -1,9 +1,10 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from "@/lib/firebaseConfig";
+import { GoogleMapsEmbed } from '@next/third-parties/google';
 
 type ContactInfo = {
     contact_id: string;
@@ -99,9 +100,12 @@ export default function Contact() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (validateForm("name", formData.name) && validateForm("email", formData.email) && validateForm("message", formData.message)) {
+        if (
+            validateForm("name", formData.name) &&
+            validateForm("email", formData.email) &&
+            validateForm("message", formData.message)
+        ) {
             try {
-                // Submit form data to Firestore
                 await addDoc(collection(db, "contacts"), {
                     name: formData.name,
                     email: formData.email,
@@ -110,11 +114,9 @@ export default function Contact() {
                 });
 
                 setIsSubmitted(true);
-                // Reset form and errors
                 setFormData({ name: "", email: "", message: "" });
                 setErrors({ name: "", email: "", message: "" });
 
-                // Hide the popup after 3 seconds
                 setTimeout(() => {
                     setIsSubmitted(false);
                 }, 3000);
@@ -124,80 +126,77 @@ export default function Contact() {
         }
     };
 
-    return (
-        <div id="contact" className="bg-gradient-to-b from-[#3d3d3d] to-[#1d1d1d] py-10">
-            <div>
-                <div className="text-center">
-                    <h1 className="text-white text-4xl font-bold">CONTACT ME</h1>
-                    <p className="text-white text-md mt-4">Feel free to contact me by submitting the form below or sending me an email</p>
-                    <p className="font-medium mt-2 text-white flex items-center justify-center">
-                        <Image
-                            src="/icons/email.png"
-                            alt="email"
-                            width={22}
-                            height={22}
-                            className="mr-2"
-                        />
-                        {contactInfo.email}
-                    </p>
-                </div>
-                <div className="font-sans max-w-7xl mx-auto pt-10 pb-4">
-                    <div className="shadow-lg rounded-lg py-8 px-14 lg:px-12">
-                        <div className="grid lg:grid-cols-2 items-start gap-12">
-                            <form className="space-y-4 text-black" onSubmit={handleSubmit}>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    placeholder="Name"
-                                    className="w-full bg-white rounded py-3 px-6 text-sm focus:outline-none focus:ring-1 focus:ring-[#8e9197] focus:border-transparent"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                />
-                                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
-                                <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Email"
-                                    className="w-full bg-white rounded py-3 px-6 text-sm focus:outline-none focus:ring-1 focus:ring-[#8e9197] focus:border-transparent" 
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                />
-                                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
-                                <textarea
-                                    name="message"
-                                    placeholder="Message"
-                                    rows={6}
-                                    className="w-full bg-white rounded px-6 text-sm pt-3 focus:outline-none focus:ring-1 focus:ring-[#8e9197] focus:border-transparent"
-                                    value={formData.message}
-                                    onChange={handleChange}
-                                />
-                                {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
-                                <button
-                                    type="submit"
-                                    className="text-white bg-[#6B4C7C] hover:bg-[#4C3A61] rounded-full text-sm px-6 py-3 mt-12"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16px"
-                                        height="16px"
-                                        fill="currentColor"
-                                        className="mr-2 inline"
-                                        viewBox="0 0 548.244 548.244"
-                                    >
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z"
-                                            clipRule="evenodd"
-                                        />
-                                    </svg>
-                                    Send Message
-                                </button>
-                            </form>
+    const isFormValid = !errors.name && !errors.email && !errors.message && formData.name && formData.email && formData.message;
 
-                            <div className="grid sm:grid-cols-2 gap-12">
-                                <p>Map will go here</p>       
-                            </div>
-                        </div>
+    const mapComponent = useMemo(() => (
+        <GoogleMapsEmbed
+            apiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY || ''}
+            height={500}
+            width="100%"
+            mode="place"
+            q={contactInfo.address || ''}
+        />
+    ), [contactInfo.address]);
+
+    return (
+        <div id="contact" className="bg-gradient-to-b from-[#3d3d3d] to-[#1d1d1d] py-10 px-8 lg:px-24">
+            <div className="font-sans mx-auto flex flex-col lg:flex-row gap-12">
+                <div className="w-full lg:w-1/2">
+                    <div className="shadow-lg rounded-lg py-4 px-2 lg:px-12">
+                        <h1 className="text-white text-4xl font-bold mb-6">CONTACT ME</h1>
+                        <p className="text-white text-md mb-4">Feel free to contact me by submitting the form below or sending me an email</p>
+                        <p className="font-medium mt-2 text-white flex items-center">
+                            <Image
+                                src="/icons/email.png"
+                                alt="email" 
+                                width={22}
+                                height={22}
+                                className="mr-2"
+                            />
+                            {contactInfo.email}
+                        </p>
+
+                        <form className="space-y-4 text-black mt-8" onSubmit={handleSubmit}>
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Name"
+                                className="w-full bg-white rounded py-3 px-6 text-sm focus:outline-none focus:ring-1 focus:ring-[#8e9197] focus:border-transparent"
+                                value={formData.name}
+                                onChange={handleChange}
+                            />
+                            {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                className="w-full bg-white rounded py-3 px-6 text-sm focus:outline-none focus:ring-1 focus:ring-[#8e9197] focus:border-transparent" 
+                                value={formData.email}
+                                onChange={handleChange}
+                            />
+                            {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                            <textarea
+                                name="message"
+                                placeholder="Message"
+                                rows={6}
+                                className="w-full bg-white rounded px-6 text-sm pt-3 focus:outline-none focus:ring-1 focus:ring-[#8e9197] focus:border-transparent"
+                                value={formData.message}
+                                onChange={handleChange}
+                            />
+                            {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+                            <button
+                                type="submit"
+                                disabled={!isFormValid}
+                                className={`text-white bg-[#6B4C7C] hover:bg-[#4C3A61] rounded-full text-sm px-6 py-3 mt-12 ${!isFormValid ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            >
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div className="w-full lg:w-1/2 flex justify-between px-2 lg:px-8">
+                    <div className="w-full" style={{ height: 'auto', minHeight: '500px' }}>
+                        {mapComponent}
                     </div>
                 </div>
             </div>
