@@ -42,7 +42,7 @@ export default function Projects() {
             const { title, duration, category, technologies, image } = projects[currentIndex];
 
             const component = (
-                <div className="flex sm:flex-col lg:flex-row w-full">
+                <div className="flex flex-col lg:flex-row w-full">
                     <div className="relative w-full lg:w-1/2">
                         <div className="relative border-gray-800 bg-gray-800 border-[8px] mx-auto max-w-[600px]">
                             <Image
@@ -95,7 +95,7 @@ export default function Projects() {
     if (projects.length === 0) return <div className="text-center">Loading...</div>;
 
     return (
-        <div id="projectsmain" className="bg-[#F0F0F0] relative text-center pt-10 pb-14 px-4 sm:px-10 md:px-36">
+        <div id="projectsmain" className="bg-[#F0F0F0] relative text-center pt-10 pb-10 px-4 sm:px-10 md:px-36">
             <h1 className="text-[#4A1942] text-3xl md:text-4xl font-bold text-center mb-10">MY PROJECTS</h1>
             <div className="max-w-[1200px] mx-auto flex items-center flex-col lg:flex-row relative">
                 <button
@@ -123,7 +123,7 @@ export default function Projects() {
                 </button>
 
                 {/* Botones de navegación para móviles */}
-                <div className="flex justify-between mt-4 lg:hidden space-x-10"> {/* Espacio entre los botones */}
+                <div className="flex justify-between mt-4 md:hidden space-x-10"> {/* Espacio entre los botones */}
                     <button
                         type="button"
                         className="h-10 w-10 bg-white bg-opacity-60 rounded-full shadow-lg hover:bg-opacity-80 transition duration-200 flex items-center justify-center"
