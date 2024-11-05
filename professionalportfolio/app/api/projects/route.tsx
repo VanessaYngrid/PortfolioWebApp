@@ -80,7 +80,7 @@ export async function GET(){
                 "/images/massagePage/home_massagePage.png",
                 "/images/massagePage/services_massagePage.png",
             "/images/massagePage/booking_massagePage.png"],
-            demo: ""
+            demo: "/pdfs/massageBooking"
         },
         {
             project_id: "p004",

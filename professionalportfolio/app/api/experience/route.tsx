@@ -26,9 +26,10 @@ export async function GET() {
             position: "Web Developer Intern",
             dateRange: "Sep 2024 - Present",
             responsibilities: {
-                responsibilities1: "Developing front-end user interfaces with TypeScript, Tailwind CSS, and Angular for responsive web applications",
-                responsibilities2: "Collaborating in an agile team environment, participating in sprint planning, daily standups,and code reviews.",
-                responsibilities3: "Utilizing Git and Bitbucket for version control, and Jira for task management."
+                responsibilities1: "Developed responsive front-end interfaces using TypeScript, Tailwind CSS, and Angular, optimizing UI components to improve performance and deliver a seamless user experience across web platforms.",
+                responsibilities2:"Integrated and fetched data from external APIs, implementing internationalization (i18n) features to support global audiences.",
+                responsibilities3: "Collaborated within an agile team, participating in daily meetings and code reviews.",
+                responsibilities4: "Utilized Git and Bitbucket for version control, and managed project tasks and progress using Jira."
             }
         },
         {
