@@ -43,35 +43,3 @@ export default function SkillsMainPage() {
         </div>
     );
 }
-
-
-
-
-/*'use client';
-
-import router from "next/router";
-
-export default function SkillsMainPage() {
-    return (
-        <div className="overflow-x-hidden bg-[#4A1942] text-center py-10 px-8 md:px-16">
-            <h1 className="text-[#EAEAEA] text-4xl font-bold mb-8">MY SKILLS</h1> 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-0">
-                {['Front-end', 'Back-end', 'Database', 'Technology Tools', 'Agile Methodologies', 'Certifications', 'Languages', 'Soft Skills'].map((skill, index) => (
-                    <div key={index} className={`flex items-center justify-center h-40 border border-gray-600 transition-transform transform ${index % 4 === 0 ? 'rounded-tl-lg rounded-bl-lg' : ''} ${index % 4 === 3 ? 'rounded-tr-lg rounded-br-lg' : ''} bg-[#2E1C2B] shadow-lg hover:bg-[#893168] hover:shadow-xl`} >
-                        <p className="text-[#EAEAEA] text-xl font-semibold">{skill}</p>
-                    </div>
-                ))}
-            </div>
-            <div className="mt-12">
-                <a 
-                    onClick={() => router.push('/components/skills')}
-                    className="inline-block bg-[#893168] text-white py-3 px-8 rounded-full cursor-pointer"
-                >
-                    Discover My Full Skill Set
-                </a>
-            </div>
-        </div>
-    );
-}*/
-
-

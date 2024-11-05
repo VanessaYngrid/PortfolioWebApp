@@ -33,8 +33,12 @@ export async function GET(){
                 description2: "Implemented comprehensive navigation pages for education, professional experience, ojects, and skills, all structured in a custom API and fetched into components using React hooks.",
                 description3: "Integrated external APIs, including Weather API, to fetch and display real-time geographical and weather data, and embedded Google Maps."
             },
-            technologies: ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "Visual Studio Code"],
-            image: ["/images/personal_portfolio.png" , "/images/personal_portfolio.png" ],
+            technologies: ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "Custom RESTful API", "Third-Party API", "Firebase", "Visual Studio Code"],
+            image: ["/images/personal_portfolio.png", 
+                "/images/portfolio/skills_page.png",
+                "/images/portfolio/home_page.png",
+                "/images/portfolio/project_page.png"
+            ],
             demo: "",
             github: "https://github.com/VanessaYngrid/PortfolioWebApp"
         },
@@ -50,13 +54,13 @@ export async function GET(){
                 description3: "Utilized Firebase for authentication, data storage, managing user feedback and beauty tips.",
                 description4: "Employed fragments for dynamic UI components to enhance user experience."
             },
-            technologies: ["Java for Android", "Android Studio", "MVC", "Android SDK", "XML", "UML Diagrams"],
+            technologies: ["Java for Android", "Third-Party API", "Firebase", "Android Studio", "MVC", "Android SDK", "XML", "UML Diagrams"],
             image: ["/images/natural_beauty_store_mobile_application.png",
                 "/images/beautyStore/login_beautyStore.png",
                 "/images/beautyStore/allProducts_beautyStore.png",
                 "/images/beautyStore/myAccount_beautyStore.png",
                 "/images/beautyStore/feedback_beautyStore.png"],
-            demo: "",
+            demo: "https://youtu.be/BPQhsrIMQOs",
             github: "https://github.com/VanessaYngrid/BeautyStoreMobileApp"
 
         },
@@ -71,7 +75,7 @@ export async function GET(){
                 description2: "Implemented server-side logic using Next.js, managing a MongoDB database and fetching data through APIs for user, services data and appointments.",
                 description3: "Designed the prototype in Figma, integrated Google Maps, and implemented Stripe for secure payments, supporting user login, registration, profile updates, and appointment bookings."
             },
-            technologies: ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "MongoDB", "Figma", "Google Maps API", "UML Diagrams", "Visual Studio Code"],
+            technologies: ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "MongoDB", "RESTful API", "Third-Party API", "Figma", "Stripe", "UML Diagrams", "Visual Studio Code"],
             image: ["/images/massage_therapy_booking_web_application.png", 
                 "/images/massagePage/home_massagePage.png",
                 "/images/massagePage/services_massagePage.png",
@@ -93,7 +97,7 @@ export async function GET(){
                 "/images/comoSeLlama/home_ComoSeLlama.png",
                 "/images/comoSeLlama/womenClothes_ComoSeLlama.png",
                 "/images/comoSeLlama/search_ComoSeLlama.png"],
-            demo: "",
+            demo: "https://youtu.be/n9u_4SOW_04",
             github: "https://github.com/VanessaYngrid/Como-Se-Llama"
         },
         {
@@ -114,7 +118,7 @@ export async function GET(){
             "/images/eFiguro/leave_efiguro.png",
             "/images/eFiguro/clock_efiguro.png",
             "/images/eFiguro/payroll_efiguro.png"],
-            demo: " ",
+            demo: "https://youtu.be/3YDwGnUh7kE",
             github: "https://github.com/VanessaYngrid/E-Figuro"
         }
     ];

@@ -18,15 +18,16 @@ export async function GET() {
                 { name: "HTML", knowledge: 95 },
                 { name: "CSS", knowledge: 90 },
                 { name: "Bootstrap", knowledge: 95 },
-                { name: "JavaScript", knowledge: 90 },
+                { name: "JavaScript", knowledge: 85 },
                 { name: "TypeScript", knowledge: 85 },
-                { name: "React.js", knowledge: 90 },
-                { name: "Angular", knowledge: 50 },
+                { name: "React.js", knowledge: 80 },
+                { name: "Angular", knowledge: 60 },
                 { name: "Next.js", knowledge: 80 },
                 { name: "Tailwind CSS", knowledge: 95 },
             ],
             backend: [
                 { name: "RESTful APIs", knowledge: 90 },
+                { name: "Third-Party APIs", knowledge: 90 },
                 { name: "Java for Android Studio", knowledge: 65 },
                 { name: "Java", knowledge: 80 },
                 { name: "Node.js", knowledge: 70 },
@@ -35,6 +36,7 @@ export async function GET() {
             database: [
                 { name: "MongoDB", knowledge: 75 },
                 { name: "SQL Server", knowledge: 60 },
+                { name: "Firebase", knowledge: 80 },
             ],
         },
         tools: [

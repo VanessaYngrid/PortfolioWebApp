@@ -49,7 +49,7 @@ export default function Projects() {
                     <div className="relative w-full lg:w-1/2">
                         <div className="relative border-[#4A1942] bg-[#F9F9F9] border-[8px] mx-auto max-w-[600px]">
                             <Image
-                                src="/images/personal_portfolio.png" 
+                                src="/images/personal_portfolio2.png" 
                                 alt="Desktop mockup"
                                 layout="responsive"
                                 width={680}
@@ -98,7 +98,7 @@ export default function Projects() {
     if (projects.length === 0) return <div className="text-center">Loading...</div>;
 
     return (
-        <div id="projectsmain" className="bg-[#cec9ce] relative text-center pt-10 pb-10 px-0 sm:px-4 md:px-20 lg:px-36"> {/*cec9ce*/}
+        <div id="projectsmain" className="bg-[#F0F0F0] relative text-center pt-10 pb-10 px-0 sm:px-4 md:px-20 lg:px-36"> {/*cec9ce*/}
             <h1 className="text-[#4A1942] text-3xl md:text-4xl font-bold text-center mb-10">MY PROJECTS</h1>
             <div className="max-w-[1200px] mx-auto flex items-center flex-col lg:flex-row relative">
                 <button
