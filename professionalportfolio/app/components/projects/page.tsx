@@ -43,7 +43,7 @@ export default function Projects() {
     }, []);
 
     return (
-        <div className="overflow-x-hidden">
+        <div className="bg-[#F9F9F9]  overflow-x-hidden">
             <Navbar/>
             <div className="relative bg-cover bg-center h-60" style={{ backgroundImage: 'url(/images/projectsBanner.jpg)' }}>
                 <h1 className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold bg-black  bg-opacity-70 p-4"> {/*[#4A1942]*/}
@@ -69,7 +69,7 @@ export default function Projects() {
     // ProjectCard Component
     function ProjectCard({ project, gridColumns }: { project: Projects; gridColumns: string }) {
         return (
-            <div className="flex flex-col lg:flex-row border rounded-lg shadow-lg overflow-hidden">
+            <div className="bg-[#F9F9F9] flex flex-col lg:flex-row border rounded-lg shadow-lg overflow-hidden">
                 <div className="w-full lg:w-1/2 p-4">
                     <div className={`grid grid-cols-2 ${gridColumns} gap-4`}>
                         {project.image.slice(1).map((imgSrc, index) => (

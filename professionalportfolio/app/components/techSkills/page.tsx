@@ -102,10 +102,10 @@ export default function TechSkills({ searchQuery }: { searchQuery: string }) {
             const component = (
                 <div className="max-w-full mx-auto px-4 py-8 text-center">
                     {/* Solo mostrar el título "TECHNOLOGY SKILLS" si hay habilidades o herramientas filtradas */}
-                    {(techSkills.programming.frontend.some(skill => skill.name.toLowerCase().includes(searchQuery)) || 
-                      techSkills.programming.backend.some(skill => skill.name.toLowerCase().includes(searchQuery)) || 
-                      techSkills.programming.database.some(skill => skill.name.toLowerCase().includes(searchQuery)) || 
-                      filteredTools.length > 0) && (
+                        {(techSkills.programming.frontend.some(skill => skill.name.toLowerCase().includes(searchQuery)) || 
+                        techSkills.programming.backend.some(skill => skill.name.toLowerCase().includes(searchQuery)) || 
+                        techSkills.programming.database.some(skill => skill.name.toLowerCase().includes(searchQuery)) || 
+                        filteredTools.length > 0) && (
                         <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">TECHNOLOGY SKILLS</h1>
                     )}
                     {renderSkills(techSkills.programming.frontend, "Front-End")}

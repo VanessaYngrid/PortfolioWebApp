@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 type Projects = {
     project_id: string;
@@ -22,6 +23,8 @@ type Projects = {
 };
 
 export default function Projects() {
+    const router = useRouter();
+    
     const [projects, setProjects] = useState<Projects[]>([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [myComponent, setMyComponent] = useState<JSX.Element | null>(null);
@@ -150,6 +153,7 @@ export default function Projects() {
 
             <div className="mt-12">
                 <a 
+                    onClick={() => router.push('/components/projects')}
                     className="inline-block bg-[#6B4C7C] text-white py-3 px-8 rounded-full cursor-pointer hover:bg-[#542C5F] transition"
                 >
                     See more details
