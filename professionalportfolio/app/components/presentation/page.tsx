@@ -1,6 +1,6 @@
 export default function Presentation() {
     return (
-        <div id="about" className="bg-[#F9F9F9] overflow-x-hidden pt-8 md:pt-12 md:px-4 lg:px-10">
+        <div id="about" className="bg-[#F9F9F9] overflow-x-hidden pt-8 md:pt-12 md:px-4 lg:px-8">
             <div className="text-center">
                 <h1 className="text-[#4A1942] text-4xl font-bold">ABOUT ME</h1>
                 <p className="text-[#4A1942] text-md pt-2">Get to know me more</p>

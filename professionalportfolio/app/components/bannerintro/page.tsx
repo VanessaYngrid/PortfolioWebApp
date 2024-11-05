@@ -7,7 +7,7 @@ export default function BannerIntro() {
     return (
         <div id="home" className="bg-[#4A1942] flex flex-col md:flex-row justify-around items-center pt-10 pb-0 px-6 md:px-0 lg:px-2 overflow-hidden relative">
             {/* Sección de texto */}
-            <div className="flex flex-col items-start px-3 md:px-16 lg:px-0 md:mr-10 mb-6 md:mb-0 z-10">
+            <div className="flex flex-col items-start px-3 md:px-16 lg:px-0 md:mr-28 mb-6 md:mb-0 z-10">
                 <p className="text-white text-xl md:text-2xl font-semibold">Hello, I am</p>
                 <p className="text-white text-4xl md:text-4xl font-bold">Vanessa Yngrid Chuquitaipe Vargas</p>
                 <p className="text-white text-lg md:text-2xl font-semibold pt-4">

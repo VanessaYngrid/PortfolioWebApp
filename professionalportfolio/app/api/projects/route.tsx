@@ -24,7 +24,7 @@ export async function GET(){
     const projectsObject: Projects[] = [
         {
             project_id: "p001",
-            title: "Personal Portfolio",
+            title: "Personal Portfolio Web Application",
             duration: "August 2024 - Present",
             category: "Web Application",
             type: "Personal Project",

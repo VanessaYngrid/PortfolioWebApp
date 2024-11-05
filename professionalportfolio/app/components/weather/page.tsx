@@ -34,7 +34,7 @@ export default function Weather() {
                 const weather: WeatherData = {
                     temperature: Math.round(data.current.temp),
                     description: data.current.weather[0].description,
-                    feelLike: data.current.feels_like,
+                    feelLike: Math.round(data.current.feels_like),
                     icon: data.current.weather[0].icon, // Obtener el código del ícono
                 };
 

@@ -14,7 +14,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="bg-[#4A1942] lg:py-4 md:px-10 lg:px-36 py-4 px-8">
+        <nav className="bg-[#4A1942] lg:py-4 md:px-10 lg:px-32 py-4 px-8">
             <div className="container mx-auto flex flex-wrap items-center justify-between">
                 <div className="text-white text-lg">Vanessa Vargas</div>
                 <button className="text-white block lg:hidden" onClick={() => setIsOpen(!isOpen)}>

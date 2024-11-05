@@ -24,7 +24,7 @@ export default function Education() {
 
     function renderTimeline() {
         return (
-            <div className="relative pt-2 md:pt-4 pb-8 px-8 md:px-12 lg:px-36">
+            <div className="relative pt-2 md:pt-4 pb-8 px-8 md:px-12 lg:px-32">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {eduInfo.map((edu) => (
                         <div key={edu.education_id} className="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl border-l-4 border-[#FFB3C1]">

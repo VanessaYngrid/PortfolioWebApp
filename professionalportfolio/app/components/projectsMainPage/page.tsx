@@ -42,9 +42,9 @@ export default function Projects() {
             const { title, duration, category, technologies, image } = projects[currentIndex];
 
             const component = (
-                <div className="flex flex-col lg:flex-row w-full">
+                <div className="flex flex-col lg:flex-row w-full px-8 lg:px-14">
                     <div className="relative w-full lg:w-1/2">
-                        <div className="relative border-gray-800 bg-gray-800 border-[8px] mx-auto max-w-[600px]">
+                        <div className="relative border-[#4A1942] bg-[#F9F9F9] border-[8px] mx-auto max-w-[600px]">
                             <Image
                                 src="/images/personal_portfolio.png" 
                                 alt="Desktop mockup"
@@ -65,13 +65,13 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/2 flex flex-col justify-center text-start p-4 md:py-6 md:px-20">
-                        <h2 className="text-[#893168] text-2xl md:text-xl font-semibold pb-4">{title}</h2>
-                        <p className="text-gray-600">{category}</p>
-                        <p className="text-gray-600 pb-10"><strong>Duration:</strong> {duration}</p>
+                    <div className="w-full lg:w-1/2 flex flex-col justify-center text-start p-4 md:py-6 lg:px-20">
+                        <h2 className="text-gray-800 text-2xl md:text-2xl font-semibold pb-4">{title}</h2>
+                        <p className="text-gray-700">{category}</p>
+                        <p className="text-gray-700 pb-10"><strong>Duration:</strong> {duration}</p>
                         <div className="flex flex-wrap">
                             {technologies.map((tech) => (
-                                <span key={tech} className="inline-block bg-[#4A1942] bg-opacity-70 rounded-md px-2 py-1 text-sm font-normal text-white mr-2 mb-2">
+                                <span key={tech} className="inline-block bg-[#8A3D57] bg-opacity-75 rounded-md px-2 py-1 text-sm font-normal text-[#F9F9F9] mr-2 mb-2">
                                     #{tech}
                                 </span>
                             ))}
@@ -95,16 +95,16 @@ export default function Projects() {
     if (projects.length === 0) return <div className="text-center">Loading...</div>;
 
     return (
-        <div id="projectsmain" className="bg-[#F0F0F0] relative text-center pt-10 pb-10 px-4 sm:px-10 md:px-36">
+        <div id="projectsmain" className="bg-[#cec9ce] relative text-center pt-10 pb-10 px-0 sm:px-4 md:px-20 lg:px-36"> {/*cec9ce*/}
             <h1 className="text-[#4A1942] text-3xl md:text-4xl font-bold text-center mb-10">MY PROJECTS</h1>
             <div className="max-w-[1200px] mx-auto flex items-center flex-col lg:flex-row relative">
                 <button
                     type="button"
-                    className="absolute -left-20 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 bg-white bg-opacity-60 rounded-full shadow-lg hover:bg-opacity-80 transition duration-200 hidden md:flex items-center justify-center"
+                    className="absolute -left-10 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 bg-[#cec9ce] bg-opacity-80 rounded-full shadow-lg hover:bg-[#bdb8bd] transition duration-200 hidden md:flex items-center justify-center"
                     onClick={prevProject}
                     aria-label="Previous Project"
                 >
-                    <svg className="w-4 h-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <svg className="w-4 h-4 text-[#4A1942]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
                     </svg>
                 </button>
@@ -113,35 +113,35 @@ export default function Projects() {
 
                 <button
                     type="button"
-                    className="absolute -right-20 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 bg-white bg-opacity-60 rounded-full shadow-lg hover:bg-opacity-80 transition duration-200 hidden md:flex items-center justify-center"
+                    className="absolute -right-10 top-1/2 transform -translate-y-1/2 z-30 h-10 w-10 bg-[#cec9ce] bg-opacity-80 rounded-full shadow-lg hover:bg-[#bdb8bd] transition duration-200 hidden md:flex items-center justify-center"
                     onClick={nextProject}
                     aria-label="Next Project"
                 >
-                    <svg className="w-4 h-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <svg className="w-4 h-4 text-[#4A1942]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                     </svg>
                 </button>
 
-                {/* Botones de navegación para móviles */}
-                <div className="flex justify-between mt-4 md:hidden space-x-10"> {/* Espacio entre los botones */}
+                {/* buttons for mobile */}
+                <div className="flex justify-between mt-4 md:hidden space-x-10">
                     <button
                         type="button"
-                        className="h-10 w-10 bg-white bg-opacity-60 rounded-full shadow-lg hover:bg-opacity-80 transition duration-200 flex items-center justify-center"
+                        className="h-10 w-10 bg-[#cec9ce] bg-opacity-80 rounded-full shadow-lg hover:bg-[#bdb8bd] transition duration-200 flex items-center justify-center"
                         onClick={prevProject}
                         aria-label="Previous Project"
                     >
-                        <svg className="w-4 h-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <svg className="w-4 h-4 text-[#4A1942]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
                         </svg>
                     </button>
 
                     <button
                         type="button"
-                        className="h-10 w-10 bg-white bg-opacity-60 rounded-full shadow-lg hover:bg-opacity-80 transition duration-200 flex items-center justify-center"
+                        className="h-10 w-10 bg-[#cec9ce] bg-opacity-80 rounded-full shadow-lg hover:bg-[#bdb8bd] transition duration-200 flex items-center justify-center"
                         onClick={nextProject}
                         aria-label="Next Project"
                     >
-                        <svg className="w-4 h-4 text-gray-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <svg className="w-4 h-4 text-[#4A1942]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
                         </svg>
                     </button>
@@ -150,7 +150,7 @@ export default function Projects() {
 
             <div className="mt-12">
                 <a 
-                    className="inline-block bg-[#6B4C7C] text-white py-3 px-8 rounded-full cursor-pointer hover:bg-[#4C3A61] transition"
+                    className="inline-block bg-[#6B4C7C] text-white py-3 px-8 rounded-full cursor-pointer hover:bg-[#542C5F] transition"
                 >
                     See more details
                 </a>

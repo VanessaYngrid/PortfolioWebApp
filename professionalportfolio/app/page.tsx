@@ -1,5 +1,5 @@
 import BannerIntro from "./components/bannerintro/page";
-//import Contact from "./components/contact/page";
+import Contact from "./components/contact/page";
 import Education from "./components/education/page";
 import WorkExperience from "./components/experience/page";
 import Footer from "./components/footer/page";
@@ -7,7 +7,7 @@ import Navbar from "./components/navbar/page";
 import Presentation from "./components/presentation/page";
 import ProjectsMainPage from "./components/projectsMainPage/page";
 import SkillsMainPage from "./components/skillsMainPage/page";
-import { useTranslation } from 'react-i18next';
+//import { useTranslation } from 'react-i18next';
 
 export default function Home() {
   return (
@@ -18,7 +18,8 @@ export default function Home() {
     <Education/>
     <SkillsMainPage/>
     <ProjectsMainPage/>
-    <WorkExperience/> 
+    <WorkExperience/>
+    <Contact/> 
     <Footer/>
   </div>    
   );
