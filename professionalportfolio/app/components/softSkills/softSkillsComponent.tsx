@@ -14,7 +14,7 @@ export default function SoftSkillsComponent({ searchQuery }: { searchQuery: stri
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/softSkills`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/softSkills`, { cache: "no-cache" });
                 if (response.ok) {
                     const data: SoftSkills = await response.json();
                     setSoftSkills(data.softSkills);

@@ -30,7 +30,7 @@ export default function LanguagesSkills({ searchQuery }: LanguagesSkillsProps) {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/languageSkills`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/languageSkills`, { cache: "no-cache" });
                 if (response.ok) {
                     const data: LanguageSkills[] = await response.json();
                     setLanguageSkills(data);

@@ -34,7 +34,7 @@ export default function TechSkills({ searchQuery }: { searchQuery: string }) {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/techSkills`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/techSkills`, { cache: "no-cache" });
                 if (response.ok) {
                     const data: TechnologySkills = await response.json();
                     setTechSkills(data);

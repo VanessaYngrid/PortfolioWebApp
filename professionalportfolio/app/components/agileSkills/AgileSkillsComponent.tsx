@@ -26,7 +26,7 @@
     useEffect(() => {
         async function fetchData() {
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/agileSkills`);
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/agileSkills`, { cache: "no-cache" });
             if (response.ok) {
             const data: AgileSkills = await response.json();
             setAgileSkills(data);
