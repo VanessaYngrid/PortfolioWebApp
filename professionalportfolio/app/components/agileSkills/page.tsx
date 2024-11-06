@@ -14,7 +14,6 @@
     return skill.replace(/ /g, '_').replace(/#/g, '%23').toLowerCase();
     };
 
-    // The type for props we expect (searchQuery)
     interface AgileSkillsProps {
     searchQuery: string;
     }
@@ -82,7 +81,7 @@
                     {filteredCertifications.map((cert, index) => (
                     <div
                         key={cert + index}
-                        className="bg-[#F0F0F0] rounded-lg overflow-hidden shadow-lg flex"
+                        className="bg-[#F0F0F0] rounded-lg overflow-hidden shadow-lg flex transition-transform transform hover:scale-105"
                     >
                         <div className="flex-shrink-0 w-1/2 h-full relative">
                         <Image
