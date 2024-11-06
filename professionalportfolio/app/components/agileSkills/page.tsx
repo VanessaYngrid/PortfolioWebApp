@@ -3,7 +3,7 @@
 
     import { useState, useEffect } from 'react';
     import Image from 'next/image';
-    import { useSearchParams } from 'next/navigation'; // useSearchParams to fetch query params
+    import { useSearchParams } from 'next/navigation'; // Use search params to fetch query params
 
     type AgileSkills = {
     agile: string[];
@@ -16,8 +16,8 @@
 
     export default function AgileSkillsComponent() {
     const [agileSkills, setAgileSkills] = useState<AgileSkills | null>(null);
-    const searchParams = useSearchParams();
-    const searchQuery = searchParams.get('searchQuery') || ''; // Fetch searchQuery from URL params
+    const searchParams = useSearchParams();  // Access search params from the URL
+    const searchQuery = searchParams.get('searchQuery') || '';  // Extract the search query from the URL
 
     // Fetch data on initial render
     useEffect(() => {
@@ -36,15 +36,15 @@
     }, []); // Empty dependency array means it runs only once after component mounts
 
     // Filter data based on searchQuery
-    const filteredAgileSkills = agileSkills?.agile.filter(skill =>
+    const filteredAgileSkills = agileSkills?.agile.filter((skill) =>
         skill.toLowerCase().includes(searchQuery.toLowerCase())
     ) || [];
-    const filteredCertifications = agileSkills?.certification.filter(cert =>
+    const filteredCertifications = agileSkills?.certification.filter((cert) =>
         cert.toLowerCase().includes(searchQuery.toLowerCase())
     ) || [];
 
     return (
-        <div className="max-w-full mx-auto px-4 py-8 text-center bg-[#F9F9F9]">
+        <div className="max-w-full mx-auto px-4 py-8 text-center bg-[#F9F9F9] md:px-20">
         {filteredAgileSkills.length > 0 || filteredCertifications.length > 0 ? (
             <>
             <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">AGILE SKILLS</h1>
