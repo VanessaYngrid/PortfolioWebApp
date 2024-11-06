@@ -14,7 +14,8 @@
     return skill.replace(/ /g, '_').replace(/#/g, '%23').toLowerCase();
     };
 
-    interface AgileSkillsProps {
+    // Declare the interface for props
+    export interface AgileSkillsProps {
     searchQuery: string;
     }
 
