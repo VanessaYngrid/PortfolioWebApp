@@ -5,11 +5,11 @@
     import Carousel from "../carousel/page";
     import Contact from "../contact/page";
     import Footer from "../footer/page";
-    import LanguagesSkills from "../languageSkills/languageSkillsComponent";
+    import LanguagesSkills from "../languageSkills/page";
     import Navbar from "../navbar/page";
-    import SoftSkillsComponent from "../softSkills/softSkillsComponent";
-    import TechSkills from "../techSkills/techSkillsComponent";
-import AgileSkillsComponent from '../agileSkills/AgileSkillsComponent';
+    import SoftSkillsComponent from "../softSkills/page";
+    import TechSkills from "../techSkills/page";
+import AgileSkillsComponent from '../agileSkills/page';
 
     export default function Skills() {
     const [searchQuery, setSearchQuery] = useState("");
