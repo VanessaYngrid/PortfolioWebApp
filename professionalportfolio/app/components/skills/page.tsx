@@ -1,7 +1,7 @@
     'use client';
 
     import { useState } from 'react';
-    import AgileSkillsComponent from "../agileSkills/page";
+
     import Carousel from "../carousel/page";
     import Contact from "../contact/page";
     import Footer from "../footer/page";
@@ -9,6 +9,7 @@
     import Navbar from "../navbar/page";
     import SoftSkillsComponent from "../softSkills/page";
     import TechSkills from "../techSkills/page";
+import AgileSkillsComponent from '../agileSkills/AgileSkillsComponent';
 
     export default function Skills() {
     const [searchQuery, setSearchQuery] = useState("");
