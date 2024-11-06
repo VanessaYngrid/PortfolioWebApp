@@ -5,7 +5,7 @@
     import Carousel from "../carousel/page";
     import Contact from "../contact/page";
     import Footer from "../footer/page";
-    import LanguagesSkills from "../languageSkills/page";
+    import LanguagesSkills from "../languageSkills/languageSkillsComponent";
     import Navbar from "../navbar/page";
     import SoftSkillsComponent from "../softSkills/page";
     import TechSkills from "../techSkills/page";
