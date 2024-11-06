@@ -14,11 +14,12 @@
     return skill.replace(/ /g, '_').replace(/#/g, '%23').toLowerCase();
     };
 
+    // The type for props we expect (searchQuery)
     interface AgileSkillsProps {
-    searchQuery: string; // Expect the searchQuery as a prop
+    searchQuery: string;
     }
 
-    const AgileSkillsComponent: React.FC<AgileSkillsProps> = ({ searchQuery }) => {
+    export default function AgileSkillsComponent({ searchQuery }: AgileSkillsProps) {
     const [agileSkills, setAgileSkills] = useState<AgileSkills | null>(null);
 
     // Fetch data when the component mounts
@@ -41,7 +42,7 @@
     const filteredAgileSkills = agileSkills?.agile.filter((skill) =>
         skill.toLowerCase().includes(searchQuery.toLowerCase())
     ) || [];
-    
+
     const filteredCertifications = agileSkills?.certification.filter((cert) =>
         cert.toLowerCase().includes(searchQuery.toLowerCase())
     ) || [];
@@ -81,7 +82,7 @@
                     {filteredCertifications.map((cert, index) => (
                     <div
                         key={cert + index}
-                        className="bg-[#F0F0F0] rounded-lg overflow-hidden shadow-lg flex transition-transform transform hover:scale-105"
+                        className="bg-[#F0F0F0] rounded-lg overflow-hidden shadow-lg flex"
                     >
                         <div className="flex-shrink-0 w-1/2 h-full relative">
                         <Image
@@ -114,6 +115,4 @@
         )}
         </div>
     );
-    };
-
-    export default AgileSkillsComponent;
+    }
