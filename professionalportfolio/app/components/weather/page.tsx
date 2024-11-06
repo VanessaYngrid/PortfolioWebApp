@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image'; // Import next/image for optimized images
 
 interface WeatherData {
     temperature: number;
@@ -48,18 +48,28 @@ export default function Weather() {
         fetchData();
     }, []);
 
-    // Construir la URL del ícono
-    const iconUrl = `https://openweathermap.org/img/wn/${weatherData.icon}@2x.png`;
+    // Construct the icon URL using OpenWeather's icon code
+    const iconUrl = weatherData.icon 
+        ? `https://openweathermap.org/img/wn/${weatherData.icon}@2x.png` 
+        : '/default-icon.png'; // Fallback to a default image if icon is missing
 
     return (
         <div className="text-white p-2 text-sm flex items-center">
-            <img src={iconUrl} alt={weatherData.description} className="w-8 h-8 mr-2" /> {/* Ajustar tamaño según sea necesario */}
+            {weatherData.icon && ( // Only render the image if an icon is available
+                <Image 
+                    src={iconUrl} 
+                    alt={weatherData.description} 
+                    width={32} // Width and height for the image
+                    height={32} 
+                    className="mr-2" // Apply styling here
+                />
+            )}
             <div>
                 <span className="inline">
                     <p className="inline">{weatherData.temperature} °C</p>
-                    <p className="inline ml-2">{weatherData.description}</p> {/* ml-2 para un poco de espacio entre temperatura y descripción */}
+                    <p className="inline ml-2">{weatherData.description}</p> 
                 </span>
-                <p className="mt-1">Feels like: {weatherData.feelLike} °C</p> {/* Mostrar "Feels like" en una nueva línea */}
+                <p className="mt-1">Feels like: {weatherData.feelLike} °C</p>
             </div>
         </div>
     );

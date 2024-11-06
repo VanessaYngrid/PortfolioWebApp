@@ -9,19 +9,14 @@
     import Navbar from "../navbar/page";
     import SoftSkillsComponent from "../softSkills/page";
     import TechSkills from "../techSkills/page";
-    import { useRouter } from 'next/navigation'; // To update query params
 
     export default function Skills() {
     const [searchQuery, setSearchQuery] = useState("");
-    const router = useRouter();
 
     // Handle the search input change
     const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const newSearchQuery = e.target.value.toLowerCase();
         setSearchQuery(newSearchQuery);
-
-        // Update the URL with the search query
-        router.push(`?searchQuery=${newSearchQuery}`);
     };
 
     return (
@@ -61,8 +56,9 @@
             />
             </div>
         </div>
+        {/* Pass searchQuery as prop to child components */}
         <TechSkills searchQuery={searchQuery} />
-        <AgileSkillsComponent /> {/* Now it fetches the searchQuery from URL */}
+        <AgileSkillsComponent searchQuery={searchQuery} />
         <LanguagesSkills searchQuery={searchQuery} />
         <SoftSkillsComponent searchQuery={searchQuery} />
         <Contact />

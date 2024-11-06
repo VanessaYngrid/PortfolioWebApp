@@ -1,25 +1,27 @@
-    // app/components/agileSkills/page.tsx
-    'use client'; // Ensures this component is client-side
+    'use client';
 
     import { useState, useEffect } from 'react';
     import Image from 'next/image';
-    import { useSearchParams } from 'next/navigation'; // Use search params to fetch query params
 
+    // Define the type for agile skills data
     type AgileSkills = {
     agile: string[];
     certification: string[];
     };
 
+    // Helper function to transform the skill name for use in the image path
     const transformSkillName = (skill: string) => {
     return skill.replace(/ /g, '_').replace(/#/g, '%23').toLowerCase();
     };
 
-    export default function AgileSkillsComponent() {
-    const [agileSkills, setAgileSkills] = useState<AgileSkills | null>(null);
-    const searchParams = useSearchParams();  // Access search params from the URL
-    const searchQuery = searchParams.get('searchQuery') || '';  // Extract the search query from the URL
+    interface AgileSkillsProps {
+    searchQuery: string; // Expect the searchQuery as a prop
+    }
 
-    // Fetch data on initial render
+    const AgileSkillsComponent: React.FC<AgileSkillsProps> = ({ searchQuery }) => {
+    const [agileSkills, setAgileSkills] = useState<AgileSkills | null>(null);
+
+    // Fetch data when the component mounts
     useEffect(() => {
         async function fetchData() {
         try {
@@ -33,12 +35,13 @@
         }
         }
         fetchData();
-    }, []); // Empty dependency array means it runs only once after component mounts
+    }, []);
 
-    // Filter data based on searchQuery
+    // Filter the agile skills and certifications based on the search query
     const filteredAgileSkills = agileSkills?.agile.filter((skill) =>
         skill.toLowerCase().includes(searchQuery.toLowerCase())
     ) || [];
+    
     const filteredCertifications = agileSkills?.certification.filter((cert) =>
         cert.toLowerCase().includes(searchQuery.toLowerCase())
     ) || [];
@@ -107,8 +110,10 @@
             )}
             </>
         ) : (
-            <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">No results found.</h1>
+            <h1 className="text-3xl font-bold mb-8 text-[#4A1942]"> </h1>
         )}
         </div>
     );
-    }
+    };
+
+    export default AgileSkillsComponent;
