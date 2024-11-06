@@ -7,7 +7,7 @@
     import Footer from "../footer/page";
     import LanguagesSkills from "../languageSkills/languageSkillsComponent";
     import Navbar from "../navbar/page";
-    import SoftSkillsComponent from "../softSkills/page";
+    import SoftSkillsComponent from "../softSkills/softSkillsComponent";
     import TechSkills from "../techSkills/page";
 import AgileSkillsComponent from '../agileSkills/AgileSkillsComponent';
 
