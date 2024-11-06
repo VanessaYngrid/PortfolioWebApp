@@ -8,7 +8,7 @@
     import LanguagesSkills from "../languageSkills/languageSkillsComponent";
     import Navbar from "../navbar/page";
     import SoftSkillsComponent from "../softSkills/softSkillsComponent";
-    import TechSkills from "../techSkills/page";
+    import TechSkills from "../techSkills/techSkillsComponent";
 import AgileSkillsComponent from '../agileSkills/AgileSkillsComponent';
 
     export default function Skills() {
