@@ -64,6 +64,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
     );
 };
 
+
 export default function WorkExperience() {
     const [experienceInfo, setExperienceInfo] = useState<JobExperience[]>([]);
     const [dataIsLoaded, setDataIsLoaded] = useState(false);
