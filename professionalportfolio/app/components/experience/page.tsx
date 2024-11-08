@@ -1,7 +1,6 @@
 'use client';
 
-import React from "react";
-import { useEffect, useState, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 
 // Define type for JobExperience
 type JobExperience = {
@@ -65,48 +64,48 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ exp }) => {
     );
 };
 
-// Memoized ExperienceItem component to avoid unnecessary re-renders
-const MemoizedExperienceItem = React.memo(ExperienceItem);
-
 export default function WorkExperience() {
     const [experienceInfo, setExperienceInfo] = useState<JobExperience[]>([]);
+    const [dataIsLoaded, setDataIsLoaded] = useState(false);
 
     // Fetching the experience data from the API when the component mounts
     useEffect(() => {
         fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/experience`, { cache: "no-cache" })
             .then((res) => res.json())
-            .then((data) => setExperienceInfo(data));
+            .then((data) => {
+                setExperienceInfo(data);
+                setDataIsLoaded(true);
+            });
     }, []);
 
-    // Memoize sliced data for performance optimization
-    const recentExperiences = useMemo(() => experienceInfo.slice(0, 3), [experienceInfo]);
-    const olderExperiences = useMemo(() => experienceInfo.slice(3), [experienceInfo]);
+    // Render experience items function
+    const renderExperienceItems = () => {
+        return (
+            <div className="flex flex-col md:flex-row justify-between px-6 md:px-8 lg:px-24 pt-10">
+                {/* Recent Experience */}
+                <div className="w-full md:w-1/2 px-4 md:px-10">
+                    <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Recent Experience</h2>
+                    {experienceInfo.slice(0, 3).map((exp, index) => (
+                        <ExperienceItem key={index} exp={exp} />
+                    ))}
+                </div>
+
+                {/* Older Experience */}
+                <div className="w-full md:w-1/2 px-4 md:px-10 lg:px-8">
+                    <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Previous Experience</h2>
+                    {experienceInfo.slice(3).map((exp, index) => (
+                        <ExperienceItem key={index} exp={exp} />
+                    ))}
+                </div>
+            </div>
+        );
+    };
 
     return (
         <div id="experience" className="overflow-x-hidden bg-[#F9F9F9] text-start pt-10 pb-8">
             <h1 className="text-[#4A1942] text-4xl font-bold text-center mb-6">WORK EXPERIENCE</h1>
             <div className="mx-auto">
-                {experienceInfo.length > 0 ? (
-                    <div className="flex flex-col md:flex-row justify-between px-6 md:px-8 lg:px-24 pt-10">
-                        {/* Recent Experience */}
-                        <div className="w-full md:w-1/2 px-4 md:px-10">
-                            <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Recent Experience</h2>
-                            {recentExperiences.map((exp, index) => (
-                                <MemoizedExperienceItem key={index} exp={exp} />
-                            ))}
-                        </div>
-
-                        {/* Older Experience */}
-                        <div className="w-full md:w-1/2 px-4 md:px-10 lg:px-8">
-                            <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Previous Experience</h2>
-                            {olderExperiences.map((exp, index) => (
-                                <MemoizedExperienceItem key={index} exp={exp} />
-                            ))}
-                        </div>
-                    </div>
-                ) : (
-                    <p className="text-center">Loading...</p>
-                )}
+                {dataIsLoaded ? renderExperienceItems() : <p className="text-center">Loading...</p>}
             </div>
         </div>
     );
