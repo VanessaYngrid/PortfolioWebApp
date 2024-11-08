@@ -13,20 +13,16 @@ type LanguageSkills = {
 // Function to transform skill names for image URLs
 const transformSkillName = (skill: string) => {
     return skill
-        .replace(/ /g, '_')
-        .replace(/#/g, '%23')
+        .replace(/ /g, '_') // Replaces spaces with _
+        .replace(/#/g, '%23') // Encodes hash symbol as %23
         .toLowerCase();
 };
 
-// Define props for the component
-interface LanguagesSkillsProps {
-    searchQuery: string;
-}
+export default function LanguagesSkills() {
+    const [languageSkills, setLanguageSkills] = useState<LanguageSkills[]>();
+    const [myComponent, setMyComponent] = useState(<></>);
 
-export default function LanguagesSkills({ searchQuery }: LanguagesSkillsProps) {
-    const [languageSkills, setLanguageSkills] = useState<LanguageSkills[]>([]);
-
-    // Fetch language skills when the component mounts
+    // Fetch the data from the API and set the languageSkills state.
     useEffect(() => {
         async function fetchData() {
             try {
@@ -42,20 +38,16 @@ export default function LanguagesSkills({ searchQuery }: LanguagesSkillsProps) {
         fetchData();
     }, []);
 
-    // Filter the language skills based on the search query
-    const filteredSkills = languageSkills.filter((skill) =>
-        skill.language.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
-    return (
-        <div className="bg-[#F9F9F9] px-8 md:px-10 lg:px-16 overflow-x-hidden">
-            <div className="max-w-full mx-auto px-4 py-8 text-center">
-                {filteredSkills.length > 0 ? (
-                    <>
-                        <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">LANGUAGE SKILLS</h1>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
-                            {filteredSkills.map((skill) => (
-                                <div className="bg-[#F0F0F0] rounded overflow-hidden shadow-lg pb-4" key={skill.language_id}>
+    // It depends on languageSkills, and it will update myComponent when languageSkills changes
+    useEffect(() => {
+        if (languageSkills) {
+            // Define a component for rendering language skills
+            const renderLanguageCards = (skills: LanguageSkills[]) => {
+                return (
+                    <div >
+                        <div className="justify-center grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+                            {skills.map((skill) => (
+                                <div className="bg-[#F0F0F0] rounded shadow-lg pb-4" key={skill.language_id}>
                                     <div className="text-center pt-4 pb-2 w-full h-16 flex items-center justify-center">
                                         <Image
                                             src={`/images/languages/${transformSkillName(skill.language)}.png`}
@@ -74,11 +66,24 @@ export default function LanguagesSkills({ searchQuery }: LanguagesSkillsProps) {
                                 </div>
                             ))}
                         </div>
-                    </>
-                ) : (
-                    <h2 className="text-md text-[#4A1942]"> </h2>
-                )}
-            </div>
+                    </div>
+                );
+            };
+
+            const component = (
+                <div className="max-w-full mx-auto px-4 py-8 text-center">
+                    <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">LANGUAGE SKILLS</h1>
+                    {renderLanguageCards(languageSkills)}
+                </div>
+            );
+
+            setMyComponent(component);
+        }
+    }, [languageSkills]);
+
+    return (
+        <div className="bg-[#F9F9F9] px-8 md:px-10 lg:px-16 overflow-x-hidden">
+            {myComponent}
         </div>
     );
 }
