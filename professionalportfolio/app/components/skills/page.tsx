@@ -57,11 +57,11 @@ import AgileSkillsComponent from '../agileSkills/page';
             />
             </div>
         </div>
-        {/* Pass searchQuery as prop to child components */}
+        {/* Pass searchQuery as prop to child components: searchQuery={searchQuery} */}
         <TechSkills searchQuery={searchQuery} />
         <AgileSkillsComponent />
         <LanguagesSkills/>
-        <SoftSkillsComponent searchQuery={searchQuery} />
+        <SoftSkillsComponent />
         <Contact />
         <Footer />
         </div>
