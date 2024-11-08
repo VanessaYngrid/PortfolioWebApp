@@ -1,7 +1,5 @@
     'use client';
 
-    import { useState } from 'react';
-
     import Carousel from "../carousel/page";
     import Contact from "../contact/page";
     import Footer from "../footer/page";
@@ -12,13 +10,6 @@
 import AgileSkillsComponent from '../agileSkills/page';
 
     export default function Skills() {
-    const [searchQuery, setSearchQuery] = useState("");
-
-    // Handle the search input change
-    const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const newSearchQuery = e.target.value.toLowerCase();
-        setSearchQuery(newSearchQuery);
-    };
 
     return (
         <div className="bg-[#F9F9F9] overflow-x-hidden">
@@ -51,14 +42,12 @@ import AgileSkillsComponent from '../agileSkills/page';
                 id="default-search"
                 className="block w-full p-4 pl-10 text-md text-gray-900 border border-gray-400 rounded-lg bg-gray-50 focus:ring-[#4A1942] focus:border-[#6e2d63]"
                 placeholder="Explore my skills..."
-                value={searchQuery}
-                onChange={handleSearchChange}
                 required
             />
             </div>
         </div>
         {/* Pass searchQuery as prop to child components: searchQuery={searchQuery} */}
-        <TechSkills searchQuery={searchQuery} />
+        <TechSkills/>
         <AgileSkillsComponent />
         <LanguagesSkills/>
         <SoftSkillsComponent />
