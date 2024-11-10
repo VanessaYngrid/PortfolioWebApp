@@ -82,7 +82,7 @@ export default function LanguagesSkills() {
     }, [languageSkills]);
 
     return (
-        <div className="bg-[#F9F9F9] px-8 md:px-10 lg:px-16 overflow-x-hidden">
+        <div className="bg-[#F9F9F9] px-6 md:px-10 lg:px-16 overflow-x-hidden">
             {myComponent}
         </div>
     );

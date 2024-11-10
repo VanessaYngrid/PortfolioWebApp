@@ -68,13 +68,13 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/2 flex flex-col justify-center text-start p-4 md:py-6 lg:px-20">
+                    <div className="w-full lg:w-1/2 flex flex-col justify-center text-start py-4 px-0 md:py-6 lg:px-20">
                         <h2 className="text-gray-800 text-2xl md:text-2xl font-semibold pb-4">{title}</h2>
                         <p className="text-gray-700">{category}</p>
-                        <p className="text-gray-700 pb-10"><strong>Duration:</strong> {duration}</p>
+                        <p className="text-gray-700 pb-8"><strong>Duration:</strong> {duration}</p>
                         <div className="flex flex-wrap">
                             {technologies.map((tech) => (
-                                <span key={tech} className="inline-block bg-[#8A3D57] bg-opacity-75 rounded-md px-2 py-1 text-sm font-normal text-[#F9F9F9] mr-2 mb-2">
+                                <span key={tech} className="inline-block bg-[#8A3D57] bg-opacity-75 rounded-md py-1 text-sm font-normal text-[#F9F9F9] mr-2 mb-2">
                                     #{tech}
                                 </span>
                             ))}
@@ -151,7 +151,7 @@ export default function Projects() {
                 </div>
             </div>
 
-            <div className="mt-12">
+            <div className="mt-10">
                 <a 
                     onClick={() => router.push('/components/projects')}
                     className="inline-block bg-[#6B4C7C] text-white py-3 px-8 rounded-full cursor-pointer hover:bg-[#542C5F] transition"
@@ -160,5 +160,6 @@ export default function Projects() {
                 </a>
             </div>
         </div>
+
     );
 }

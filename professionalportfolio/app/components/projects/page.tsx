@@ -50,7 +50,7 @@ export default function Projects() {
                     SHOWCASE OF MY WORK
                 </h1>
             </div>
-            <div className="bg-[#F9F9F9] px-14 md:px-10 lg:px-20 pt-10 pb-20">
+            <div className="bg-[#F9F9F9] px-8 md:px-10 lg:px-20 pt-10 pb-20">
                 <div className="flex flex-col space-y-8">
                     {projects.map((project, index) => (
                         <ProjectCard 

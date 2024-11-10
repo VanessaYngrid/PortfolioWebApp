@@ -82,7 +82,7 @@ export default function WorkExperience() {
     // Render experience items function
     const renderExperienceItems = () => {
         return (
-            <div className="flex flex-col md:flex-row justify-between px-6 md:px-8 lg:px-24 pt-10">
+            <div className="flex flex-col md:flex-row justify-between px-6 md:px-8 lg:px-24 pt-6 md:pt-10">
                 {/* Recent Experience */}
                 <div className="w-full md:w-1/2 px-4 md:px-10">
                     <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Recent Experience</h2>
