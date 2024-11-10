@@ -112,12 +112,12 @@ export async function GET(){
             },
             technologies: ["C#", "MVC", "RESTful APIs", "Visual Studio"],
             image: ["/images/e_figuro_employee_management_system.png",
-            "/images/eFiguro/login_efiguro.png",
-            "/images/eFiguro/features_efiguro.png",
-            "/images/eFiguro/registration_efiguro.png",
-            "/images/eFiguro/leave_efiguro.png",
-            "/images/eFiguro/clock_efiguro.png",
-            "/images/eFiguro/payroll_efiguro.png"],
+            "/images/eFiguro/login_page_efiguro.png",
+            "/images/eFiguro/features_page_efiguro.png",
+            "/images/eFiguro/registration_page_efiguro.png",
+            "/images/eFiguro/leave_page_efiguro.png",
+            "/images/eFiguro/clock_page_efiguro.png",
+            "/images/eFiguro/payroll_page_efiguro.png"],
             demo: "https://youtu.be/3YDwGnUh7kE",
             github: "https://github.com/VanessaYngrid/E-Figuro"
         }

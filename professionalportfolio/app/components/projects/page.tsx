@@ -46,7 +46,7 @@ export default function Projects() {
         <div className="bg-[#F9F9F9] overflow-x-hidden">
             <Navbar/>
             <div className="relative bg-cover bg-center h-60" style={{ backgroundImage: 'url(/images/projectsBanner.jpg)' }}>
-                <h1 className="absolute inset-0 flex items-center justify-center text-white text-4xl font-bold bg-black  bg-opacity-70 p-4"> {/*[#4A1942]*/}
+                <h1 className="absolute inset-0 text-center flex items-center justify-center text-white text-4xl font-bold bg-black  bg-opacity-70 p-4"> {/*[#4A1942]*/}
                     SHOWCASE OF MY WORK
                 </h1>
             </div>
@@ -87,8 +87,8 @@ export default function Projects() {
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 p-4 flex flex-col justify-center">
-                    <h2 className="text-[#893168] text-xl font-semibold pb-2 flex justify-start items-center">{project.title}
-                    <span className="flex space-x-2 ml-4">
+                    <h2 className="text-[#893168] text-xl font-semibold pb-2 flex flex-col md:flex-row justify-start items-start">{project.title}
+                    <span className="flex space-x-2 md:ml-4 mt-4 md:mt-0 mb-2 md:mb-0">
                             {project.demo && (
                                 <a 
                                     href={project.demo} 
