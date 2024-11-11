@@ -16,7 +16,11 @@ export default function Navbar() {
     return (
         <nav className="bg-[#4A1942] lg:py-4 md:px-10 lg:px-32 py-4 px-8">
             <div className="container mx-auto flex flex-wrap items-center justify-between">
-                <div className="text-white text-lg">Vanessa Vargas</div>
+                <a href="/">
+                    <div className="text-white text-lg">
+                        Vanessa Vargas
+                    </div>
+                </a>
                 <button className="text-white block lg:hidden" onClick={() => setIsOpen(!isOpen)}>
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
