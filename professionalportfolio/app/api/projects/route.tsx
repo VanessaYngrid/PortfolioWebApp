@@ -96,7 +96,7 @@ export async function GET(){
             image: ["/images/como_se_llama_ecommerce_clothing_store.png",
                 "/images/comoSeLlama/home_page_ComoSeLlama.png",
                 "/images/comoSeLlama/womenClothes_ComoSeLlama.png",
-                "/images/comoSeLlama/search_page_ComoSeLlama.png"],
+                "/images/comoSeLlama/search_pages_ComoSeLlama.png"],
             demo: "https://youtu.be/n9u_4SOW_04",
             github: "https://github.com/VanessaYngrid/Como-Se-Llama"
         },
