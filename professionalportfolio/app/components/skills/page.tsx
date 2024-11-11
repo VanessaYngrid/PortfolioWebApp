@@ -56,12 +56,13 @@
             </div>
         </div>
 
+        {/* Pasamos searchQuery como prop a SoftSkillsComponent */}
         <TechSkills />
         <AgileSkillsComponent />
         <LanguagesSkills />
-        <SoftSkillsComponent searchQuery={searchQuery} /> {/* Pasamos searchQuery a SoftSkillsComponent */}
+        <SoftSkillsComponent searchQuery={searchQuery} /> {/* Pasamos searchQuery aquí */}
         <Contact />
-        <Footer />
+        <Footer />    
         </div>
     );
     }
