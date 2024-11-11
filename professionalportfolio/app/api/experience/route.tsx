@@ -26,8 +26,8 @@ export async function GET() {
             position: "Web Developer Intern",
             dateRange: "Sep 2024 - Present",
             responsibilities: {
-                responsibilities1: "Developed responsive front-end interfaces using TypeScript, Tailwind CSS, and Angular, optimizing UI components to improve performance and deliver a seamless user experience across web platforms.",
-                responsibilities2:"Integrated and fetched data from external APIs, implementing internationalization (i18n) features to support global audiences.",
+                responsibilities1: "Developed responsive front-end interfaces using TypeScript, Tailwind CSS, and Angular, optimizing UI components to deliver a seamless user experience across web platforms.",
+                responsibilities2:"Integrated and fetched data from external APIs, implementing internationalization (i18n) for global audience support.",
                 responsibilities3: "Collaborated within an agile team, participating in daily meetings and code reviews.",
                 responsibilities4: "Utilized Git and Bitbucket for version control, and managed project tasks and progress using Jira."
             }
@@ -39,31 +39,20 @@ export async function GET() {
             dateRange: "Sep 2021 - Oct 2022",
             responsibilities: {
                 responsibilities1: "Worked in a team that implemented the Scrum framework as its working model.",
-                responsibilities2: "Applied the Lean methodology, as well as quality measures to enhance processes, resources, and overall user journey in the vehicle financing process.",
-                responsibilities3: "Taught analysts to map, create end-to-end process flows, and identify bottlenecks.",
-                responsibilities4: "Interviewed analysts on vehicle financing sales to gain process insights and collaborated with technology and UX teams to enhance the sales journey."
+                responsibilities2: "Led process optimization initiatives using Lean methodology and quality measures to streamline the vehicle financing process and enhance the user experience, addressing customer needs and pain points.",
+                responsibilities3: "Trained analysts on mapping BPMN end-to-end processes, identifying bottlenecks, and creating actionable improvement plans.",
+                responsibilities4: "Worked with technology, UX teams, and sales analysts to design and implement process improvements in the vehicle financing journey."
             }
         },
         {
             company: "ITAÚ UNIBANCO BANK - Brazil",
-            department: "Accounting Operations Transformation Management",
+            department: "Insurance Operations Accounting Management",
             position: "Junior Operational Financial Analyst",
-            dateRange: "Jan 2021 - Sep 2021",
+            dateRange: "Apr 2020 - Sep 2021",
             responsibilities: {
-                responsibilities1: "Represented the department in quality and continuous process improvement initiatives.",
-                responsibilities2: "Facilitated retrospective meetings between management teams.",
-                responsibilities3: "Collaborated with the project and processes team in mapping and establishing indicators for coordination processes."
-            }
-        },
-        {
-            company: "ITAÚ UNIBANCO BANK - Brazil",
-            department: "Insurance and Pension Accounting Processing Management",
-            position: "Junior Operational Financial Analyst",
-            dateRange: "Apr 2020 - Jan 2021",
-            responsibilities: {
-                responsibilities1: "Implemented Lean methodology to improve process flow.",
-                responsibilities2: "Mapped end-to-end process flows to identify pain points and improve operations.",
-                responsibilities3: "Specified tools for automating processes and documented procedure manuals."
+                responsibilities1: "Implemented Lean methodology to streamline department processes, reduce waste, and improve efficiency across insurance and pension operations, while leading cross-departmental projects to enhance communication and coordination.",
+                responsibilities2: "Represented the department in continuous quality improvement initiatives and established key performance indicators (KPIs) to monitor process effectiveness.",
+                responsibilities3: "Mapped and designed end-to-end BPMN process flows to identify pain points and optimize workflows."
             }
         },
         {
@@ -72,9 +61,10 @@ export async function GET() {
             position: "Operational Financial Intern",
             dateRange: "Aug 2018 - Apr 2020",
             responsibilities: {
-                responsibilities1: "End-to-end process mapping to identify gaps, process pain points, improvement opportunities and action plans.",
-                responsibilities2: "Development of materials for monthly management meetings.",
-                responsibilities3: "Assistance in the analytical reconciliation of credit card and Insurance balance sheet accounts."
+                responsibilities1: "Led a Lean methodology project to identify process improvement opportunities, and collaborate with IT analysts to automate workflows, reducing manual errors and enhancing performance.",
+                responsibilities2: "Gained cross-departmental experience by working in three different areas, including Credit Card and Insurance Accounting, where I mapped end-to-end processes, identified gaps, and developed action plans for process optimization.",
+                responsibilities3: "Prepared materials for monthly management meetings, highlighting project progress and key outcomes.",
+                responsibilities4: "Assisted in the analytical reconciliation of credit card and insurance balance sheet accounts, ensuring accuracy and compliance with financial standards."
             }
         }
     ];

@@ -50,7 +50,7 @@ export async function GET(){
             type: "Personal Project",
             description: {
                 description1: "Developed using Java in Android Studio, implementing the Model-View-Controller (MVC) architecture and Android SDK frameworks.",
-                description2: "Implemented features like user login, product browsing, profile management, and display of beauty tips and user feedback, along with Google Maps API integration, utilizing XML for UI design.",
+                description2: "Implemented  features for user login, product browsing, profile management, beauty tips and user feedback, along with Google Maps API integration, utilizing XML for UI design.",
                 description3: "Utilized Firebase for authentication, data storage, managing user feedback and beauty tips.",
                 description4: "Employed fragments for dynamic UI components to enhance user experience."
             },
@@ -71,9 +71,9 @@ export async function GET(){
             category: "Web Application",
             type: "Group Project",
             description: {
-                description1: "Developed a comprehensive web application with two team members, using TypeScript,React.js and Tailwind CSS.",
-                description2: "Implemented server-side logic using Next.js, managing a MongoDB database and fetching data through APIs for user, services data and appointments.",
-                description3: "Designed the prototype in Figma, integrated Google Maps, and implemented Stripe for secure payments, supporting user login, registration, profile updates, and appointment bookings."
+                description1: "Developed a comprehensive web application with two team members, using TypeScript, React.js and Tailwind CSS.",
+                description2: "Implemented server-side logic using Next.js, managing a MongoDB database and fetching data through APIs for user, services and appointments data.",
+                description3: "Designed the application prototype in Figma, integrated Google Maps Embed, and implemented Stripe for secure payment processing."
             },
             technologies: ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "MongoDB", "RESTful API", "Third-Party API", "Figma", "Stripe", "UML Diagrams", "Visual Studio Code"],
             image: ["/images/massage_therapy_booking_web_application.png", 
@@ -89,7 +89,7 @@ export async function GET(){
             category: "Web Application",
             type: "Group Project",
             description: {
-                description1: "Developed a clothing store web application using Visual Studio Code, HTML, CSS, JavaScript, Bootstrap, and JQuery collaboratively with a study colleague.",
+                description1: "Developed a clothing store web application collaboratively with a study colleague, using HTML, CSS, JavaScript, Bootstrap, and JQuery.",
                 description2: "Orchestrated the design framework to ensure a user-friendly, responsive interface, including a real-time search bar with product data and refined filters, and contributed to developing the login system."
             },
             technologies: ["HTML", "CSS", "Bootstrap", "JavaScript", "JQuery","Visual Studio Code"],
