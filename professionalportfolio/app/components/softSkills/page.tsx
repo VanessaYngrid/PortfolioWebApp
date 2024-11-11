@@ -2,14 +2,17 @@
 
     import { useState, useEffect } from 'react';
 
+    // Definimos el tipo de datos que vamos a recibir (skills en este caso)
     type SoftSkills = {
     softSkills: string[];
     };
 
+    // Recibimos searchQuery como prop directamente
     export default function SoftSkillsComponent({ searchQuery }: { searchQuery: string }) {
     const [softSkills, setSoftSkills] = useState<SoftSkills | null>(null);
     const [filteredSkills, setFilteredSkills] = useState<string[]>([]);
 
+    // Fetch de las habilidades al cargar el componente
     useEffect(() => {
         async function fetchData() {
         try {
@@ -25,15 +28,17 @@
         fetchData();
     }, []);
 
+    // Filtrar habilidades cada vez que cambia el searchQuery
     useEffect(() => {
         if (softSkills) {
         const filtered = softSkills.softSkills.filter(skill =>
-            skill.toLowerCase().includes(searchQuery.toLowerCase()) // Filtramos las habilidades
+            skill.toLowerCase().includes(searchQuery.toLowerCase())
         );
         setFilteredSkills(filtered);
         }
-    }, [softSkills, searchQuery]); // Se ejecuta cada vez que cambia searchQuery o softSkills
+    }, [softSkills, searchQuery]);
 
+    // Renderizar las habilidades filtradas
     const renderSkillCards = (skills: string[]) => {
         return (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -52,8 +57,7 @@
         <div className="bg-[#F9F9F9] px-6 md:px-10 lg:px-16 pb-20 overflow-x-hidden">
         <div className="max-w-full mx-auto px-4 py-8 text-center">
             <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">SOFT SKILLS</h1>
-            {/* Renderizamos las habilidades filtradas */}
-            {renderSkillCards(filteredSkills)}
+            {renderSkillCards(filteredSkills)} {/* Mostramos las habilidades filtradas */}
         </div>
         </div>
     );

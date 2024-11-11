@@ -7,17 +7,16 @@
     import Navbar from "../navbar/page";
     import SoftSkillsComponent from "../softSkills/page";
     import TechSkills from "../techSkills/page";
-import AgileSkillsComponent from '../agileSkills/page';
-import { useState } from "react";
+    import AgileSkillsComponent from '../agileSkills/page';
+    import { useState } from "react";
 
     export default function Skills() {
-    
-        const [searchQuery, setSearchQuery] = useState(""); // Estado para almacenar la búsqueda
+    const [searchQuery, setSearchQuery] = useState(""); // Estado para almacenar la búsqueda
 
-  // Función que maneja el cambio de la búsqueda
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchQuery(event.target.value); // Actualiza el estado del query de búsqueda
-  };
+    // Función que maneja el cambio de la búsqueda
+    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(event.target.value); // Actualiza el estado del query de búsqueda
+    };
 
     return (
         <div className="bg-[#F9F9F9] overflow-x-hidden">
@@ -51,16 +50,16 @@ import { useState } from "react";
                 className="block w-full p-4 pl-10 text-md text-gray-900 border border-gray-400 rounded-lg bg-gray-50 focus:ring-[#4A1942] focus:border-[#6e2d63]"
                 placeholder="Explore my skills..."
                 value={searchQuery}
-            onChange={handleSearchChange}
+                onChange={handleSearchChange}
                 required
             />
             </div>
         </div>
-        {/* Pass searchQuery as prop to child components: searchQuery={searchQuery} */}
-        <TechSkills/>
+
+        <TechSkills />
         <AgileSkillsComponent />
-        <LanguagesSkills/>
-        <SoftSkillsComponent searchQuery={searchQuery}/>
+        <LanguagesSkills />
+        <SoftSkillsComponent searchQuery={searchQuery} /> {/* Pasamos searchQuery a SoftSkillsComponent */}
         <Contact />
         <Footer />
         </div>
