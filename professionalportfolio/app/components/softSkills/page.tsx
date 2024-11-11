@@ -1,64 +1,64 @@
-'use client';
+    'use client';
 
-import { useState, useEffect } from 'react';
+    import { useState, useEffect } from 'react';
 
-type SoftSkills = {
+    type SoftSkills = {
     softSkills: string[];
-};
+    searchQuery: string; // Recibimos searchQuery como prop
+    };
 
-interface SoftSkillsComponentProps {
-    searchQuery: string;
-}
-
-export default function SoftSkillsComponent({ searchQuery }: SoftSkillsComponentProps) {
+    export default function SoftSkillsComponent({ searchQuery }: { searchQuery: string }) {
     const [softSkills, setSoftSkills] = useState<SoftSkills | null>(null);
     const [filteredSkills, setFilteredSkills] = useState<string[]>([]);
 
+    // Fetch data cuando el componente se monta
     useEffect(() => {
         async function fetchData() {
-            try {
-                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/softSkills`, { cache: "no-cache" });
-                if (response.ok) {
-                    const data: SoftSkills = await response.json();
-                    setSoftSkills(data);
-                }
-            } catch (error) {
-                console.error('Error fetching data:', error);
+        try {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/softSkills`, { cache: 'no-cache' });
+            if (response.ok) {
+            const data: SoftSkills = await response.json();
+            setSoftSkills(data);
             }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
         }
         fetchData();
     }, []);
 
-    // Filter skills based on searchQuery
+    // Filtrar las habilidades basadas en la búsqueda
     useEffect(() => {
         if (softSkills) {
-            const filtered = softSkills.softSkills.filter(skill =>
-                skill.toLowerCase().includes(searchQuery.toLowerCase())
-            );
-            setFilteredSkills(filtered);
+        const filtered = softSkills.softSkills.filter(skill =>
+            skill.toLowerCase().includes(searchQuery.toLowerCase()) // Filtramos las habilidades
+        );
+        setFilteredSkills(filtered);
         }
-    }, [softSkills, searchQuery]);
+    }, [softSkills, searchQuery]); // Se ejecuta cada vez que cambia searchQuery o softSkills
 
+    // Renderizamos las tarjetas de habilidades filtradas
     const renderSkillCards = (skills: string[]) => {
         return (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                {skills.map((skill, index) => (
-                    <div className="bg-[#F0F0F0] rounded overflow-hidden shadow-lg" key={skill + index}>
-                        <div className="px-4 py-4 lg:py-6 w-full flex items-center justify-center">
-                            <h2 className="text-[#4A1942] text-md font-normal">{skill}</h2>
-                        </div>
-                    </div>
-                ))}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {skills.map((skill, index) => (
+            <div className="bg-[#F0F0F0] rounded overflow-hidden shadow-lg" key={skill + index}>
+                <div className="px-4 py-4 lg:py-6 w-full flex items-center justify-center">
+                <h2 className="text-[#4A1942] text-md font-normal">{skill}</h2>
+                </div>
             </div>
+            ))}
+        </div>
         );
     };
 
     return (
         <div className="bg-[#F9F9F9] px-6 md:px-10 lg:px-16 pb-20 overflow-x-hidden">
-            <div className="max-w-full mx-auto px-4 py-8 text-center">
-                <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">SOFT SKILLS</h1>
-                {renderSkillCards(filteredSkills)}
-            </div>
+        <div className="max-w-full mx-auto px-4 py-8 text-center">
+            <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">SOFT SKILLS</h1>
+            {/* Renderizamos las habilidades filtradas */}
+            {renderSkillCards(filteredSkills)}
+        </div>
         </div>
     );
-}
+    }

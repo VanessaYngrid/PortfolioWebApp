@@ -1,22 +1,23 @@
-'use client';
+    'use client';
 
-import Carousel from "../carousel/page";
-import Contact from "../contact/page";
-import Footer from "../footer/page";
-import LanguagesSkills from "../languageSkills/page";
-import Navbar from "../navbar/page";
-import SoftSkillsComponent from "../softSkills/page";
-import TechSkills from "../techSkills/page";
+    import Carousel from "../carousel/page";
+    import Contact from "../contact/page";
+    import Footer from "../footer/page";
+    import LanguagesSkills from "../languageSkills/page";
+    import Navbar from "../navbar/page";
+    import SoftSkillsComponent from "../softSkills/page";
+    import TechSkills from "../techSkills/page";
 import AgileSkillsComponent from '../agileSkills/page';
 import { useState } from "react";
 
     export default function Skills() {
-    const [searchQuery, setSearchQuery] = useState("");
+    
+        const [searchQuery, setSearchQuery] = useState(""); // Estado para almacenar la búsqueda
 
-    // Handle the search input change
-    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchQuery(event.target.value);
-    };
+  // Función que maneja el cambio de la búsqueda
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(event.target.value); // Actualiza el estado del query de búsqueda
+  };
 
     return (
         <div className="bg-[#F9F9F9] overflow-x-hidden">
@@ -50,7 +51,7 @@ import { useState } from "react";
                 className="block w-full p-4 pl-10 text-md text-gray-900 border border-gray-400 rounded-lg bg-gray-50 focus:ring-[#4A1942] focus:border-[#6e2d63]"
                 placeholder="Explore my skills..."
                 value={searchQuery}
-                onChange={handleSearchChange}
+            onChange={handleSearchChange}
                 required
             />
             </div>
