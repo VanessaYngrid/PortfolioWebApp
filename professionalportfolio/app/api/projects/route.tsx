@@ -25,7 +25,7 @@ export async function GET(){
         {
             project_id: "p001",
             title: "Personal Portfolio Web Application",
-            duration: "August 2024 - Present",
+            duration: "Oct 2024 - Nov 2024",
             category: "Web Application",
             type: "Personal Project",
             description: {
@@ -45,7 +45,7 @@ export async function GET(){
         {
             project_id: "p002",
             title: "Natural Beauty Store - Mobile Application",
-            duration: "June 2024 – Aug 2024",
+            duration: "Jun 2024 – Aug 2024",
             category: "Mobile Application",
             type: "Personal Project",
             description: {
@@ -67,7 +67,7 @@ export async function GET(){
         {
             project_id: "p003",
             title: "Massage Therapy Booking Web Application",
-            duration: "July 2024 - Aug 2024",
+            duration: "Jul 2024 - Aug 2024",
             category: "Web Application",
             type: "Group Project",
             description: {
