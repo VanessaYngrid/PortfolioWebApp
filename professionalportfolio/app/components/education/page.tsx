@@ -22,6 +22,7 @@ export default function Education() {
             });
     }, []);
 
+    
     function renderTimeline() {
         return (
             <div className="relative pt-2 md:pt-4 pb-8 px-8 md:px-12 lg:px-32">
