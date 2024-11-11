@@ -4,14 +4,16 @@
 
     type SoftSkills = {
     softSkills: string[];
-    searchQuery: string; // Recibimos searchQuery como prop
     };
 
-    export default function SoftSkillsComponent({ searchQuery }: { searchQuery: string }) {
+    interface SoftSkillsComponentProps {
+    searchQuery: string; // Asegúrate de definir los props correctamente
+    }
+
+    export default function SoftSkillsComponent({ searchQuery }: SoftSkillsComponentProps) {
     const [softSkills, setSoftSkills] = useState<SoftSkills | null>(null);
     const [filteredSkills, setFilteredSkills] = useState<string[]>([]);
 
-    // Fetch data cuando el componente se monta
     useEffect(() => {
         async function fetchData() {
         try {
@@ -27,7 +29,6 @@
         fetchData();
     }, []);
 
-    // Filtrar las habilidades basadas en la búsqueda
     useEffect(() => {
         if (softSkills) {
         const filtered = softSkills.softSkills.filter(skill =>
@@ -37,7 +38,6 @@
         }
     }, [softSkills, searchQuery]); // Se ejecuta cada vez que cambia searchQuery o softSkills
 
-    // Renderizamos las tarjetas de habilidades filtradas
     const renderSkillCards = (skills: string[]) => {
         return (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
