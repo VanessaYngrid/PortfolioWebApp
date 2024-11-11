@@ -6,11 +6,7 @@
     softSkills: string[];
     };
 
-    interface SoftSkillsComponentProps {
-    searchQuery: string; // Asegúrate de definir los props correctamente
-    }
-
-    export default function SoftSkillsComponent({ searchQuery }: SoftSkillsComponentProps) {
+    export default function SoftSkillsComponent({ searchQuery }: { searchQuery: string }) {
     const [softSkills, setSoftSkills] = useState<SoftSkills | null>(null);
     const [filteredSkills, setFilteredSkills] = useState<string[]>([]);
 
