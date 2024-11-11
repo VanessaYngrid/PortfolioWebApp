@@ -19,7 +19,7 @@ export async function GET() {
                 { name: "CSS", knowledge: 90 },
                 { name: "Bootstrap", knowledge: 95 },
                 { name: "JavaScript", knowledge: 85 },
-                { name: "TypeScript", knowledge: 85 },
+                { name: "TypeScript ", knowledge: 85 },
                 { name: "React.js", knowledge: 80 },
                 { name: "Angular", knowledge: 60 },
                 { name: "Next.js", knowledge: 80 },
