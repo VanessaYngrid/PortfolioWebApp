@@ -14,7 +14,7 @@ type TechnologySkills = {
 
 const ProgressBar = ({ knowledge }: { knowledge: number }) => {
     return (
-        <div className="flex items-center px-0">
+        <div className="flex items-center px-2">
             <div className="h-2 bg-white rounded w-full shadow-md">
                 <div className="h-full bg-[#6B4C7C] rounded" style={{ width: `${knowledge}%` }}></div>
             </div>
@@ -47,11 +47,24 @@ export default function TechSkills() {
             const renderSkills = (skills: { name: string, knowledge: number }[], title: string) => {
                 return (
                     <div className="mb-8">
-                        <h2 className="text-2xl font-bold mb-4 text-[#893168]">{title}</h2>
+                        <h2 className="text-2xl font-bold mb-6 text-[#893168]">{title}</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {skills.map((skill, index) => (
                                 <div className="mb-6" key={skill.name + index}>
-                                    <h3 className="text-md font-normal text-[#2B2B2B] text-left">{skill.name}</h3>
+                                    <div className="flex items-center mb-2 mx-2">
+                                        {/* Imagen next to the tech name */}
+                                        <div className="mr-2">
+                                            <Image
+                                                src={`/images/programming/${transformSkillName(skill.name)}.png`}
+                                                alt={`${skill.name} logo`}
+                                                width={30}
+                                                height={30}
+                                                layout="intrinsic"
+                                            />
+                                        </div>
+                                        <h3 className="text-md font-normal text-[#2B2B2B] text-left">{skill.name}</h3>
+                                    </div>
+                                    {/* Barra de progreso */}
                                     <ProgressBar knowledge={skill.knowledge} />
                                 </div>
                             ))}
@@ -107,5 +120,9 @@ export default function TechSkills() {
 }
 
 const transformSkillName = (skill: string) => { 
-    return skill.replace(/ /g, '_').replace(/#/g, '%23').toLowerCase();
+    return skill
+        .replace(/ /g, '_')       // espacios por _
+        .replace(/#/g, '%23')      // # por %23
+        .replace(/\./g, '_')       // puntos por _
+        .toLowerCase();           // todo a minúsculas
 };

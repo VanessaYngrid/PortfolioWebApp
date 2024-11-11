@@ -1,6 +1,5 @@
     'use client';
 
-    import { useState, useEffect } from 'react';
     import Carousel from "../carousel/page";
     import Contact from "../contact/page";
     import Footer from "../footer/page";
@@ -8,60 +7,56 @@
     import Navbar from "../navbar/page";
     import SoftSkillsComponent from "../softSkills/page";
     import TechSkills from "../techSkills/page";
-    import AgileSkillsComponent from '../agileSkills/page';
-    import SearchBar from '../searchBar/searchBar';
+import AgileSkillsComponent from '../agileSkills/page';
 
     export default function Skills() {
-    const [searchQuery, setSearchQuery] = useState("");
-    const [filteredSoftSkills, setFilteredSoftSkills] = useState<string[]>([]);
-
-    // Simulamos la carga de las habilidades (esto debería venir de tu API o base de datos)
-    const [allSoftSkills, setAllSoftSkills] = useState<string[]>([]);
-    
-    useEffect(() => {
-        async function fetchData() {
-        try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/softSkills`, { cache: 'no-cache' });
-            if (response.ok) {
-            const data = await response.json();
-            setAllSoftSkills(data.softSkills); // Suponemos que el API devuelve un array de habilidades
-            }
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-        }
-        fetchData();
-    }, []);
-
-    useEffect(() => {
-        // Filtrar las habilidades cuando cambia searchQuery
-        if (allSoftSkills) {
-        const filtered = allSoftSkills.filter(skill =>
-            skill.toLowerCase().includes(searchQuery.toLowerCase())
-        );
-        setFilteredSoftSkills(filtered);
-        }
-    }, [allSoftSkills, searchQuery]);
 
     return (
         <div className="bg-[#F9F9F9] overflow-x-hidden">
-        <Navbar />
-        <Carousel />
-        <div className="max-w-xl mx-auto pb-4 px-8 lg:px-8 pt-8 text-center">
-            <p className="text-lg text-gray-700 mb-4">
-            Use the search bar below to find specific skills in my portfolio:
-            </p>
-            {/* Usamos el componente SearchBar para manejar el estado de búsqueda */}
-            <SearchBar onSearch={setSearchQuery} />
-        </div>
-
-        {/* Pasamos las habilidades filtradas al componente SoftSkillsComponent */}
-        <TechSkills />
-        <AgileSkillsComponent />
-        <LanguagesSkills />
-        <SoftSkillsComponent filteredSkills={filteredSoftSkills} />
-        <Contact />
-        <Footer />
+            <Navbar />
+            <Carousel />
+            <TechSkills/>
+            <AgileSkillsComponent />
+            <LanguagesSkills/>
+            <SoftSkillsComponent />
+            <Contact />
+            <Footer />
         </div>
     );
     }
+
+    /*
+
+    <div className="max-w-xl mx-auto pb-4 px-8 lg:px-8 pt-8 text-center">
+            <p className="text-lg text-gray-700 mb-4">
+            Use the search bar below to find specific skills in my portfolio:
+            </p>
+            <div className="relative">
+            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg
+                className="w-4 h-4 text-gray-500"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+                >
+                <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+                </svg>
+            </div>
+            <input
+                type="search"
+                id="default-search"
+                className="block w-full p-4 pl-10 text-md text-gray-900 border border-gray-400 rounded-lg bg-gray-50 focus:ring-[#4A1942] focus:border-[#6e2d63]"
+                placeholder="Explore my skills..."
+                required
+            />
+            </div>
+        </div>
+
+        */

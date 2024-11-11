@@ -145,7 +145,7 @@ export default function Contact() {
                     <div className="shadow-lg rounded-lg py-4 px-2 lg:px-12">
                         <h1 className="text-white text-4xl font-bold mb-6">CONTACT ME</h1>
                         <p className="text-white text-md mb-4">Feel free to contact me by submitting the form below, sending me an email, or connecting with me via LinkedIn:</p>
-                        <p className="font-medium mt-2 text-white flex flex-col lg:flex-row items-start lg:items-center">
+                        <div className="font-medium mt-2 text-white flex flex-col lg:flex-row items-start lg:items-center">
                             <div className="flex items-center mb-4 lg:mb-0">
                                 <Image
                                     src="/icons/email.png"
@@ -165,7 +165,7 @@ export default function Contact() {
                                 </svg>
                                 <span className="text-white pl-2 lg:inline text-start">LinkedIn</span>
                             </a>
-                        </p>
+                        </div>
 
                         <form className="space-y-4 text-black mt-8" onSubmit={handleSubmit}>
                             <input
