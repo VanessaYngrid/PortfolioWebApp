@@ -1,5 +1,6 @@
     'use client';
 
+    import { useState, useEffect } from 'react';
     import Carousel from "../carousel/page";
     import Contact from "../contact/page";
     import Footer from "../footer/page";
@@ -8,15 +9,39 @@
     import SoftSkillsComponent from "../softSkills/page";
     import TechSkills from "../techSkills/page";
     import AgileSkillsComponent from '../agileSkills/page';
-    import { useState } from "react";
+    import SearchBar from '../searchBar/searchBar';
 
     export default function Skills() {
-    const [searchQuery, setSearchQuery] = useState(""); // Estado para almacenar la búsqueda
+    const [searchQuery, setSearchQuery] = useState("");
+    const [filteredSoftSkills, setFilteredSoftSkills] = useState<string[]>([]);
 
-    // Función que maneja el cambio de la búsqueda
-    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchQuery(event.target.value); // Actualiza el estado del query de búsqueda
-    };
+    // Simulamos la carga de las habilidades (esto debería venir de tu API o base de datos)
+    const [allSoftSkills, setAllSoftSkills] = useState<string[]>([]);
+    
+    useEffect(() => {
+        async function fetchData() {
+        try {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/softSkills`, { cache: 'no-cache' });
+            if (response.ok) {
+            const data = await response.json();
+            setAllSoftSkills(data.softSkills); // Suponemos que el API devuelve un array de habilidades
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+        }
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        // Filtrar las habilidades cuando cambia searchQuery
+        if (allSoftSkills) {
+        const filtered = allSoftSkills.filter(skill =>
+            skill.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        setFilteredSoftSkills(filtered);
+        }
+    }, [allSoftSkills, searchQuery]);
 
     return (
         <div className="bg-[#F9F9F9] overflow-x-hidden">
@@ -26,43 +51,17 @@
             <p className="text-lg text-gray-700 mb-4">
             Use the search bar below to find specific skills in my portfolio:
             </p>
-            <div className="relative">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <svg
-                className="w-4 h-4 text-gray-500"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-                >
-                <path
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                />
-                </svg>
-            </div>
-            <input
-                type="search"
-                id="default-search"
-                className="block w-full p-4 pl-10 text-md text-gray-900 border border-gray-400 rounded-lg bg-gray-50 focus:ring-[#4A1942] focus:border-[#6e2d63]"
-                placeholder="Explore my skills..."
-                value={searchQuery}
-                onChange={handleSearchChange}
-                required
-            />
-            </div>
+            {/* Usamos el componente SearchBar para manejar el estado de búsqueda */}
+            <SearchBar onSearch={setSearchQuery} />
         </div>
 
-        {/* Pasamos searchQuery como prop a SoftSkillsComponent */}
+        {/* Pasamos las habilidades filtradas al componente SoftSkillsComponent */}
         <TechSkills />
         <AgileSkillsComponent />
         <LanguagesSkills />
-        <SoftSkillsComponent searchQuery={searchQuery} /> {/* Pasamos searchQuery aquí */}
+        <SoftSkillsComponent filteredSkills={filteredSoftSkills} />
         <Contact />
-        <Footer />    
+        <Footer />
         </div>
     );
     }

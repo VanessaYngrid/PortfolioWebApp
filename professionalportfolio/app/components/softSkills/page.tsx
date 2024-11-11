@@ -1,39 +1,8 @@
     'use client';
 
-    import { useState, useEffect } from 'react';
 
-    type SoftSkills = {
-    softSkills: string[];
-    };
 
-    export default function SoftSkillsComponent({ searchQuery }: { searchQuery: string }) {
-    const [softSkills, setSoftSkills] = useState<SoftSkills | null>(null);
-    const [filteredSkills, setFilteredSkills] = useState<string[]>([]);
-
-    useEffect(() => {
-        async function fetchData() {
-        try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/softSkills`, { cache: 'no-cache' });
-            if (response.ok) {
-            const data: SoftSkills = await response.json();
-            setSoftSkills(data);
-            }
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-        }
-        fetchData();
-    }, []);
-
-    useEffect(() => {
-        if (softSkills) {
-        const filtered = softSkills.softSkills.filter(skill =>
-            skill.toLowerCase().includes(searchQuery.toLowerCase()) // Filtrar según el query de búsqueda
-        );
-        setFilteredSkills(filtered);
-        }
-    }, [softSkills, searchQuery]); // Ejecutar cada vez que cambie el `searchQuery` o `softSkills`
-
+    export default function SoftSkillsComponent({ filteredSkills }: { filteredSkills: string[] }) {
     const renderSkillCards = (skills: string[]) => {
         return (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -52,7 +21,7 @@
         <div className="bg-[#F9F9F9] px-6 md:px-10 lg:px-16 pb-20 overflow-x-hidden">
         <div className="max-w-full mx-auto px-4 py-8 text-center">
             <h1 className="text-3xl font-bold mb-8 text-[#4A1942]">SOFT SKILLS</h1>
-            {/* Renderizamos las habilidades filtradas */}
+            {/* Mostrar las habilidades filtradas */}
             {renderSkillCards(filteredSkills)}
         </div>
         </div>
