@@ -15,12 +15,12 @@ export async function GET() {
     const TechnologyObject: TechnologySkills = {
         programming: {
             frontend: [
-                { name: "HTML", knowledge: 95 },
+                { name: "HTML", knowledge: 98 },
                 { name: "CSS", knowledge: 90 },
                 { name: "Bootstrap", knowledge: 95 },
                 { name: "JavaScript ", knowledge: 85 },
                 { name: "TypeScript", knowledge: 85 },
-                { name: "React.js", knowledge: 80 },
+                { name: "React.js", knowledge: 85 },
                 { name: "Angular", knowledge: 70 },
                 { name: "Next.js", knowledge: 80 },
                 { name: "Tailwind CSS", knowledge: 95 },

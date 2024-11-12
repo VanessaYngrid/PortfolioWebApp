@@ -27,7 +27,7 @@ export default function Navbar() {
                     </svg>
                 </button>
 
-                {/* Contenedor del menú que se abre */}
+                {/* Menu container */}
                 <div className={`w-full lg:flex lg:items-center lg:w-auto ${isOpen ? 'flex' : 'hidden'}`}>
                     {/* Flex container dividido en dos partes */}
                     <div className="flex justify-between w-full">
@@ -46,7 +46,7 @@ export default function Navbar() {
                                 <a onClick={() => handleMenuItemClick('skillsmain')} className="text-white block py-2 px-4 cursor-pointer">Skills</a>
                             </li>
                             <li>
-                                <a onClick={() => handleMenuItemClick('projectsmain')} className="text-white block py-2 px-4 cursor-pointer">Projects</a>
+                                <a onClick={() => handleMenuItemClick('projects')} className="text-white block py-2 px-4 cursor-pointer">Projects</a>
                             </li>
                             <li>
                                 <a onClick={() => handleMenuItemClick('experience')} className="text-white block py-2 px-4 cursor-pointer">Experience</a>

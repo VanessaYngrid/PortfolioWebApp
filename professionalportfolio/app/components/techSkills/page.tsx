@@ -14,7 +14,7 @@ type TechnologySkills = {
 
 const ProgressBar = ({ knowledge }: { knowledge: number }) => {
     return (
-        <div className="flex items-center px-2">
+        <div className="flex items-center px-0 md:px-2">
             <div className="h-2 bg-white rounded w-full shadow-md">
                 <div className="h-full bg-[#6B4C7C] rounded" style={{ width: `${knowledge}%` }}></div>
             </div>

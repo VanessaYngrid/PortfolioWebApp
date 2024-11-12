@@ -28,7 +28,7 @@ export default function Carousel() {
                 modules={[Autoplay]}
                 spaceBetween={30}
                 slidesPerView={1}
-                autoplay={{ delay: 3000 }} // Adjust autoplay delay
+                autoplay={{ delay: 3000 }} // utoplay delay
                 loop={true} // Enable looping
             >
                 {slides.map((slide, index) => (
@@ -43,8 +43,8 @@ export default function Carousel() {
                                     className="opacity-50"
                                 />
                             </div>
-                            <div className="relative z-10 text-center text-white text-3xl font-normal">
-                                <h1 className="mt-2">{slide.text}</h1>
+                            <div className="relative z-10 text-center text-white text-xl md:text-3xl font-normal">
+                                <h1 className="mt-2 px-4">{slide.text}</h1>
                             </div>
                         </div>
                     </SwiperSlide>

@@ -10,6 +10,7 @@ import SkillsMainPage from "./components/skillsMainPage/page";
 //import { useTranslation } from 'react-i18next';
 
 export default function Home() {
+  
   return (
   <div className="bg-[#f9f9f9] overflow-x-hidden">
     <Navbar/>
