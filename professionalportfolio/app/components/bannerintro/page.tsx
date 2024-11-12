@@ -27,7 +27,7 @@ export default function BannerIntro() {
                     </a>
 
                     <a 
-                        href="/pdfs/curriculum.pdf" 
+                        href="/pdfs/curriculumVanessa.pdf" 
                         download 
                         className="inline-block bg-[#6B4C7C] text-white py-1 px-4 rounded-full hover:bg-[#4C3A61] transition"
                     >

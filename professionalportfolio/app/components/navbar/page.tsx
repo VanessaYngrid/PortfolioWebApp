@@ -14,7 +14,7 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="bg-[#4A1942] lg:py-4 md:px-10 lg:px-32 py-4 px-8">
+        <nav className="bg-[#4A1942] lg:py-4 md:px-10 lg:px-32 py-4 px-10">
             <div className="container mx-auto flex flex-wrap items-center justify-between">
                 <a href="/">
                     <div className="text-white text-lg">
@@ -32,7 +32,7 @@ export default function Navbar() {
                     {/* Flex container dividido en dos partes */}
                     <div className="flex justify-between w-full">
                         {/* Enlaces a la izquierda */}
-                        <ul className="flex flex-col lg:flex-row lg:space-x-4 mt-4 lg:mt-0">
+                        <ul className="flex flex-col md:flex-row lg:space-x-4 mt-4 lg:mt-0">
                             <li>
                                 <a onClick={() => handleMenuItemClick('home')} className="text-white block py-2 px-4 cursor-pointer">Home</a>
                             </li>
