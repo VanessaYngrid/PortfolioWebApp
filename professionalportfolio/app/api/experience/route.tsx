@@ -29,8 +29,8 @@ export async function GET() {
             dateRange: "Sep 2024 - Present",
             responsibilities: {
                 responsibilities1: "Developed responsive Front-End interfaces using TypeScript, Tailwind CSS, and Angular for seamless user experiences across web platforms.",
-                responsibilities2:"Integrated external APIs and implemented internationalization (i18n) for a global audience.",
-                responsibilities3: "Collaborated with Back-End teams to ensure smooth data flow and dynamic content rendering, ensuring seamless integration.",
+                responsibilities2:"Integrated external and Django RESTful APIs to fetch and render dynamic data, ensuring smooth collaboration with Back-End teams.",
+                responsibilities3: "Implemented internationalization (i18n) to adapt the application for a global audience.",
                 responsibilities4: "Contributed in an Agile environment, participating in daily meetings and code reviews.",
                 responsibilities5: "Utilized Git and Bitbucket for version control, and managed tasks through Jira.",
                 responsibilities6: "Coordinated communication between the client and internal teams, overseeing the migration and delivery of technical support for an international project in Latin America."
