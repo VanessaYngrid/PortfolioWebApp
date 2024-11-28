@@ -12,8 +12,10 @@ export async function GET() {
         responsibilities: {
             responsibilities1: string,
             responsibilities2: string,
-            responsibilities3?: string,
-            responsibilities4?: string,
+            responsibilities3: string,
+            responsibilities4: string,
+            responsibilities5?: string,
+            responsibilities6?: string,
         }
     }
 
@@ -26,10 +28,12 @@ export async function GET() {
             position: "Web Developer Intern",
             dateRange: "Sep 2024 - Present",
             responsibilities: {
-                responsibilities1: "Developed responsive front-end interfaces using TypeScript, Tailwind CSS, and Angular, optimizing UI components to deliver a seamless user experience across web platforms.",
-                responsibilities2:"Integrated and fetched data from external APIs, implementing internationalization (i18n) for global audience support.",
-                responsibilities3: "Collaborated within an agile team, participating in daily meetings and code reviews.",
-                responsibilities4: "Utilized Git and Bitbucket for version control, and managed project tasks and progress using Jira."
+                responsibilities1: "Developed responsive Front-End interfaces using TypeScript, Tailwind CSS, and Angular for seamless user experiences across web platforms.",
+                responsibilities2:"Integrated external APIs and implemented internationalization (i18n) for a global audience.",
+                responsibilities3: "Collaborated with Back-End teams to ensure smooth data flow and dynamic content rendering, ensuring seamless integration.",
+                responsibilities4: "Contributed in an Agile environment, participating in daily meetings and code reviews.",
+                responsibilities5: "Utilized Git and Bitbucket for version control, and managed tasks through Jira.",
+                responsibilities6: "Coordinated communication between the client and internal teams, overseeing the migration and delivery of technical support for an international project in Latin America."
             }
         },
         {
@@ -38,10 +42,10 @@ export async function GET() {
             position: "Process Engineer",
             dateRange: "Sep 2021 - Oct 2022",
             responsibilities: {
-                responsibilities1: "Worked in a team that implemented the Scrum framework as its working model.",
-                responsibilities2: "Led process optimization initiatives using Lean methodology and quality measures to streamline the vehicle financing process and enhance the user experience, addressing customer needs and pain points.",
-                responsibilities3: "Trained analysts on mapping BPMN end-to-end processes, identifying bottlenecks, and creating actionable improvement plans.",
-                responsibilities4: "Worked with technology, UX teams, and sales analysts to design and implement process improvements in the vehicle financing journey."
+                responsibilities1: "Worked with cross-functional teams to implement continuous process improvements across the vehicle financing journey, improving customer experience and operational efficiency.",
+                responsibilities2: "Led Lean process optimization initiatives to streamline vehicle financing operations, addressing customer needs, reducing cycle time and enhancing user satisfaction.",
+                responsibilities3: "Trained cross-functional teams on BPMN to identify process bottlenecks and implement efficient solutions.",
+                responsibilities4: "Participated in a team that implemented the Scrum framework as its working model."
             }
         },
         {
@@ -50,9 +54,10 @@ export async function GET() {
             position: "Junior Operational Financial Analyst",
             dateRange: "Apr 2020 - Sep 2021",
             responsibilities: {
-                responsibilities1: "Implemented Lean methodology to streamline department processes, reduce waste, and improve efficiency across insurance and pension operations, while leading cross-departmental projects to enhance communication and coordination.",
+                responsibilities1: "Implemented Lean methodology to optimize operations, reducing waste and improving efficiency in insurance and pension services.",
                 responsibilities2: "Represented the department in continuous quality improvement initiatives and established key performance indicators (KPIs) to monitor process effectiveness.",
-                responsibilities3: "Mapped and designed end-to-end BPMN process flows to identify pain points and optimize workflows."
+                responsibilities3: "Mapped and optimized end-to-end BPMN flows, identifying pain points for improved service delivery.",
+                responsibilities4: "Led cross-department projects to improve communication and operational effectiveness."
             }
         },
         {
