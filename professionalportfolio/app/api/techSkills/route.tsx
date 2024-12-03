@@ -21,7 +21,7 @@ export async function GET() {
                 { name: "JavaScript ", knowledge: 85 },
                 { name: "TypeScript", knowledge: 85 },
                 { name: "React.js", knowledge: 85 },
-                { name: "Angular", knowledge: 70 },
+                { name: "Angular", knowledge: 80 },
                 { name: "Next.js", knowledge: 80 },
                 { name: "Tailwind CSS", knowledge: 95 },
             ],

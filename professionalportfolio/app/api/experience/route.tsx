@@ -28,7 +28,7 @@ export async function GET() {
             position: "Web Developer Intern",
             dateRange: "Sep 2024 - Present",
             responsibilities: {
-                responsibilities1: "Developed responsive Front-End interfaces using TypeScript, Tailwind CSS, and Angular for seamless user experiences across web platforms.",
+                responsibilities1: "Developed responsive Front-End interfaces using Angular, TypeScript and Tailwind CSS for seamless user experiences across web platforms.",
                 responsibilities2:"Integrated external and Django RESTful APIs to fetch and render dynamic data, ensuring smooth collaboration with Back-End teams.",
                 responsibilities3: "Implemented internationalization (i18n) to adapt the application for a global audience.",
                 responsibilities4: "Contributed in an Agile environment, participating in daily meetings and code reviews.",
