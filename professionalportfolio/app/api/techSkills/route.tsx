@@ -26,10 +26,10 @@ export async function GET() {
                 { name: "Tailwind CSS", knowledge: 95 },
             ],
             backend: [
+                { name: "Java", knowledge: 85 },
                 { name: "RESTful APIs", knowledge: 90 },
                 { name: "Third-Party APIs", knowledge: 90 },
-                { name: "Java for Android", knowledge: 65 },
-                { name: "Java", knowledge: 80 },
+                { name: "Java for Android", knowledge: 70 },
                 { name: "Node.js", knowledge: 70 },
                 { name: "C#", knowledge: 50 },
             ],
@@ -40,7 +40,7 @@ export async function GET() {
             ],
         },
         tools: [
-            "Git" , "Visual Studio Code", "Jira", "Figma" , "Miro","Bizagi", "Draw io", "Android Studio",
+            "Git" , "Visual Studio Code", "Jira", "Figma" , "Android Studio", "Miro","Bizagi", "Draw io",
             "Eclipse", "Excel", "PowerPoint", "Word"
         ],
     };
