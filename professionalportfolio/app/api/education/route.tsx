@@ -18,7 +18,7 @@ export async function GET(){
             education_id:"e001",
             program:"AEC Software Development: Mobile and Web Application",
             university:"Vanier College",
-            period:"January 2023 - December 2024 (Expected)",
+            period:"January 2023 - November 2024",
             place:"Montreal, Canada",
             image:"/images/vaniercollege_image.jpg"
         },
