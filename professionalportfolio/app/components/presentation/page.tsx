@@ -19,10 +19,10 @@ export default function Presentation() {
                 
                 <div className="md:w-2/3 px-4 pt-4 pb-2 md:p-6 flex flex-col justify-center">
                     <p className="text-gray-600 mb-4 text-[16px] lg:text-[17px] leading-relaxed">
-                        I am a software development student with proficiency in web and mobile application development. My experience includes front-end development, building user interfaces, server-side development, database design, and a solid foundation in object-oriented programming.
+                        I am a software developer proficient in web and mobile application development. My experience includes a solid foundation in object-oriented programming, front-end development, user interface design, server-side development and database design.
                     </p>
                     <p className="text-gray-600 mb-4 text-[16px] lg:text-[17px] leading-relaxed">
-                        I have 4 years of experience in a financial institution as a financial analyst and process engineer, specializing in process improvement through agile methodologies, particularly the Scrum framework.
+                        I have 4 years of experience in a financial institution as a financial and business analyst, specializing in process optimization using agile methodologies and frameworks such as Lean and Scrum.
                     </p>
                     <p className="text-gray-600 text-[16px] lg:text-[17px] leading-relaxed">
                         My previous bachelor&apos;s degree in industrial engineering and work experience were essential in developing my problem-solving and interpersonal skills through my analytical thinking, communication, and collaboration skills.

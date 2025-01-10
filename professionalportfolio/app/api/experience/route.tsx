@@ -38,8 +38,8 @@ export async function GET() {
         },
         {
             company: "ITAÚ UNIBANCO BANK - Brazil",
-            department: "Vehicle Department",
-            position: "Process Engineer",
+            department: "Vehicle Operations Management",
+            position: "Business Analyst - Process Optimization",
             dateRange: "Sep 2021 - Oct 2022",
             responsibilities: {
                 responsibilities1: "Worked with cross-functional teams to implement continuous process improvements across the vehicle financing journey, improving customer experience and operational efficiency.",
@@ -50,8 +50,8 @@ export async function GET() {
         },
         {
             company: "ITAÚ UNIBANCO BANK - Brazil",
-            department: "Insurance Operations Accounting Management",
-            position: "Junior Operational Financial Analyst",
+            department: "Financial Operations Management - Insurance Accounting",
+            position: "Junior Business Analyst",
             dateRange: "Apr 2020 - Sep 2021",
             responsibilities: {
                 responsibilities1: "Implemented Lean methodology to optimize operations, reducing waste and improving efficiency in insurance and pension services.",
@@ -62,8 +62,8 @@ export async function GET() {
         },
         {
             company: "ITAÚ UNIBANCO BANK - Brazil",
-            department: "Credit Card and Insurance Accounting Processing Management",
-            position: "Operational Financial Intern",
+            department: "Financial Operations Management - Credit Card and Insurance Accounting",
+            position: "Process Improvement Intern",
             dateRange: "Aug 2018 - Apr 2020",
             responsibilities: {
                 responsibilities1: "Led a Lean methodology project to identify process improvement opportunities, and collaborate with IT analysts to automate workflows, reducing manual errors and enhancing performance.",
