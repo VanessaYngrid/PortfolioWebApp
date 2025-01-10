@@ -63,7 +63,7 @@ export async function GET() {
         {
             company: "ITAÚ UNIBANCO BANK - Brazil",
             department: "Financial Operations Management - Credit Card and Insurance Accounting",
-            position: "Process Improvement Intern",
+            position: "Financial Operations Intern",
             dateRange: "Aug 2018 - Apr 2020",
             responsibilities: {
                 responsibilities1: "Led a Lean methodology project to identify process improvement opportunities, and collaborate with IT analysts to automate workflows, reducing manual errors and enhancing performance.",
