@@ -13,6 +13,9 @@ type JobExperience = {
         responsibilities2: string;
         responsibilities3?: string;
         responsibilities4?: string;
+        responsibilities5?: string;
+        responsibilities6?: string;
+        responsibilities7?: string;
     };
 };
 

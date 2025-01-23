@@ -16,6 +16,7 @@ export async function GET() {
             responsibilities4: string,
             responsibilities5?: string,
             responsibilities6?: string,
+            responsibilities7?: string,
         }
     }
 
@@ -28,12 +29,13 @@ export async function GET() {
             position: "Web Developer Intern",
             dateRange: "Sep 2024 - Nov 2024",
             responsibilities: {
-                responsibilities1: "Developed responsive Front-End interfaces using Angular, TypeScript and Tailwind CSS for seamless user experiences across web platforms.",
-                responsibilities2:"Integrated external and Django RESTful APIs to fetch and render dynamic data, ensuring smooth collaboration with Back-End teams.",
-                responsibilities3: "Implemented internationalization (i18n) to adapt the application for a global audience.",
-                responsibilities4: "Contributed in an Agile environment, participating in daily meetings and code reviews.",
-                responsibilities5: "Utilized Git and Bitbucket for version control, and managed tasks through Jira.",
-                responsibilities6: "Coordinated communication between the client and internal teams, overseeing the migration and delivery of technical support for an international project in Latin America."
+                responsibilities1: "Developed dynamic and responsive Front-End interfaces using Angular, JavaScript, TypeScript, and Tailwind CSS, enhancing user experiences across web platforms.",
+                responsibilities2: "Integrated external APIs and Django RESTful APIs to fetch and render dynamic data, ensuring seamless collaboration with Back-End teams.",
+                responsibilities3: "Executed Docker containers locally to access APIs and test Front-End integrations effectively.",
+                responsibilities4: "Implemented internationalization (i18n) to adapt the application for a global audience.",
+                responsibilities5: "Actively collaborated in an Agile environment, participating in daily meetings and code reviews.",
+                responsibilities6: "Utilized Git and Bitbucket for version control, and managed tasks through Jira.",
+                responsibilities7: "Coordinated communication between the client and internal teams, overseeing the migration and delivery of technical support for an international project in Latin America."
             }
         },
         {
@@ -42,10 +44,12 @@ export async function GET() {
             position: "Business Analyst - Process Optimization",
             dateRange: "Sep 2021 - Oct 2022",
             responsibilities: {
-                responsibilities1: "Worked with cross-functional teams to implement continuous process improvements across the vehicle financing journey, improving customer experience and operational efficiency.",
-                responsibilities2: "Led Lean process optimization initiatives to streamline vehicle financing operations, addressing customer needs, reducing cycle time and enhancing user satisfaction.",
-                responsibilities3: "Trained cross-functional teams on BPMN to identify process bottlenecks and implement efficient solutions.",
-                responsibilities4: "Participated in a team that implemented the Scrum framework as its working model."
+                responsibilities1: "Participated in teams that implemented the Scrum framework as its working model.",
+                responsibilities2: "Worked with Technology, UX, and Sales teams to implement process improvements, enhancing customer experience in vehicle financing operations.",
+                responsibilities3: "Mapped 9 end-to-end BPMN flows, identifying process bottlenecks and implementing solutions that improved operational efficiency.",
+                responsibilities4: "Represented the department in continuous quality improvement initiatives and established key performance indicators (KPIs) to monitor process effectiveness.",
+                responsibilities5: "Led Lean process optimization initiatives in 3 departments to streamline vehicle financing operations, reduce cycle time, and enhance user satisfaction by 60%.",
+                responsibilities6: "Trained 14 cross-functional team members in mapping BPMN flow and Lean methodologies."
             }
         },
         {
@@ -54,10 +58,11 @@ export async function GET() {
             position: "Junior Business Analyst",
             dateRange: "Apr 2020 - Sep 2021",
             responsibilities: {
-                responsibilities1: "Implemented Lean methodology to optimize operations, reducing waste and improving efficiency in insurance and pension services.",
-                responsibilities2: "Represented the department in continuous quality improvement initiatives and established key performance indicators (KPIs) to monitor process effectiveness.",
-                responsibilities3: "Mapped and optimized end-to-end BPMN flows, identifying pain points for improved service delivery.",
-                responsibilities4: "Led cross-department projects to improve communication and operational effectiveness."
+                responsibilities1: "Led cross-department projects across 4 different areas to improve operational effectiveness and communication, documenting business rules for process automation.",
+                responsibilities2: "Mapped and optimized 5 end-to-end BPMN flows, identifying pain points and reducing operational effort by 80%.",
+                responsibilities3: "Applied Lean methodologies to reduce operational waste and improve the efficiency of insurance services, helping to reduce accounting discrepancies.",
+                responsibilities4: "Performed data entry for insurance processes, ensuring data accuracy and consistency for business analysis and decision-making.",
+                responsibilities5: "Prepared monthly performance reports for senior management presentations."
             }
         },
         {
