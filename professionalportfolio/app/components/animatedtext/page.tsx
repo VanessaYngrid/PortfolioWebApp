@@ -6,7 +6,7 @@ export default function AnimatedText() {
     // Use useMemo to memoize the specialties array so it doesn't cause re-renders
     const specialties = useMemo(() => [
         "Web Development",
-        "Mobile Development",
+        "Business Analysis",
         "Agile Methodologies"
     ], []); // Empty array means it won't change
 

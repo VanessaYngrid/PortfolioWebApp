@@ -18,7 +18,7 @@ export async function GET(){
         {
             language_id: "l002",
             language: "French",
-            level: "Intermediate"
+            level: "Advanced"
         },
         {
             language_id: "l003",
@@ -28,7 +28,7 @@ export async function GET(){
         {
             language_id: "l004",
             language: "Portuguese",
-            level: "Proficient"
+            level: "Fluent"
         }    
     ]
 

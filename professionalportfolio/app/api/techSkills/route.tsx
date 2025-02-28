@@ -34,13 +34,13 @@ export async function GET() {
                 { name: "C#", knowledge: 50 },
             ],
             database: [
-                { name: "MongoDB", knowledge: 75 },
-                { name: "SQL Server", knowledge: 60 },
+                { name: "SQL", knowledge: 85 },
+                { name: "MongoDB", knowledge: 60 },
                 { name: "Firebase", knowledge: 80 },
             ],
         },
         tools: [
-            "Git" , "Visual Studio Code", "Jira", "Figma" , "Android Studio", "Miro","Bizagi", "Draw io",
+            "Git", "Jira", "Figma" , "Visual Studio Code", "Android Studio", "Miro","Bizagi", "Draw io",
             "Eclipse", "Excel", "PowerPoint", "Word"
         ],
     };
