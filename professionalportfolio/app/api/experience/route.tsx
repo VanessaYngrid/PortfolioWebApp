@@ -13,7 +13,7 @@ export async function GET() {
             responsibilities1: string,
             responsibilities2: string,
             responsibilities3: string,
-            responsibilities4: string,
+            responsibilities4?: string,
             responsibilities5?: string,
             responsibilities6?: string,
             responsibilities7?: string,
@@ -26,55 +26,64 @@ export async function GET() {
         {
             company: "YULCOM Technologies - Canada",
             department: "Development Team",
-            position: "Web Developer Intern",
-            dateRange: "Sep 2024 - Nov 2024",
+            position: "Web Developer Intern (CO-OP)",
+            dateRange: "Sep. 2024 - Nov. 2024",
             responsibilities: {
-                responsibilities1: "Developed dynamic and responsive Front-End interfaces using Angular, JavaScript, TypeScript, and Tailwind CSS, enhancing user experiences across web platforms.",
-                responsibilities2: "Integrated external APIs and Django RESTful APIs to fetch and render dynamic data, ensuring seamless collaboration with Back-End teams.",
+                responsibilities1: "Developed responsive front-end interfaces using Angular, TypeScript, CSS, and Tailwind CSS to deliver seamless user experiences across web platforms.",
+                responsibilities2: "Integrated external RESTful APIs built with Django to fetch and display dynamic data, ensuring smooth collaboration with back-end teams.",
                 responsibilities3: "Executed Docker containers locally to access APIs and test Front-End integrations effectively.",
-                responsibilities4: "Implemented internationalization (i18n) to adapt the application for a global audience.",
-                responsibilities5: "Actively collaborated in an Agile environment, participating in daily meetings and code reviews.",
-                responsibilities6: "Utilized Git and Bitbucket for version control, and managed tasks through Jira.",
-                responsibilities7: "Coordinated communication between the client and internal teams, overseeing the migration and delivery of technical support for an international project in Latin America."
+                responsibilities4: "Contributed in an Agile environment, participating in daily stand-up meetings and code reviews.",
+                responsibilities5: "Used Git and Bitbucket for version control, and managed tasks through Jira.",
             }
         },
         {
-            company: "ITAÚ UNIBANCO BANK - Brazil",
-            department: "Vehicle Operations Management",
-            position: "Business Analyst - Process Optimization",
-            dateRange: "Sep 2021 - Oct 2022",
+            company: "ATLAS COPCO - Canada",
+            department: "Logistics and Warehouse Operations",
+            position: "Logistics Clerk (Part-time - Contract)",
+            dateRange: "May 2023 - May 2024",
             responsibilities: {
-                responsibilities1: "Participated in teams that implemented the Scrum framework as its working model.",
-                responsibilities2: "Worked with Technology, UX, and Sales teams to implement process improvements, enhancing customer experience in vehicle financing operations.",
-                responsibilities3: "Mapped 9 end-to-end BPMN flows, identifying process bottlenecks and implementing solutions that improved operational efficiency.",
-                responsibilities4: "Represented the department in continuous quality improvement initiatives and established key performance indicators (KPIs) to monitor process effectiveness.",
-                responsibilities5: "Led Lean process optimization initiatives in 3 departments to streamline vehicle financing operations, reduce cycle time, and enhance user satisfaction by 60%.",
-                responsibilities6: "Trained 14 cross-functional team members in mapping BPMN flow and Lean methodologies."
+                responsibilities1: "Processed over 20 shipping orders per day and entered data into SAP, ensuring the accuracy and reliability of logistics information.",
+                responsibilities2: "Coordinated logistics with more than 7 carriers to ensure on-time deliveries, maintaining consistent communication by phone and email.",
+                responsibilities3: "Maintained detailed records of transactions, inventory levels, and shipping logs to support smooth warehouse operations.",
             }
         },
         {
             company: "ITAÚ UNIBANCO BANK - Brazil",
-            department: "Financial Operations Management - Insurance Accounting",
+            department: "Middle Office, Vehicle Financing",
+            position: "Business Analyst",
+            dateRange: "Sep. 2021 - Oct. 2022",
+            responsibilities: {
+                responsibilities1: "Participated in teams that implemented the Scrum framework as a working model.",
+                responsibilities2: "Led Lean process optimization initiatives in 3 departments to streamline vehicle financing operations, reduce processing times, and improve user satisfaction by 60%.",
+                responsibilities3: "Mapped 9 end-to-end BPMN workflows, identifying bottlenecks and implementing solutions that improved operational efficiency.",
+                responsibilities4: "Collaborated with Operations, Sales, UX, and Technology teams to optimize customer journey processes in vehicle financing, enhancing operational efficiency and user satisfaction.",
+                responsibilities5: "Monitored key performance indicators (KPIs) to measure process efficiency at the departmental level.",
+                responsibilities6: "Trained 14 cross-functional team members in BPMN workflow mapping and Lean methodology."
+            }
+        },
+        {
+            company: "ITAÚ UNIBANCO BANK - Brazil",
+            department: "Back Office, Accounting Operations",
             position: "Junior Business Analyst",
-            dateRange: "Apr 2020 - Sep 2021",
+            dateRange: "Apr. 2020 - Sep. 2021",
             responsibilities: {
-                responsibilities1: "Led cross-department projects across 4 different areas to improve operational effectiveness and communication, documenting business rules for process automation.",
-                responsibilities2: "Mapped and optimized 5 end-to-end BPMN flows, identifying pain points and reducing operational effort by 80%.",
-                responsibilities3: "Applied Lean methodologies to reduce operational waste and improve the efficiency of insurance services, helping to reduce accounting discrepancies.",
-                responsibilities4: "Performed data entry for insurance processes, ensuring data accuracy and consistency for business analysis and decision-making.",
-                responsibilities5: "Prepared monthly performance reports for senior management presentations."
+                responsibilities1: "Performed account reconciliations in Excel on various products (claims, accounts payable and receivable, provident funds, insurance), ensuring accuracy and consistency of financial data for analysis and control.",
+                responsibilities2: "Led cross-functional projects involving 4 departments to improve operational efficiency and communication, by documenting and standardizing business rules for automation purposes.",
+                responsibilities3: "Mapped and optimized 5 end-to-end BPMN workflows, applying Lean methodology to identify bottlenecks and reduce operational effort by 80%.",
+                responsibilities4: "Formalized business rules with operational analysts and transferred specifications to the IT team, contributing to process automation and reduction of accounting discrepancies.",
+                responsibilities5: "Prepared monthly financial performance presentations for management, supporting strategic decision-making."
             }
         },
         {
             company: "ITAÚ UNIBANCO BANK - Brazil",
-            department: "Financial Operations Management - Credit Card and Insurance Accounting",
+            department: "Back Office, Accounting Operations",
             position: "Financial Operations Intern",
-            dateRange: "Aug 2018 - Apr 2020",
+            dateRange: "Jun. 2018 - Apr. 2020",
             responsibilities: {
-                responsibilities1: "Led a Lean methodology project to identify process improvement opportunities, and collaborate with IT analysts to automate workflows, reducing manual errors and enhancing performance.",
-                responsibilities2: "Gained cross-departmental experience by working in three different areas, including Credit Card and Insurance Accounting, where I mapped end-to-end processes, identified gaps, and developed action plans for process optimization.",
-                responsibilities3: "Prepared materials for monthly management meetings, highlighting project progress and key outcomes.",
-                responsibilities4: "Assisted in the analytical reconciliation of credit card and insurance balance sheet accounts, ensuring accuracy and compliance with financial standards."
+                responsibilities1: "Acquired cross-functional experience by rotating through three departments, including Credit Card and Insurance Accounting, where I mapped end-to-end processes, identified inefficiencies, and proposed actionable improvements.",
+                responsibilities2: "Led a Lean process improvement initiative in collaboration with IT analysts to automate workflows, reduce manual errors, and enhance operational efficiency.",
+                responsibilities3: "Prepared executive-level presentation materials for monthly management meetings, summarizing project progress and key performance indicators.",
+                responsibilities4: "Supported the analytical reconciliation of credit card and insurance balance sheet accounts, ensuring accuracy, consistency, and compliance with internal financial policies."
             }
         }
     ];

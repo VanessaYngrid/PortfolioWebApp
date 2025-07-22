@@ -89,7 +89,7 @@ export default function WorkExperience() {
                 {/* Recent Experience */}
                 <div className="w-full md:w-1/2 px-4 md:px-10">
                     <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Recent Experience</h2>
-                    {experienceInfo.slice(0, 2).map((exp, index) => (
+                    {experienceInfo.slice(0, 3).map((exp, index) => (
                         <ExperienceItem key={index} exp={exp} />
                     ))}
                 </div>
@@ -97,7 +97,7 @@ export default function WorkExperience() {
                 {/* Older Experience */}
                 <div className="w-full md:w-1/2 px-4 md:px-10 lg:px-8">
                     <h2 className="text-2xl font-bold text-[#4A1942] mb-4">Previous Experience</h2>
-                    {experienceInfo.slice(2,4).map((exp, index) => (
+                    {experienceInfo.slice(3,5).map((exp, index) => (
                         <ExperienceItem key={index} exp={exp} />
                     ))}
                 </div>
