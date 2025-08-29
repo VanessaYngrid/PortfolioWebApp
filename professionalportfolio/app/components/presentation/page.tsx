@@ -19,7 +19,7 @@ export default function Presentation() {
                 
                 <div className="md:w-2/3 px-4 pt-4 pb-2 md:p-6 flex flex-col justify-center">
                     <p className="text-gray-600 mb-4 text-[16px] lg:text-[17px] leading-relaxed">
-                        Business Analyst with over 4 years of experience in the financial sector, specializing in process optimization, operational monitoring, process mapping, and data management. Skilled in applying Agile methodologies such as Lean and Scrum to improve efficiency and stakeholder satisfaction. Experienced in cross-functional collaboration, aligning business goals with operational and technical requirements.
+                        Business Analyst with experience in the financial sector, specializing in process optimization, operational monitoring, process mapping, and data management. Skilled in applying Agile methodologies such as Lean and Scrum to improve efficiency and stakeholder satisfaction. Experienced in cross-functional collaboration, aligning business goals with operational and technical requirements.
                     </p>
                     <p className="text-gray-600 text-[16px] lg:text-[17px] leading-relaxed">
                         Background in industrial engineering and software development, providing a strong foundation in analytical thinking, problem-solving, adaptability, and effective communication across diverse teams. Proven ability to drive improvements in complex organizational environments, with experience in both Latin America and Canada.
