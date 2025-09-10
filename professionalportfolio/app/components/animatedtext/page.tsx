@@ -5,9 +5,9 @@ import { useState, useEffect, useMemo } from "react";
 export default function AnimatedText() {
     // Use useMemo to memoize the specialties array so it doesn't cause re-renders
     const specialties = useMemo(() => [
-        "Web Development",
         "Business Analysis",
-        "Agile Methodologies"
+        "Agile Methodologies",
+        "Data Analysis"
     ], []); // Empty array means it won't change
 
     const [currentSpecialty, setCurrentSpecialty] = useState(specialties[0]);

@@ -64,11 +64,11 @@ export async function GET() {
         {
             company: "ITAÚ UNIBANCO BANK - Brazil",
             department: "Back Office, Accounting Operations",
-            position: "Junior Business Analyst",
+            position: "Junior Financial & Business Analyst",
             dateRange: "Apr. 2020 - Sep. 2021",
             responsibilities: {
                 responsibilities1: "Performed account reconciliations in Excel on various products (claims, accounts payable and receivable, provident funds, insurance), ensuring accuracy and consistency of financial data for analysis and control.",
-                responsibilities2: "Led cross-functional projects involving 4 departments to improve operational efficiency and communication, by documenting and standardizing business rules for automation purposes.",
+                responsibilities2: "Led cross-functional projects to improve operational efficiency and communication, by documenting and standardizing business rules for automation purposes.",
                 responsibilities3: "Mapped and optimized 5 end-to-end BPMN workflows, applying Lean methodology to identify bottlenecks and reduce operational effort by 80%.",
                 responsibilities4: "Formalized business rules with operational analysts and transferred specifications to the IT team, contributing to process automation and reduction of accounting discrepancies.",
                 responsibilities5: "Prepared monthly financial performance presentations for management, supporting strategic decision-making."
@@ -80,12 +80,12 @@ export async function GET() {
             position: "Financial Operations Intern",
             dateRange: "Jun. 2018 - Apr. 2020",
             responsibilities: {
-                responsibilities1: "Acquired cross-functional experience by rotating through three departments, including Credit Card and Insurance Accounting, where I mapped end-to-end processes, identified inefficiencies, and proposed actionable improvements.",
-                responsibilities2: "Led a Lean process improvement initiative in collaboration with IT analysts to automate workflows, reduce manual errors, and enhance operational efficiency.",
+                responsibilities1: "Assisted with account reconciliations for credit card and insurance products, ensuring accuracy and compliance with financial standards.",
+                responsibilities2: "Gained cross-departmental experience by working in 3 departments, including Credit Card and Insurance Accounting, supporting end-to-end process mapping and workflow improvements.",
                 responsibilities3: "Prepared executive-level presentation materials for monthly management meetings, summarizing project progress and key performance indicators.",
-                responsibilities4: "Supported the analytical reconciliation of credit card and insurance balance sheet accounts, ensuring accuracy, consistency, and compliance with internal financial policies."
-            }
+                responsibilities4: "Led a Lean process improvement initiative in collaboration with IT analysts to automate workflows, reduce manual errors, and enhance operational efficiency."
         }
+    }
     ];
 
     // Return the JSON response with job experiences

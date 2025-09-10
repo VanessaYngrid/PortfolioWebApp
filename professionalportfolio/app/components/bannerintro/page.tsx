@@ -11,7 +11,7 @@ export default function BannerIntro() {
                 <p className="text-white text-xl md:text-2xl font-semibold">Hello, I am</p>
                 <p className="text-white text-4xl md:text-4xl font-bold">Vanessa Yngrid Chuquitaipe Vargas</p>
                 <p className="text-white text-lg md:text-2xl font-semibold pt-4">
-                    <span className="text-[#FFB3C1]">Software Developer</span> & Industrial Engineer
+                    <span className="text-[#FFB3C1]">Industrial Engineer</span> & Software Developer
                 </p>
                 <p className="text-white text-lg md:text-xl font-normal">
                     Specializing in <span className="text-[#FFB3C1]"><AnimatedText /></span>
